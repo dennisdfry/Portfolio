@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'fira'; /* Name der Schriftart */
+    src: url('assets/fonts/Fira/FiraCode-Medium.ttf') format('truetype'); /* Pfad zur .ttf-Datei */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    margin:0px;
+}
+
+

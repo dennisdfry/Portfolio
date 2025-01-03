@@ -94,8 +94,28 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "portfolio-website:build:production",
+              "serveTarget": "portfolio-website:serve:production"
+            },
+            "development": {
+              "buildTarget": "portfolio-website:build:development",
+              "serveTarget": "portfolio-website:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

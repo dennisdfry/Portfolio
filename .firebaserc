@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dennis-freyer": {
+      "hosting": {
+        "portfolio-website": [
+          "dennis-freyer"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dennis-freyer"
+  }
+}
