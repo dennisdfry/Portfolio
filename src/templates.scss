@@ -1,4 +1,59 @@
-.no_margin_block{
+.no-margin-block{
     margin-block-start: 0;
     margin-block-end: 0;
+}
+.pointer{
+    cursor: pointer;
+}
+.d-flex{
+    display: flex;
+}
+.img32{
+    width:32px;
+    height:32px;
+}
+.align-items-ctr{
+    align-items: center;
+}
+
+.text-turquoise{
+    color:#3DCFB6;
+}
+.text-white{
+    color:#FFFFFF;
+}
+.font-karla{
+    font-family: 'karla';
+}
+.font-fira{
+    font-family: 'fira';
+}
+.font-wgh700{
+    font-weight: 700;
+}
+.pa-le-ri-96{
+    padding-left: 96px;
+    padding-right: 96px;
+}
+.font-18{
+    font-size: 18px;
+}
+.font-24{
+    font-size: 24px;
+}
+
+.font-16{
+    font-size: 16px;
+}
+.font-64{
+    font-size: 64px;
+}
+.border-ra30{
+    border-radius: 30px;
+}
+.border-ra100{
+    border-radius: 100px;
+}
+.gap24{
+    gap:24px;
 }

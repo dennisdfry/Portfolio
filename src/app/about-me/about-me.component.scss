@@ -2,7 +2,6 @@ section {
     padding-left: 96px;
     padding-right: 96px;
     padding-top: 144px;
-    padding-bottom: 144px;
     height:708px;
     background-color: #1c1c1c;
     display: flex;
@@ -33,6 +32,7 @@ section {
     border:1px solid #3DCFB6;
     background-color: rgb(31,46,43);
     backdrop-filter: blur(4);
+    padding:32px;
     >h2{
         font-family: 'karla';
         font-size: 24px;

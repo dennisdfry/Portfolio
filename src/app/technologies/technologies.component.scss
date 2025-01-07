@@ -1,17 +1,69 @@
 section {
-    padding-left: 96px;
-    padding-right: 96px;
     padding-top: 144px;
     height:695px;
     background: radial-gradient(circle at left, #08463b  0%, #1c1c1c 22% );
+    >h3{
+        font-size: 24px;
+    }
 }
+
 .technologies_contain{
     display: flex;
+    justify-content: space-between;
 }
-.technologies_left{
 
+.technologies_left{
+    width: 520px;
+    height:503px;
+    padding:32px;
+    border:1px solid #3DCFB6;
+    background-color: rgb(31,46,43);
+    backdrop-filter: blur(4);
 }
 
 .technologies_right{
-
+    display: flex;
+    flex-wrap: wrap;
+    width:632px;
+    height:428px;
+    gap: 72px;
+    >img{
+        gap: 8px;
+        width: 104px;
+        height:116px;
+    }
 }
+
+// .technologies_button{
+//    all:unset;
+//    border:1px solid #FFFFFF;
+//    width:122px;
+//    height:48px;
+//    padding-left: 24px;
+//    padding-right:24px;
+//    border-radius: 100px;
+//    font-family:'karla';
+//    color:#FFFFFF;
+//    font-size: 18px;
+//    position: relative;
+//    overflow: hidden;
+// }
+
+.technologies_button {
+    border: 1px solid #FFFFFF;
+    width: 122px;
+    height: 48px;
+    padding: 0 24px; /* Kombinierte Seitenabstände */
+    border-radius: 100px;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden; /* Verhindert sichtbaren Überlauf des Textes */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Zentriert den Text */
+    cursor: pointer;
+ 
+  }
+  
