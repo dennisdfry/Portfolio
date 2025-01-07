@@ -1,0 +1,40 @@
+section {
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 144px;
+    padding-bottom: 144px;
+    height:708px;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_me_left {
+    height: 708px;
+    display: flex;
+    align-items: first baseline;
+     >img {
+        width: 568px;
+        height: 568px;
+        border-radius: 30px;
+    }
+}
+.about_me_right_align{
+    height: 708px;
+    display: flex;
+    align-items:last baseline;
+}
+
+.about_me_right {
+    width: 568px;
+    height: 568px;
+    border-radius: 30px;
+    color: #3DCFB6;
+    border:1px solid #3DCFB6;
+    background-color: rgb(31,46,43);
+    backdrop-filter: blur(4);
+    >h2{
+        font-family: 'karla';
+        font-size: 24px;
+    }
+}
