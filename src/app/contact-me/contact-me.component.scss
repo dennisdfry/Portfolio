@@ -1,0 +1,29 @@
+section{
+    background-color:#1c1c1c;
+    display: flex;
+    justify-content: space-between;
+}
+form{
+    flex-direction: column;
+    width:616px;
+    height: 550px;
+    background-color: #1c1c1c;
+}
+label{
+    background-color: #1c1c1c;
+    border: none;
+    padding:32px;
+    border-top:1px solid #3DCFB6;
+}
+.contact_input{
+    background-color:#1c1c1c;
+    border:none;
+    padding-left: 32px;
+}
+.contact_textarea{
+
+}
+.contact_me_left{
+    width:568px;
+    height:337px;
+}
