@@ -5,10 +5,11 @@ import { TechnologiesComponent } from '../technologies/technologies.component';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { FeedbackComponent } from '../feedback/feedback.component';
 import { ContactMeComponent } from '../contact-me/contact-me.component';
+import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-mainpage',
   standalone: true,
-  imports: [HeaderComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, FeedbackComponent, ContactMeComponent ],
+  imports: [HeaderComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, FeedbackComponent, ContactMeComponent, FooterComponent ],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })
