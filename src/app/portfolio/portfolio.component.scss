@@ -6,6 +6,7 @@ section{
     }
 }
 .portfolio_button{
+    opacity: 0;
     width:880px;
     height: 109px;
     display: flex;
@@ -24,6 +25,14 @@ section{
 .portfolio_button_last{
     border-bottom:1px solid #3DCFB6; 
 }
+
 p{
     width:456px;
 }
+
+.initial-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+  }
+  
