@@ -9,6 +9,7 @@ section {
 }
 
 .about_me_left {
+    opacity:0;
     height: 708px;
     display: flex;
     align-items: first baseline;
@@ -25,6 +26,7 @@ section {
 }
 
 .about_me_right {
+    opacity:0;
     width: 568px;
     height: 568px;
     border-radius: 30px;
@@ -36,5 +38,26 @@ section {
     >h2{
         font-family: 'karla';
         font-size: 24px;
+    }
+}
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%); 
+    transition: all 0.8s ease-out; 
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

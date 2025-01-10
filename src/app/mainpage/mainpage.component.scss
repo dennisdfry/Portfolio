@@ -17,6 +17,7 @@ h1 {
     font-family: 'karla';
     font-size: 128px;
     color: #D9D9D9;
+    opacity: 0;
 }
 
 h2 {
@@ -34,6 +35,9 @@ h2 {
 }
 
 .main_button_section {
+    width:636px;
+    display: flex;
+    justify-content: space-between;
     >button {
         all: unset;
         font-family: 'karla';
@@ -55,18 +59,20 @@ h2 {
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5.3);
+    backdrop-filter: blur(5.3px);
     transform: skewY(-3deg);
     margin-top: 8px;
     margin-bottom: calc(62px * 0.7);
+    overflow: hidden; /* Notwendig, um den überflüssigen Inhalt auszublenden */
 }
 
 .mainpage_banner>.banner-content {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 100%; /* Breite 100% für die Animation */
     padding: 0 96px;
+    animation: moveBanner 10s linear infinite; /* Animation hinzufügen */
 }
 
 .mainpage_banner>.banner-content>img {
@@ -84,10 +90,17 @@ h2 {
     white-space: nowrap;
 }
 
-// .mainpage_lateral_section {
-//     display: flex;
-//     justify-content: space-between;
-// }
+/* Animation für Bewegung */
+@keyframes moveBanner {
+    0% {
+        transform: translateX(100%); /* Start rechts außerhalb des Containers */
+    }
+    100% {
+        transform: translateX(-100%); /* Ende links außerhalb des Containers */
+    }
+}
+
+
 
 .lateral_scroll_section_left {
     display: flex;
@@ -96,7 +109,6 @@ h2 {
     position: absolute;
     left: 96px;
     top: 50%;
-    /* 50% vom oberen Rand */
     transform: translateY(-50%);
 }
 
