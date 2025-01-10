@@ -1,8 +1,8 @@
 <section>
     <h2 class="no-margin-block font-fira text-turquoise font-32 font-wgh700">What my colleagues say about me</h2>
-    <div>
-        <div class="feedback_comments font-karla text-white">
-            <p class="font-18">Dennis, your creative approach and attention to detail have greatly advanced the project. Working with you has been truly rewarding!</p>
+    <div class="comment_container">
+        <div class="feedback_comments font-karla text-white" *ngFor="let comment of comments; let i = index" [ngClass]="getCommentClass(i)">
+            <p class="font-18 comment">{{ comment }}{{i}}</p>
             <div>
                 <div></div>
                 <p class="font-16">P. Pfautsch</p>
@@ -10,10 +10,12 @@
         </div>
     </div>
     <div>
-        <img src="../../assets/img/feedback/arrows.png" alt="">
+        <img (click)="prevComment()" [class.disabled]="currentIndex === 0" src="../../assets/img/feedback/arrows.png"
+            alt="">
         <img src="../../assets/img/feedback/Ellipse 3.png" alt="">
         <img src="../../assets/img/feedback/Ellipse 3.png" alt="">
         <img src="../../assets/img/feedback/Ellipse 3.png" alt="">
-        <img src="../../assets/img/feedback/24. Arrow - references.png" alt="">
+        <img (click)="nextComment()" [class.disabled]="currentIndex === comments.length - 1"
+            src="../../assets/img/feedback/24. Arrow - references.png" alt="">
     </div>
 </section>
