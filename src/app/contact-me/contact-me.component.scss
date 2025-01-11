@@ -33,6 +33,10 @@ label{
 .contact_input, 
 .contact_textarea {
   caret-color: #FFFFFF; 
+  width: 100%; /* Volle Breite des Containers */
+  height: 16px; /* Optional: Mindesthöhe, um die Größe zu steuern */
+  height: auto; /* Automatische Höhe basierend auf dem Inhalt */
+  resize: vertical; 
 }
 .contact_me_left{
     width:568px;
