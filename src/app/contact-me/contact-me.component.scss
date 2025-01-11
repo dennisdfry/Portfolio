@@ -12,8 +12,8 @@ form{
 label{
     background-color: #1c1c1c;
     border: none;
-    padding:32px;
-    border-top:1px solid #3DCFB6;
+    padding-left:32px;
+    // border-top:1px solid #3DCFB6;
 }
 .contact_input{
     background-color:#1c1c1c;
@@ -21,9 +21,68 @@ label{
     padding-left: 32px;
 }
 .contact_textarea{
+    color:#FFFFFF;
+}
 
+.contact_input:focus, 
+.contact_textarea:focus {
+  outline: none; 
+  border: none; 
+}
+
+.contact_input, 
+.contact_textarea {
+  caret-color: #FFFFFF; 
 }
 .contact_me_left{
     width:568px;
     height:337px;
 }
+
+.checkbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact_me_button{
+border: 1px solid #FFFFFF;
+background-color: #1c1c1c;
+width: 139px;
+height: 48px;
+
+border-radius: 100px;
+font-family: 'Karla', sans-serif;
+color: #FFFFFF;
+position: relative;
+overflow: hidden; 
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+.checkbox_design {
+    appearance: none;
+    -webkit-appearance: none; 
+    background-color: #1c1c1c;
+    border: 1px solid #3DCFB6;
+    width: 18px; 
+    height: 18px; 
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .checkbox_design:checked {
+    background-color: #3DCFB6;
+    border-color: #3DCFB6;
+  }
+  
+  .checkbox_design:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

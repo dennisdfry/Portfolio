@@ -11,21 +11,35 @@ import { CommonModule } from '@angular/common';
 export class FeedbackComponent {
   comments = ['hallo', 'huhu', 'tschüss'];
 
-  currentIndex = 1;
+  currentIndex = 0;
 
   prevComment(): void {
-    if (this.currentIndex > 0) {
+    if (this.currentIndex === 0) {
+      this.currentIndex = this.comments.length - 1; 
+    } else {
       this.currentIndex--;
     }
   }
 
-  nextComment(): void {
-    if (this.currentIndex < this.comments.length - 1) {
-      this.currentIndex++;
-    }
+nextComment(): void {
+  if (this.currentIndex === this.comments.length - 1) {
+    this.currentIndex = 0; 
+  } else {
+    this.currentIndex++;
   }
+}
 
-  getCommentClass(index: number): string {
-    return index === this.currentIndex ? 'comment_center' : '';
-  }
+scrollToIndex(index: number): void {
+  this.currentIndex = index;
+}
+
+getCommentClass(index: number): string {
+  return index === this.currentIndex ? 'comment_center' : '';
+}
+
+
+
+getTransform(): string {
+  return `translateX(-${this.currentIndex * 100}%)`;
+}
 }
