@@ -30,3 +30,15 @@ section{
     }
     }
 }
+
+@media (max-width:320px){
+    section{
+        height: 98px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .header_left_resp{
+        display: none;
+    }
+   
+}

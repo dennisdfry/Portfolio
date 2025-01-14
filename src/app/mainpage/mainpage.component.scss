@@ -138,7 +138,7 @@ h2 {
 }
 
 .mainpage_scroll_line_left {
-    height: 240px;
+    height: 210px;
     width: 0px;
     border: 1px solid #3DCFB6;
 }
@@ -165,6 +165,7 @@ h2 {
         font-size: 62px;
         color: #D9D9D9;
         opacity: 0;
+        text-align: center;
     }
 
     h2 {
@@ -176,14 +177,14 @@ h2 {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 48px;
+        gap: 24px;
     }
 
     .main_button_section {
-        width: 320px;
+        width: 300px;
         display: flex;
         justify-content: space-between;
-    
+
         >button {
             all: unset;
             font-family: 'karla';
@@ -195,7 +196,40 @@ h2 {
             border-radius: 100px;
             padding-top: 10px;
             padding-bottom: 10px;
+            width:130px;
+            margin:8px;
         }
     }
 
+    .lateral_scroll_section_right {
+        height: 256px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: 8px;
+        bottom: 0;
+        gap: 24px;
+    }
+
+    .mainpage_lateral_mail {
+        display: none;
+    }
+
+    .lateral_scroll_section_left {
+        left: 8px; 
+        bottom: 0; 
+        top: unset; 
+        transform: none; 
+    }
+    .mainpage_banner>.banner-content>p {
+        margin: 0;
+        font-family: 'Karla';
+        font-size: 24px;
+        color: #3DCFB6;
+        white-space: nowrap;
+    }
+    .mainpage_banner {
+        height: 53px;
+    }
 }

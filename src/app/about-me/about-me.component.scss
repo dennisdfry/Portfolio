@@ -17,6 +17,7 @@ section {
         width: 568px;
         height: 568px;
         border-radius: 30px;
+        object-fit: cover;
     }
 }
 .about_me_right_align{
@@ -83,6 +84,11 @@ section {
             height: 300px;
             border-radius: 30px;
             margin-bottom:8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+            
         }
     }
 
