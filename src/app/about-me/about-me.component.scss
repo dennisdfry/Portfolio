@@ -66,7 +66,7 @@ section {
     section {
         padding-left: 8px;
         padding-right: 8px;
-        padding-top: 144px;
+        padding-top: 40px;
         height:fit-content;
         background-color: #1c1c1c;
         display: flex;
@@ -101,4 +101,11 @@ section {
             font-size: 24px;
         }
     }
+    .about_me_right_align{
+        height: fit-content;
+        display: flex;
+        align-items:last baseline;
+        margin-top: 40px;
+    }
+    
 }
