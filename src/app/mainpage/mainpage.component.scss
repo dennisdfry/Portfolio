@@ -1,10 +1,9 @@
 section {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(45deg, 
-    #1c1c1c 40%, /* 20% der Breite ist #1c1c1c */
-    #08463b 100%  /* 80% der Breite ist #08463b */
-);
+    background: linear-gradient(45deg,
+            #1c1c1c 40%,
+            #08463b 100%);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -35,9 +34,10 @@ h2 {
 }
 
 .main_button_section {
-    width:636px;
+    width: 636px;
     display: flex;
     justify-content: space-between;
+
     >button {
         all: unset;
         font-family: 'karla';
@@ -63,16 +63,16 @@ h2 {
     transform: skewY(-3deg);
     margin-top: 8px;
     margin-bottom: calc(62px * 0.7);
-    overflow: hidden; /* Notwendig, um den überflüssigen Inhalt auszublenden */
+    overflow: hidden;
 }
 
 .mainpage_banner>.banner-content {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%; /* Breite 100% für die Animation */
+    width: 100%;
     padding: 0 96px;
-    animation: moveBanner 10s linear infinite; /* Animation hinzufügen */
+    animation: moveBanner 10s linear infinite;
 }
 
 .mainpage_banner>.banner-content>img {
@@ -93,10 +93,13 @@ h2 {
 /* Animation für Bewegung */
 @keyframes moveBanner {
     0% {
-        transform: translateX(100%); /* Start rechts außerhalb des Containers */
+        transform: translateX(100%);
+        /* Start rechts außerhalb des Containers */
     }
+
     100% {
-        transform: translateX(-100%); /* Ende links außerhalb des Containers */
+        transform: translateX(-100%);
+        /* Ende links außerhalb des Containers */
     }
 }
 
@@ -153,4 +156,46 @@ h2 {
     color: #FFFFFF;
     font-size: 18px;
     font-family: 'karla';
+}
+
+@media (max-width:320px) {
+
+    h1 {
+        font-family: 'karla';
+        font-size: 62px;
+        color: #D9D9D9;
+        opacity: 0;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .mainpage_teaser_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .main_button_section {
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+    
+        >button {
+            all: unset;
+            font-family: 'karla';
+            font-size: 18px;
+            color: #FFFFFF;
+            padding-right: 24px;
+            padding-left: 24px;
+            border: 1px solid #FFFFFF;
+            border-radius: 100px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
 }

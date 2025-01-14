@@ -9,5 +9,13 @@ section{
 .footer_link{
     display: flex;
     flex-direction: column;
-    
+    >a {
+        text-decoration: none;
+        font-family: 'karla';
+        font-size: 16px;
+        color: #FFFFFF;
+        &:hover{
+            color:#3DCFB6;  
+        }
+    }
 }

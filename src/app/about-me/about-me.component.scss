@@ -61,3 +61,38 @@ section {
         transform: translateX(0);
     }
 }
+@media (max-width:320px){
+    section {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 144px;
+        height:fit-content;
+        background-color: #1c1c1c;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .about_me_left {
+        opacity:0;
+        height: 300px;
+        display: flex;
+        align-items: first baseline;
+         >img {
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+            margin-bottom:8px;
+        }
+    }
+
+    .about_me_right {
+        opacity:0;
+        width: 300px;
+        height: fit-content;
+        >h2{
+            font-family: 'karla';
+            font-size: 24px;
+        }
+    }
+}

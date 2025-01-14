@@ -36,3 +36,41 @@ p{
     transition: all 0.5s ease-in-out;
   }
   
+  @media (max-width:320px){
+    section{
+        padding-left: 8px;
+        padding-right: 8px;
+        height:fit-content;
+    }
+    h1{
+        font-size: 56px;
+        padding:8px;
+    }
+    p{
+        font-size: 16px;
+        padding:8px;
+        width:fit-content;
+    }
+    h3{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .portfolio_button{
+        opacity: 0;
+        width:300px;
+        height: 109px;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        background-color: #1c1c1c;
+        border: none;
+        padding:32px;
+        border-top:1px solid #3DCFB6;
+        &:hover{
+            background-color: rgb(31,46,43);
+        backdrop-filter: blur(4);
+        }
+    }
+  }
