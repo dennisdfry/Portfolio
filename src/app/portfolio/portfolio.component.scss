@@ -38,6 +38,7 @@ p{
   
   @media (max-width:320px){
     section{
+        padding-top: 40px;
         padding-left: 8px;
         padding-right: 8px;
         height:fit-content;
@@ -45,11 +46,14 @@ p{
     h1{
         font-size: 56px;
         padding:8px;
+        // word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     p{
         font-size: 16px;
         padding:8px;
         width:fit-content;
+        text-align: center;
     }
     h3{
         padding-left: 8px;
