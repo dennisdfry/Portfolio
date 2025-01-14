@@ -61,7 +61,7 @@ section {
 
 @media (max-width:320px) {
     section {
-        padding-top: 144px;
+        padding-top: 40px;
         padding-left: 8px;
         padding-right: 8px;
         height: fit-content;
@@ -69,6 +69,7 @@ section {
         background: radial-gradient(circle at left, #08463b 0%, #1c1c1c 22%);
 
         >h3 {
+            margin-block-start: 0;
             font-size: 24px;
         }
     }
@@ -86,7 +87,7 @@ section {
 
     .technologies_left {
         opacity: 0;
-        width: 300px;
+        width: 280px;
         height: fit-content;
         padding: 8px;
         border: 1px solid #3DCFB6;
