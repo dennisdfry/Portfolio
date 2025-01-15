@@ -84,7 +84,7 @@ label {
   -webkit-appearance: none;
   background-color: #1c1c1c;
   border: 1px solid #3DCFB6;
-  width: 18px;
+  width: 24px;
   height: 18px;
   cursor: pointer;
   display: inline-block;
@@ -109,6 +109,7 @@ label {
 @media(max-width:320px) {
   h3 {
     font-size: 20px;
+   
   }
 
   h2 {
@@ -117,6 +118,7 @@ label {
 
   h1 {
     font-size: 56px;
+    word-wrap: break-word; 
   }
 
   section {
@@ -129,22 +131,33 @@ label {
   }
 
   .contact_me_left {
-    width: 300px;
+    width: 280px;
     height: fit-content;
     padding: 8px;
+    >p{
+      text-align: center;
+    }
+    >div{
+      >p{
+        text-align: center;
+      }
+    }
   }
   form {
     flex-direction: column;
     width: 300px;
     height: fit-content;
     background-color: #1c1c1c;
+    text-align: center;
   }
 
   .contact_input,
 .contact_textarea {
-  width: 300px;
+  width: 280px;
   height: 16px;
   resize: vertical;
+  text-align: center;
+  overflow-y: hidden;
 }
 .contact_input::placeholder{
   max-width: 300px; 
