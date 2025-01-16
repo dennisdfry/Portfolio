@@ -44,7 +44,7 @@ export class PortfolioComponent {
     {
       title: 'Join',
       description: 'Dieses Projekt wurde mit Angular, TypeScript, HTML, CSS und Firebase erstellt. Es zeigt, wie man kollaborative Tools entwickelt.',
-      image: '../../assets/img/job_pictures/join_project.jpg',
+      image: '../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase']
     },
     {
@@ -60,4 +60,18 @@ export class PortfolioComponent {
       technologies: ['Angular', 'Firebase', 'TypeScript']
     }
   ];
+  
+
+  getTechImage(technology: string): string {
+    return this.techImages[technology] || 'assets/img/icons/default.png';
+  }
+
+  techImages: { [key: string]: string } = {
+    Angular: '../../assets/img/portfolio/A.png',
+    TypeScript: '../../assets/img/portfolio/TS.png',
+    HTML: '../../assets/img/portfolio/HTML.png',
+    CSS: '../../assets/img/portfolio/CSS.png',
+    Firebase: '../../assets/img/portfolio/FIRE.png',
+    JavaScript: '../../assets/img/portfolio/JS.png'
+  };
 }
