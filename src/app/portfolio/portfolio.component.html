@@ -1,18 +1,17 @@
 <div class="overlay" *ngIf="isOverlayVisible">
     <button class="close-button" (click)="hideOverlay()">X</button>
     <div class="overlay-container">
-      <h2 class="overlay-title">Da Bubble</h2>
+      <h2 class="overlay-title">{{ currentProject.title }}</h2>
       <div class="project-content">
         <!-- Links: Projektbeschreibung -->
         <div class="project-description">
           <p class="overlay-description">
-            Dieses Projekt wurde mit Angular, Firebase und TypeScript erstellt. 
-            Es zeigt meine Fähigkeit, skalierbare Anwendungen zu entwickeln.
+            {{ currentProject.description }}
           </p>
         </div>
         <!-- Rechts: Projektbild -->
         <div class="project-image">
-          <img src="../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg" alt="Da Bubble Project Image" />
+          <img [src]="currentProject.image" [alt]="currentProject.title + ' Project Image'" />
         </div>
       </div>
       <button class="next-project-button" (click)="goToNextProject()">Next Project</button>
@@ -28,7 +27,7 @@
                 appScrollAnimate animationClass="slide-in-left"
                 (mouseenter)="showImage('../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg')" 
                 (mouseleave)="hideImage()"
-                (click)="showOverlay()">
+                (click)="showOverlay(0)">
                 <span class="font-fira font-24 text-white font-wgh700">Join</span>
                 <div class="font-karla font-18 text-white">
                     <span>Angular</span>
@@ -42,7 +41,8 @@
                 class="portfolio_button pointer" 
                 appScrollAnimate animationClass="slide-in-right"
                 (mouseenter)="showImage('../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg')" 
-                (mouseleave)="hideImage()">
+                (mouseleave)="hideImage()"
+                (click)="showOverlay(1)">
                 <span class="font-fira font-24 text-white font-wgh700">El Pollo Loco</span>
                 <div class="font-karla font-18 text-white">
                     <span>HTML</span>
@@ -54,7 +54,8 @@
                 class="portfolio_button portfolio_button_last pointer" 
                 appScrollAnimate animationClass="slide-in-left"
                 (mouseenter)="showImage('../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg')" 
-                (mouseleave)="hideImage()">
+                (mouseleave)="hideImage()"
+                (click)="showOverlay(2)">
                 <span class="font-fira font-24 text-white font-wgh700">Da Bubble</span>
                 <div class="font-karla font-18 text-white">
                     <span>Angular</span>
