@@ -35,6 +35,142 @@ p{
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
   }
+
+  .portfolio-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.portfolio-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-preview {
+    position: relative;
+    width: 300px; /* Breite des Bildbereichs */
+    height: 200px; /* Höhe des Bildbereichs */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.image-preview img:hover {
+    transform: scale(1.05); /* Zoom-Effekt beim Hover */
+}
+
+/* Vollbild-Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Schwarzer Hintergrund mit Transparenz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px); /* Weichzeichnereffekt */
+    z-index: 1000; /* Über allen anderen Elementen */
+  }
+  
+  /* Container im Overlay */
+  .overlay-container {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: rgb(31, 46, 43); /* Hintergrundfarbe */
+    border: 1px solid #3dcfb6; /* Rahmen */
+    border-radius: 32px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Schatten */
+    text-align: center;
+    color: #ffffff; /* Textfarbe */
+    position: relative;
+  }
+  
+  /* Close-Button oben rechts */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent; /* Kein Hintergrund */
+    color: #ffffff; /* Weißer Text */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: #3dcfb6; /* Türkis beim Hover */
+  }
+  
+  /* Weiter-Button unten rechts */
+  .next-project-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3dcfb6; /* Türkiser Hintergrund */
+    color: #ffffff; /* Weißer Text */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .next-project-button:hover {
+    background-color: #2abda4; /* Etwas dunkleres Türkis beim Hover */
+  }
+  
+  /* Der Container für die Projektbeschreibung und das Bild */
+  .project-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Links: Projektbeschreibung */
+  .project-description {
+    width: 48%; /* Nimmt etwa die Hälfte des Containers ein */
+    text-align: left;
+  }
+  
+  /* Rechts: Projektbild */
+  .project-image {
+    width: 48%; /* Nimmt etwa die andere Hälfte des Containers ein */
+  }
+  
+  .project-image img {
+    width: 100%; /* Bild skaliert zur Containergröße */
+    height: auto; /* Verhindert verzerrte Bilder */
+    border-radius: 16px; /* Optionale Abrundung der Ecken des Bildes */
+  }
+  
+  /* Titel im Overlay */
+  .overlay-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #3dcfb6; /* Türkis */
+  }
+  
+  /* Beschreibung im Overlay */
+  .overlay-description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
   
   @media (max-width:320px){
     section{

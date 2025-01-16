@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , EventEmitter, Output} from '@angular/core';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive'; 
 @Component({
   selector: 'app-technologies',
@@ -8,5 +8,9 @@ import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
   styleUrl: './technologies.component.scss'
 })
 export class TechnologiesComponent {
+  @Output() scrollEvent = new EventEmitter<string>();
 
+  onButtonClick(): void {
+    this.scrollEvent.emit('contact'); 
+  }
 }

@@ -49,6 +49,12 @@ h2 {
         border-radius: 100px;
         padding-top: 10px;
         padding-bottom: 10px;
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid #3DCFB6;
+            color: #3DCFB6;
+        }
     }
 }
 
@@ -135,6 +141,19 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    overflow: hidden;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    >img {
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(10px);
+        }
+    }
 }
 
 .mainpage_scroll_line_left {
@@ -183,21 +202,21 @@ h2 {
     .main_button_section {
         width: 300px;
         display: flex;
-        justify-content: space-between;
+
+        justify-content: center;
 
         >button {
             all: unset;
             font-family: 'karla';
             font-size: 18px;
             color: #FFFFFF;
-            padding-right: 24px;
-            padding-left: 24px;
             border: 1px solid #FFFFFF;
             border-radius: 100px;
             padding-top: 10px;
             padding-bottom: 10px;
-            width:130px;
-            margin:8px;
+            width: 110px;
+            margin: 4px;
+            text-align: center;
         }
     }
 
@@ -217,11 +236,12 @@ h2 {
     }
 
     .lateral_scroll_section_left {
-        left: 8px; 
-        bottom: 0; 
-        top: unset; 
-        transform: none; 
+        left: 8px;
+        bottom: 0;
+        top: unset;
+        transform: none;
     }
+
     .mainpage_banner>.banner-content>p {
         margin: 0;
         font-family: 'Karla';
@@ -229,6 +249,7 @@ h2 {
         color: #3DCFB6;
         white-space: nowrap;
     }
+
     .mainpage_banner {
         height: 53px;
     }

@@ -14,5 +14,11 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './mainpage.component.scss'
 })
 export class MainpageComponent {
-
+  
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

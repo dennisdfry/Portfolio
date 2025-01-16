@@ -4,12 +4,12 @@
         <h2 class="no-margin-block slide-in-left">Frontend Developer</h2>
         <h1 class="no-margin-block slide-in-right">Dennis Freyer</h1>
         <div class="main_button_section">
-            <button>Check my work</button>
-            <button>Contact me</button>
+            <button (click)="scrollToSection('work')">Check my work</button>
+            <button (click)="scrollToSection('contact')">Contact me</button>
         </div>
     </div>
     <div class="lateral_scroll_section_left">
-        <div class="mainpage_scroll_button">
+        <div (click)="scrollToSection('aboutMe')" class="mainpage_scroll_button">
             <img src="../../assets/img/mainpage_section/Vector 8.png" alt="">
         </div>
         <div class="mainpage_scroll_line_left"></div>
@@ -34,9 +34,9 @@
         </div>
     </div>
 </section>
-<app-about-me></app-about-me>
-<app-technologies></app-technologies>
-<app-portfolio></app-portfolio>
+<app-about-me id="aboutMe"></app-about-me>
+<app-technologies (scrollEvent)="scrollToSection($event)"></app-technologies>
+<app-portfolio id="work"></app-portfolio>
 <app-feedback></app-feedback>
-<app-contact-me></app-contact-me>
+<app-contact-me id="contact"></app-contact-me>
 <app-footer></app-footer>

@@ -1,9 +1,12 @@
 section{
     background-color:#1c1c1c;
+    padding-bottom: 48px;
+}
+
+.header_top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 48px;
 }
 
 .footer_link{
@@ -17,5 +20,25 @@ section{
         &:hover{
             color:#3DCFB6;  
         }
+    }
+}
+@media (max-width:320px){
+    section{
+        padding:8px;
+        flex-direction: column;
+    }
+    .header_mid{
+        display: none;
+    }
+    .header_resp{
+        display: inline;
+        display: flex;
+        justify-content: center;
+    }
+    .header_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
     }
 }
