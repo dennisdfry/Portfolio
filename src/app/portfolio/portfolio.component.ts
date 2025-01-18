@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class PortfolioComponent {
 
   hoveredImage: string | null = null;
-  currentProjectIndex: number = 0; 
+  currentProjectIndex: number = 0;
   isOverlayVisible: boolean = false;
 
   showImage(imagePath: string): void {
@@ -40,27 +40,49 @@ export class PortfolioComponent {
     return this.projects[this.currentProjectIndex];
   }
 
+  openGithub(url: string): void {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      console.error('GitHub URL is not available for this project.');
+    }
+  }
+
+  openProject(url: string): void {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      console.error('Live URL is not available for this project.');
+    }
+  }
+
   projects = [
     {
       title: 'Join',
       description: 'Dieses Projekt wurde mit Angular, TypeScript, HTML, CSS und Firebase erstellt. Es zeigt, wie man kollaborative Tools entwickelt.',
-      image: '../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg',
-      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase']
+      image: '../../assets/img/portfolio/JOIN (1).png',
+      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+      githubUrl: 'https://github.com/dennisdfry/Join',
+      liveUrl: 'https://your-live-project-url.com'
     },
     {
       title: 'El Pollo Loco',
       description: 'Ein lustiges Spiel, das mit HTML, CSS und JavaScript entwickelt wurde. Es demonstriert Animationen und Spielelogik.',
-      image: '../../assets/img/job_pictures/el_pollo_loco.jpg',
-      technologies: ['HTML', 'CSS', 'JavaScript']
+      image: '../../assets/img/portfolio/EL-POLLO-LOCO.png',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      githubUrl: 'https://github.com/dennisdfry/El-Pollo-Lco',
+      liveUrl: 'https://your-live-project-url.com'
     },
     {
       title: 'Da Bubble',
       description: 'Dieses Projekt wurde mit Angular, Firebase und TypeScript erstellt. Es zeigt meine Fähigkeit, skalierbare Anwendungen zu entwickeln.',
-      image: '../../assets/img/job_pictures/da_bubble.jpg',
-      technologies: ['Angular', 'Firebase', 'TypeScript']
+      image: '../../assets/img/portfolio/DABUBBLE.png',
+      technologies: ['Angular', 'Firebase', 'TypeScript'],
+      githubUrl: 'https://github.com/your-repo',
+      liveUrl: 'https://your-live-project-url.com'
     }
   ];
-  
+
 
   getTechImage(technology: string): string {
     return this.techImages[technology] || 'assets/img/icons/default.png';

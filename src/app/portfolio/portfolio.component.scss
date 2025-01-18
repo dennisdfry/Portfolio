@@ -26,10 +26,6 @@ section{
     border-bottom:1px solid #3DCFB6; 
 }
 
-// p{
-//     width:456px;
-// }
-
 .initial-hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -50,8 +46,8 @@ section{
 
 .image-preview {
     position: relative;
-    width: 300px; /* Breite des Bildbereichs */
-    height: 200px; /* Höhe des Bildbereichs */
+    width: 300px; 
+    height: 200px; 
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -62,116 +58,164 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease; /* Smooth animation */
+    transition: transform 0.3s ease; 
 }
 
 .image-preview img:hover {
-    transform: scale(1.05); /* Zoom-Effekt beim Hover */
+    transform: scale(1.05); 
 }
 
-/* Vollbild-Overlay */
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Schwarzer Hintergrund mit Transparenz */
+    background-color: rgba(0, 0, 0, 0.7); 
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(4px); /* Weichzeichnereffekt */
-    z-index: 1000; /* Über allen anderen Elementen */
+    backdrop-filter: blur(4px); 
+    z-index: 1000; 
   }
   
-  /* Container im Overlay */
+
   .overlay-container {
     width: 80%;
     max-width: 900px;
-    padding: 20px;
-    background-color: rgb(31, 46, 43); /* Hintergrundfarbe */
-    border: 1px solid #3dcfb6; /* Rahmen */
-    border-radius: 32px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Schatten */
+    padding: 80px;
+    background-color: rgb(31, 46, 43); 
+    border: 1px solid #3dcfb6;
+    border-radius: 32px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
     text-align: center;
-    color: #ffffff; /* Textfarbe */
+    color: #ffffff; 
     position: relative;
   }
   
-  /* Close-Button oben rechts */
+.close-button-contain{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
   .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent; /* Kein Hintergrund */
-    color: #ffffff; /* Weißer Text */
+    background-color: transparent; 
+    margin:28px;
+    color: #ffffff; 
     border: none;
     font-size: 20px;
     cursor: pointer;
   }
   
   .close-button:hover {
-    color: #3dcfb6; /* Türkis beim Hover */
+    color: #3dcfb6; 
   }
   
-  /* Weiter-Button unten rechts */
+  .next-button-contain{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   .next-project-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: #3dcfb6; /* Türkiser Hintergrund */
-    color: #ffffff; /* Weißer Text */
+    all:unset;
+    color: #3dcfb6; 
     border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'karla';
     transition: background-color 0.3s ease;
+    &:hover{
+      color: #ffffff; 
+      >img{
+        transition: transform 0.4s ease; 
+        transform: translate(8px); 
+    }
+    }
   }
   
-  .next-project-button:hover {
-    background-color: #2abda4; /* Etwas dunkleres Türkis beim Hover */
-  }
-  
-  /* Der Container für die Projektbeschreibung und das Bild */
   .project-content {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
   }
   
-  /* Links: Projektbeschreibung */
   .project-description {
-    width: 48%; /* Nimmt etwa die Hälfte des Containers ein */
+    width: 48%; 
     text-align: left;
     >h3{
         margin-block-start: 0;
     }
   }
   
-  /* Rechts: Projektbild */
   .project-image {
-    width: 48%; /* Nimmt etwa die andere Hälfte des Containers ein */
+    width: 48%; 
   }
   
   .project-image img {
-    width: 100%; /* Bild skaliert zur Containergröße */
-    height: auto; /* Verhindert verzerrte Bilder */
-    border-radius: 16px; /* Optionale Abrundung der Ecken des Bildes */
+    width: 100%; 
+    height: auto; 
+    border-radius: 16px; 
   }
   
-  /* Titel im Overlay */
-  .overlay-title {
-  
-  }
-  
-  .overlay-description {
- 
-  }
   .technologies_portfolio{
     display: flex;
     
   }
+
+  .project-picture{
+    width:520px;
+    height:370px;
+  }
+
+  .open-portfolio-button {
+    all: unset;
+    border: 1px solid #FFFFFF;
+    width: 122px;
+    height: 48px;
+    border-radius: 100px;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border 0.5s ease, color 0.5s ease; 
+}
+
+.open-portfolio-button:hover {
+    border: 1px solid #3dcfb6;
+    color: #3dcfb6;
+}
+
+.icon-container {
+    position: relative;
+    width: 20px; 
+    height: 20px;
+    margin-left: 8px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.icon-container img {
+    position: absolute;
+    width: 10px; 
+    height: 10px;
+    bottom: 0; 
+    left: 0;
+    transition: transform 0.4s ease; 
+}
+
+.open-portfolio-button:hover .icon-container img {
+    transform: translate(8px, -8px); 
+}
   
   @media (max-width:320px){
     section{
@@ -183,7 +227,6 @@ section{
     h1{
         font-size: 56px;
         padding:8px;
-        // word-wrap: break-word;
         overflow-wrap: break-word;
     }
     p{

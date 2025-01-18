@@ -1,7 +1,9 @@
 <div class="overlay" *ngIf="isOverlayVisible">
-    <button class="close-button" (click)="hideOverlay()">X</button>
-    <div class="overlay-container">
 
+    <div class="overlay-container">
+        <div class="close-button-contain">
+            <button class="close-button" (click)="hideOverlay()">X</button>
+        </div>
         <div class="project-content">
             <div class="project-description">
                 <h1 class="text-turquoise font-karla font-128 no-margin-block">0{{currentProjectIndex +1}}</h1>
@@ -18,10 +20,28 @@
                 </div>
             </div>
             <div class="project-image">
-                <img [src]="currentProject.image" [alt]="currentProject.title + ' Project Image'" />
+                <img class="project-picture" [src]="currentProject.image"
+                    [alt]="currentProject.title + ' Project Image'" />
             </div>
         </div>
-        <button class="next-project-button" (click)="goToNextProject()">Next Project</button>
+        <div class="project-buttons d-flex gap16">
+            <button class="open-portfolio-button" (click)="openGithub(currentProject.githubUrl)">
+                GitHub
+                <div class="icon-container">
+                    <img src="../../assets/img/portfolio/arrow_outward.png" alt="Arrow Icon">
+                </div>
+            </button>
+            <button class="open-portfolio-button" (click)="openProject(currentProject.liveUrl)">
+                Live Test
+                <div class="icon-container">
+                    <img src="../../assets/img/portfolio/arrow_outward.png" alt="Arrow Icon">
+                </div>
+            </button>
+        </div>
+        <div class="next-button-contain">
+            <button class="next-project-button " (click)="goToNextProject()">Next Project<img
+                    src="../../assets/img/portfolio/arrow_forward.png"></button>
+        </div>
     </div>
 </div>
 
@@ -30,8 +50,8 @@
     <div class="portfolio-container">
         <div class="portfolio-buttons">
             <button class="portfolio_button pointer" appScrollAnimate animationClass="slide-in-left"
-                (mouseenter)="showImage('../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg')"
-                (mouseleave)="hideImage()" (click)="showOverlay(0)">
+                (mouseenter)="showImage('../../assets/img/portfolio/JOIN (1).png')" (mouseleave)="hideImage()"
+                (click)="showOverlay(0)">
                 <span class="font-fira font-24 text-white font-wgh700">Join</span>
                 <div class="font-karla font-18 text-white">
                     <span>Angular</span>
@@ -42,8 +62,8 @@
                 </div>
             </button>
             <button class="portfolio_button pointer" appScrollAnimate animationClass="slide-in-right"
-                (mouseenter)="showImage('../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg')"
-                (mouseleave)="hideImage()" (click)="showOverlay(1)">
+                (mouseenter)="showImage('../../assets/img/portfolio/EL-POLLO-LOCO.png')" (mouseleave)="hideImage()"
+                (click)="showOverlay(1)">
                 <span class="font-fira font-24 text-white font-wgh700">El Pollo Loco</span>
                 <div class="font-karla font-18 text-white">
                     <span>HTML</span>
@@ -52,8 +72,7 @@
                 </div>
             </button>
             <button class="portfolio_button portfolio_button_last pointer" appScrollAnimate
-                animationClass="slide-in-left"
-                (mouseenter)="showImage('../../assets/img/job_pictures/PXL_20250111_084638231~3.jpg')"
+                animationClass="slide-in-left" (mouseenter)="showImage('../../assets/img/portfolio/DABUBBLE.png')"
                 (mouseleave)="hideImage()" (click)="showOverlay(2)">
                 <span class="font-fira font-24 text-white font-wgh700">Da Bubble</span>
                 <div class="font-karla font-18 text-white">
