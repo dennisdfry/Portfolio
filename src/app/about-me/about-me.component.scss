@@ -2,50 +2,54 @@ section {
     padding-left: 96px;
     padding-right: 96px;
     padding-top: 144px;
-    height:708px;
+    height: 708px;
     background-color: #1c1c1c;
     display: flex;
     justify-content: space-between;
 }
 
 .about_me_left {
-    opacity:0;
+    opacity: 0;
     height: 708px;
     display: flex;
     align-items: first baseline;
-     >img {
+
+    >img {
         width: 568px;
         height: 568px;
         border-radius: 30px;
         object-fit: cover;
     }
 }
-.about_me_right_align{
+
+.about_me_right_align {
     height: 708px;
     display: flex;
     flex-direction: column;
-    align-items:last baseline;
+    align-items: last baseline;
 }
 
 .about_me_right {
-    opacity:0;
+    opacity: 0;
     width: 568px;
     height: 568px;
     border-radius: 30px;
     color: #3DCFB6;
-    border:1px solid #3DCFB6;
-    background-color: rgb(31,46,43);
+    border: 1px solid #3DCFB6;
+    background-color: rgb(31, 46, 43);
     backdrop-filter: blur(4);
-    padding:32px;
-    >h2{
+    padding: 32px;
+
+    >h2 {
         font-family: 'karla';
         font-size: 24px;
     }
 }
+
 .slide-in-right {
     opacity: 0;
-    transform: translateX(100%); 
-    transition: all 0.8s ease-out; 
+    transform: translateX(100%);
+    transition: all 0.8s ease-out;
 }
 
 .visible {
@@ -58,64 +62,120 @@ section {
         opacity: 0;
         transform: translateX(100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
-@media (max-width:320px){
+
+@media (max-width:375px) {
     section {
         padding-left: 8px;
         padding-right: 8px;
         padding-top: 40px;
-        height:fit-content;
+        height: fit-content;
         background-color: #1c1c1c;
         display: flex;
         flex-direction: column;
-       
+
     }
 
     .about_me_left {
-        opacity:0;
+        opacity: 0;
         height: 300px;
         display: flex;
-        align-items: first baseline;
-         >img {
+        justify-content: center;
+
+        >img {
             width: 300px;
             height: 300px;
             border-radius: 30px;
-            margin-bottom:8px;
+            margin-bottom: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
             object-fit: cover;
-            
+
         }
     }
 
     .about_me_right {
-        opacity:0;
+        opacity: 0;
         width: 280px;
         height: fit-content;
-        padding:8px;
-        >h2{
+        padding: 8px;
+
+        >h2 {
             font-family: 'karla';
             font-size: 24px;
         }
     }
-    .about_me_right_align{
+
+    .about_me_right_align {
         height: fit-content;
         display: flex;
-        align-items:center;
+        align-items: center;
         margin-top: 40px;
         padding: 8px;
-        margin:8px;
+        margin: 8px;
     }
-    .about_me_h3_resp{
-        width:100%;
+
+    .about_me_h3_resp {
+        width: 100%;
         display: flex;
         justify-content: flex-start;
     }
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
 
+    section {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 40px;
+        height: fit-content;
+        background-color: #1c1c1c;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .about_me_left {
+        opacity: 0;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        >img {
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+
+        }
+    }
+
+    .about_me_right {
+        opacity: 0;
+        width: 280px;
+        height: fit-content;
+        padding: 8px;
+
+        >h2 {
+            font-family: 'karla';
+            font-size: 24px;
+        }
+    }
+
+    .about_me_right_align {
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        padding: 8px;
+        margin: 8px;
+    }
+}
