@@ -1,260 +1,271 @@
-section{
-    height:581px;
-    background-color:#1c1c1c;
-    >h3 {
-        padding-bottom: 10px;
-    }
-}
-.portfolio_button{
-    opacity: 0;
-    width:880px;
-    height: 109px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1c1c1c;
-    border: none;
-    padding:32px;
-    border-top:1px solid #3DCFB6;
-    &:hover{
-        background-color: rgb(31,46,43);
-    backdrop-filter: blur(4);
-    }
+section {
+  height: 581px;
+  background-color: #1c1c1c;
+
+  >h3 {
+    padding-bottom: 10px;
+  }
 }
 
-.portfolio_button_last{
-    border-bottom:1px solid #3DCFB6; 
+.portfolio_button {
+  opacity: 0;
+  width: 880px;
+  height: 109px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  border: none;
+  padding: 32px;
+  border-top: 1px solid #3DCFB6;
+
+  &:hover {
+    background-color: rgb(31, 46, 43);
+    backdrop-filter: blur(4);
+  }
+}
+
+.portfolio_button_last {
+  border-bottom: 1px solid #3DCFB6;
 }
 
 .initial-hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-  }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
 
-  .portfolio-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+.portfolio-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .portfolio-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-preview {
-    position: relative;
-    width: 300px; 
-    height: 200px; 
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #000;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #000;
 }
 
 .image-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .image-preview img:hover {
-    transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(4px); 
-    z-index: 1000; 
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
 
-  .overlay-container {
-    width: 80%;
-    max-width: 900px;
-    padding: 80px;
-    background-color: rgb(31, 46, 43); 
-    border: 1px solid #3dcfb6;
-    border-radius: 32px; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
-    text-align: center;
-    color: #ffffff; 
-    position: relative;
-  }
-  
-.close-button-contain{
+
+.overlay-container {
+  margin: 40px;
+  padding: 80px;
+  background-color: rgb(31, 46, 43);
+  border: 1px solid #3dcfb6;
+  border-radius: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.close-button-contain {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-  .close-button {
-    background-color: transparent; 
-    margin:28px;
-    color: #ffffff; 
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .close-button:hover {
-    color: #3dcfb6; 
-  }
-  
-  .next-button-contain{
-    width:100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .next-project-button {
-    all:unset;
-    color: #3dcfb6; 
-    border: none;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-family: 'karla';
-    transition: background-color 0.3s ease;
-    &:hover{
-      color: #ffffff; 
-      >img{
-        transition: transform 0.4s ease; 
-        transform: translate(8px); 
-    }
-    }
-  }
-  
-  .project-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .project-description {
-    width: 48%; 
-    text-align: left;
-    >h3{
-        margin-block-start: 0;
-    }
-  }
-  
-  .project-image {
-    width: 48%; 
-  }
-  
-  .project-image img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 16px; 
-  }
-  
-  .technologies_portfolio{
-    display: flex;
-    
-  }
 
-  .project-picture{
-    width:520px;
-    height:370px;
-  }
+.close-button {
+  background-color: transparent;
+  margin: 28px;
+  color: #ffffff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
 
-  .open-portfolio-button {
-    all: unset;
-    border: 1px solid #FFFFFF;
-    width: 122px;
-    height: 48px;
-    border-radius: 100px;
-    font-family: 'Karla', sans-serif;
-    font-size: 18px;
-    color: #FFFFFF;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: border 0.5s ease, color 0.5s ease; 
+.close-button:hover {
+  color: #3dcfb6;
+}
+
+.next-button-contain {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.next-project-button {
+  all: unset;
+  color: #3dcfb6;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'karla';
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: #ffffff;
+
+    >img {
+      transition: transform 0.4s ease;
+      transform: translate(8px);
+    }
+  }
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.project-description {
+  width: 48%;
+  text-align: left;
+
+  >h3 {
+    margin-block-start: 0;
+  }
+}
+
+.project-image {
+  width: 48%;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.technologies_portfolio {
+  display: flex;
+
+}
+
+.project-picture {
+  width: 520px;
+  height: 370px;
+}
+
+.open-portfolio-button {
+  all: unset;
+  border: 1px solid #FFFFFF;
+  width: 122px;
+  height: 48px;
+  border-radius: 100px;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border 0.5s ease, color 0.5s ease;
 }
 
 .open-portfolio-button:hover {
-    border: 1px solid #3dcfb6;
-    color: #3dcfb6;
+  border: 1px solid #3dcfb6;
+  color: #3dcfb6;
 }
 
 .icon-container {
-    position: relative;
-    width: 20px; 
-    height: 20px;
-    margin-left: 8px; 
-    overflow: hidden; 
-    position: relative;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
 .icon-container img {
-    position: absolute;
-    width: 10px; 
-    height: 10px;
-    bottom: 0; 
-    left: 0;
-    transition: transform 0.4s ease; 
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.4s ease;
 }
 
 .open-portfolio-button:hover .icon-container img {
-    transform: translate(8px, -8px); 
+  transform: translate(8px, -8px);
 }
-  
-  @media (max-width:320px){
-    section{
-        padding-top: 40px;
-        padding-left: 8px;
-        padding-right: 8px;
-        height:fit-content;
-    }
-    h1{
-        font-size: 56px;
-        padding:8px;
-        overflow-wrap: break-word;
-    }
-    p{
-        font-size: 16px;
-        padding:8px;
-        width:fit-content;
-        text-align: center;
-    }
-    h3{
-        padding-left: 8px;
-        padding-right: 8px;
-    }
 
-    .portfolio_button{
-        opacity: 0;
-        width:300px;
-        height: 109px;
-        display: flex;
-        flex-direction: column;
-        justify-content:flex-start;
-        align-items: center;
-        background-color: #1c1c1c;
-        border: none;
-        padding:32px;
-        border-top:1px solid #3DCFB6;
-        &:hover{
-            background-color: rgb(31,46,43);
-        backdrop-filter: blur(4);
-        }
+@media (max-width:320px) {
+  section {
+    padding-top: 40px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: fit-content;
+  }
+
+  h1 {
+    font-size: 56px;
+    padding: 8px;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 8px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  h3 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .portfolio_button {
+    opacity: 0;
+    width: 300px;
+    height: 109px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1c1c1c;
+    border: none;
+    padding: 32px;
+    border-top: 1px solid #3DCFB6;
+
+    &:hover {
+      background-color: rgb(31, 46, 43);
+      backdrop-filter: blur(4);
     }
   }
+}
+
