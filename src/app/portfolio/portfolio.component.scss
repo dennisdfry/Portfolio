@@ -1,10 +1,15 @@
 section {
-  height: 581px;
+  // height: 581px;
   background-color: #1c1c1c;
 
   >h3 {
     padding-bottom: 10px;
   }
+}
+
+.portfolio_seperator{
+  border:1px solid #3DCFB6;
+  margin:4px;
 }
 
 .portfolio_button {
@@ -237,13 +242,6 @@ section {
     overflow-wrap: break-word;
   }
 
-  p {
-    font-size: 16px;
-    padding: 8px;
-    width: fit-content;
-    text-align: center;
-  }
-
   h3 {
     padding-left: 8px;
     padding-right: 8px;
@@ -265,6 +263,10 @@ section {
       background-color: rgb(31, 46, 43);
       backdrop-filter: blur(4);
     }
+  }
+
+  .portfolio_button_last {
+    border-bottom: 1px solid #3DCFB6;
   }
 }
 
@@ -289,11 +291,9 @@ section {
     padding:8px;
   }
 
-  .language_container{
-    display: flex;
-    justify-content: space-evenly;
+  .portfolio-seperator-small{
+    margin:4px;
   }
-  // .portfolio_title{
-  //   text-align: start;
-  // }
+
+  
 }
