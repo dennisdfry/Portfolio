@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './feedback.component.scss'
 })
 export class FeedbackComponent {
-  comments = ['Dennis, your creative approach and attention to detail have greatly advanced the project. Working with you has been truly rewarding!', 'huhu', 'tschüss'];
-
+  comments = ['Dennis, your creative approach and attention to detail have greatly advanced the project. Working with you has been truly rewarding!', 'huhu'];
+  user = ['Peter Pfautsch', 'Benjamin Kloss'];
   currentIndex = 0;
 
   prevComment(): void {

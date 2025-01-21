@@ -106,7 +106,7 @@ label {
   transform: translate(-50%, -50%);
 }
 
-@media(max-width:320px) {
+@media(max-width:375px) {
   h3 {
     font-size: 20px;
    
@@ -125,9 +125,75 @@ label {
     background-color: #1c1c1c;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
+    align-items: center;
     padding-left: 8px;
     padding-right: 8px;
+  }
+
+  .contact_me_left {
+    width: 280px;
+    height: fit-content;
+    padding: 8px;
+    >p{
+      text-align: center;
+    }
+    >div{
+      >p{
+        text-align: center;
+      }
+    }
+  }
+  form {
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    background-color: #1c1c1c;
+    text-align: center;
+  }
+
+  .contact_input,
+.contact_textarea {
+  width: 280px;
+  height: 16px;
+  resize: vertical;
+  text-align: center;
+  overflow-y: hidden;
+}
+.contact_input::placeholder{
+  max-width: 300px; 
+}
+
+label {
+  padding:8px;
+}
+
+.contact_input {
+  padding: 8px;
+}
+}
+@media (min-width:375px) and (max-width:768px){
+  section {
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  h3 {
+    font-size: 20px;
+   
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 56px;
+    word-wrap: break-word; 
   }
 
   .contact_me_left {

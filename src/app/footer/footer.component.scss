@@ -22,7 +22,7 @@ section{
         }
     }
 }
-@media (max-width:320px){
+@media (max-width:375px){
     section{
         padding:8px;
         flex-direction: column;
@@ -38,6 +38,26 @@ section{
     .header_top{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+    }
+}
+@media (min-width:375px) and (max-width:768px){
+    section{
+        padding:8px;
+        flex-direction: column;
+    }
+    .header_mid{
+        display: none;
+    }
+    .header_resp{
+        display: inline;
+        display: flex;
+        justify-content: center;
+    }
+    .header_top{
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
 
     }
