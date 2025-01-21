@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './feedback.component.scss'
 })
 export class FeedbackComponent {
-  comments = ['hallo', 'huhu', 'tschüss'];
+  comments = ['Dennis, your creative approach and attention to detail have greatly advanced the project. Working with you has been truly rewarding!', 'huhu', 'tschüss'];
 
   currentIndex = 0;
 
