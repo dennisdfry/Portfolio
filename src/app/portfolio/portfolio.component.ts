@@ -16,8 +16,10 @@ export class PortfolioComponent {
   isOverlayVisible: boolean = false;
 
   showImage(imagePath: string): void {
+    if (window.innerWidth >= 1024){
     this.hoveredImage = imagePath;
   }
+}
 
   showOverlay(index: number): void {
     this.currentProjectIndex = index;
