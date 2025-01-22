@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-feedback',
@@ -9,37 +9,34 @@ import { CommonModule } from '@angular/common';
   styleUrl: './feedback.component.scss'
 })
 export class FeedbackComponent {
-  comments = ['Dennis, your creative approach and attention to detail have greatly advanced the project. Working with you has been truly rewarding!', 'huhu'];
-  user = ['Peter Pfautsch', 'Benjamin Kloss'];
-  currentIndex = 0;
+  comments = [
+    'Dennis, your creative approach and attention to detail have greatly advanced the project. Working with you has been truly rewarding!',
+    'Your ability to simplify complex problems is remarkable.',
+    'Thank you for being such a supportive colleague!'
+  ];
+  user = ['Peter Pfautsch', 'Benjamin Kloss', 'Lisa Meier'];
+  public currentIndex = 0;
 
-  prevComment(): void {
-    if (this.currentIndex === 0) {
-      this.currentIndex = this.comments.length - 1; 
-    } else {
+  prevComment() {
+    if (this.currentIndex > 0) {
       this.currentIndex--;
     }
   }
 
-nextComment(): void {
-  if (this.currentIndex === this.comments.length - 1) {
-    this.currentIndex = 0; 
-  } else {
-    this.currentIndex++;
+  nextComment() {
+    if (this.currentIndex < this.comments.length - 1) {
+      this.currentIndex++;
+    }
   }
-}
 
-scrollToIndex(index: number): void {
-  this.currentIndex = index;
-}
+  scrollToIndex(index: number) {
+    this.currentIndex = index;
+  }
 
-getCommentClass(index: number): string {
-  return index === this.currentIndex ? 'comment_center' : '';
-}
-
-
-
-getTransform(): string {
-  return `translateX(-${this.currentIndex * 100}%)`;
-}
+  getCommentClass(index: number): string {
+    if (index === this.currentIndex) return 'active';
+    if (index < this.currentIndex) return 'left';
+    if (index > this.currentIndex) return 'right';
+    return '';
+  }
 }

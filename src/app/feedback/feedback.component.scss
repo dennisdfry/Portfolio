@@ -3,6 +3,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 40px;
 
 }
 
@@ -14,20 +15,38 @@ section {
 .feedback_comments_wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .feedback_comments {
-  // min-width: 100%; /* Kommentare horizontal anordnen */
-  
-  border-radius: 32px;
-  padding:8px;
-  margin:8px;
-  text-align: center;
-  border: 1px solid #3DCFB6;
+  flex: 0 0 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback_comments.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feedback_comments.left {
+  opacity: 0.5;
+  transform: translateX(-100%);
+}
+
+.feedback_comments.right {
+  opacity: 0.5;
+  transform: translateX(100%);
 }
 
 .comment_center {
-
+  display: flex;
+  justify-content: center;
 }
 
 .arrow_container {
@@ -71,9 +90,7 @@ section {
 
 @media (max-width:375px) {
   section {
-    // width: 320px;
     padding-top: 40px;
-
   }
 
   h2 {
@@ -86,7 +103,6 @@ section {
 
 @media (min-width:375px) and (max-width:768px) {
   section {
-    // width: 100%;
     padding-top: 40px;
     padding-left: 8px;
     padding-right: 8px;

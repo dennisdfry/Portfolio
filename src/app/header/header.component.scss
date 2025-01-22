@@ -31,7 +31,19 @@ section{
     }
 }
 
-@media (max-width:320px){
+@media (max-width:375px){
+    section{
+        height: 98px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .header_left_resp{
+        display: none;
+    }
+   
+}
+
+@media (min-width:375px) and (max-width:768px){
     section{
         height: 98px;
         padding-left: 8px;

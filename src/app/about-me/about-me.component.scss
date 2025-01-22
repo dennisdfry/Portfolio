@@ -2,7 +2,8 @@ section {
     padding-left: 96px;
     padding-right: 96px;
     padding-top: 144px;
-    height: 708px;
+    padding-bottom: 40px;
+    // height: 708px;
     background-color: #1c1c1c;
     display: flex;
     justify-content: space-between;
@@ -10,7 +11,7 @@ section {
 
 .about_me_left {
     opacity: 0;
-    height: 708px;
+    // height: 708px;
     display: flex;
     align-items: first baseline;
 
@@ -23,7 +24,7 @@ section {
 }
 
 .about_me_right_align {
-    height: 708px;
+    // height: 708px;
     display: flex;
     flex-direction: column;
     align-items: last baseline;
@@ -176,6 +177,54 @@ section {
         align-items: center;
         margin-top: 40px;
         padding: 8px;
-        margin: 8px;
+        // margin: 8px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    section {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        height: fit-content;
+        background-color: #1c1c1c;
+        // display: flex;
+        // flex-direction: column-reverse;
+        // justify-content: space-between;
+        // flex-direction: column;
+
+    }
+    .about_me_left {
+        opacity: 0;
+        // height: 300px;
+        display: flex;
+        justify-content: center;
+        margin-right: 4px;
+        >img {
+            width: 350px;
+            height: 350px;
+            border-radius: 30px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+
+        }
+    }
+    
+    .about_me_right {
+        opacity: 0;
+        width: 350px;
+        height: 350px;
+        height: fit-content;
+        padding: 8px;
+        margin-left: 8px;
+
+        >h2 {
+            font-family: 'karla';
+            font-size: 24px;
+        }
+    }
+}
+

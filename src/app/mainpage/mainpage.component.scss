@@ -179,9 +179,7 @@ h2 {
 @media (max-width: 375px) {
 
     h1 {
-        font-family: 'karla';
         font-size: 62px;
-        color: #D9D9D9;
         opacity: 0;
         text-align: center;
     }
@@ -203,11 +201,7 @@ h2 {
         display: flex;
         justify-content: center;
         >button {
-            all: unset;
-            font-family: 'karla';
             font-size: 18px;
-            color: #FFFFFF;
-            border: 1px solid #FFFFFF;
             border-radius: 100px;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -324,6 +318,9 @@ h2 {
             }
         }
     }
+}
+@media (min-width: 768px) and (max-width: 1440px){
+
 }
 
 
