@@ -67,6 +67,5 @@ body{
 .limited-container {
   max-width: 1440px;
   margin: 0 auto; /* Zentriert den Container */
-  padding: 0 16px; /* Fügt etwas Innenabstand hinzu, damit der Inhalt nicht direkt am Rand klebt */
   box-sizing: border-box; /* Stellt sicher, dass das Padding in der Breite enthalten ist */
 }

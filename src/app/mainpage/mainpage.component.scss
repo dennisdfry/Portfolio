@@ -65,6 +65,9 @@ h2 {
 }
 
 .mainpage_banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100vw;
     height: 62px;
     display: flex;
@@ -75,7 +78,7 @@ h2 {
     transform: skewY(-3deg);
     margin-top: 8px;
     margin-bottom: calc(62px * 0.7);
-    overflow: hidden;
+    z-index: 9999; 
 }
 
 .mainpage_banner>.banner-content {
@@ -83,7 +86,6 @@ h2 {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    padding: 0 96px;
     animation: moveBanner 10s linear infinite;
 }
 
@@ -268,7 +270,7 @@ h2 {
     }
 
     .lateral_scroll_section_left {
-        position: absolute; 
+        position: relative; 
         bottom: 0; 
         left: 8px; 
         display: flex;
@@ -276,6 +278,8 @@ h2 {
         align-items: center;
         gap: 10px; 
     }
+
+ 
 
     .lateral_scroll_section_right {
         height: 256px;

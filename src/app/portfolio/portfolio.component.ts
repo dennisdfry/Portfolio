@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 import { CommonModule } from '@angular/common';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,10 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  constructor(private renderer: Renderer2) {}
   hoveredImage: string | null = null;
   currentProjectIndex: number = 0;
   isOverlayVisible: boolean = false;
+ 
 
   showImage(imagePath: string): void {
     if (window.innerWidth >= 920){
@@ -33,6 +35,8 @@ export class PortfolioComponent {
   hideOverlay(): void {
     this.isOverlayVisible = false;
   }
+
+
 
   goToNextProject(): void {
     this.currentProjectIndex = (this.currentProjectIndex + 1) % this.projects.length;

@@ -1,15 +1,16 @@
 section {
-  
+
   background-color: #1c1c1c;
   padding-top: 40px;
+
   >h3 {
     padding-bottom: 10px;
   }
 }
 
-.portfolio_seperator{
-  border:1px solid #3DCFB6;
-  margin:4px;
+.portfolio_seperator {
+  border: 1px solid #3DCFB6;
+  margin: 4px;
 }
 
 .portfolio_button {
@@ -42,7 +43,7 @@ section {
 
 .portfolio-container {
   display: flex;
-justify-content: flex-start;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -86,7 +87,9 @@ justify-content: flex-start;
   backdrop-filter: blur(4px);
   z-index: 1000;
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 
 .overlay-container {
   margin: 40px;
@@ -247,6 +250,10 @@ justify-content: flex-start;
     padding-right: 8px;
   }
 
+  .portfolio-container {
+    justify-content: center;
+  }
+
   .portfolio_button {
     opacity: 0;
     width: 300px;
@@ -268,35 +275,51 @@ justify-content: flex-start;
   .portfolio_button_last {
     border-bottom: 1px solid #3DCFB6;
   }
+
+  .overlay-container {
+    max-width: 280px;
+    margin: 40px;
+    padding: 80px;
+    background-color: rgb(31, 46, 43);
+    border: 1px solid #3dcfb6;
+    border-radius: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+  }
 }
 
-@media (min-width: 375px) and (max-width: 768px){
-  section{
-    padding-top:40px;
+@media (min-width: 375px) and (max-width: 768px) {
+  section {
+    padding-top: 40px;
     padding-left: 8px;
-    padding-right:8px;
-    >h3{
+    padding-right: 8px;
+
+    >h3 {
       text-align: center;
     }
   }
-  .portfolio-container{
+
+  .portfolio-container {
     display: flex;
     justify-content: center;
   }
+
   .portfolio_button {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding:8px;
+    padding: 8px;
   }
 
-  .portfolio-seperator-small{
-    margin:4px;
+  .portfolio-seperator-small {
+    margin: 4px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
   .portfolio_button {
     opacity: 0;
     width: 680px;
@@ -308,18 +331,18 @@ justify-content: flex-start;
     border: none;
     padding: 32px;
     border-top: 1px solid #3DCFB6;
-  
+
     &:hover {
       background-color: rgb(31, 46, 43);
       backdrop-filter: blur(4);
     }
   }
 
-  .portfolio-container{
+  .portfolio-container {
     display: flex;
   }
 
-  section{
-    padding-top:40px;
+  section {
+    padding-top: 40px;
   }
 }
