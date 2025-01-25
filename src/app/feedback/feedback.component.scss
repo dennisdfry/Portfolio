@@ -1,15 +1,155 @@
+// section {
+//   background-color: #1c1c1c;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding-top: 40px;
+
+// }
+
+// .comment_container {
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+// .feedback_comments_wrapper {
+//   display: flex;
+//   transition: transform 0.5s ease-in-out;
+//   will-change: transform;
+// }
+
+// .feedback_comments {
+//   flex: 0 0 100%;
+//   opacity: 0;
+//   transform: scale(0.8);
+//   transition: opacity 0.5s ease, transform 0.5s ease;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+//   border: 1px solid #3DCFB6;
+//   background-color: rgba(61, 207, 182, 0.5);
+//   border-radius: 30px;
+// }
+
+// .feedback_comments.active {
+//   opacity: 1;
+//   transform: scale(1);
+// }
+
+// .feedback_comments.left {
+//   opacity: 0.5;
+//   transform: translateX(-100%);
+// }
+
+// .feedback_comments.right {
+//   opacity: 0.5;
+//   transform: translateX(100%);
+// }
+// .comment_container {
+//   width: 100%;
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .feedback_comments_wrapper {
+//   display: flex;
+//   transition: transform 0.5s ease-in-out;
+//   will-change: transform;
+//   width: 100%; /* Optional: Kann die Breite des Containers anpassen */
+//   justify-content: center; /* Sorgt dafür, dass Inhalte in der Mitte bleiben */
+// }
+
+// .feedback_comments {
+//   flex: 0 0 60%; /* Begrenze die Breite des Feedback-Kommentars */
+//   max-width: 600px; /* Optional: Setze eine maximale Breite */
+//   opacity: 0;
+//   transform: scale(0.8);
+//   transition: opacity 0.5s ease, transform 0.5s ease;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+//   border: 1px solid #3DCFB6;
+//   background-color: rgba(61, 207, 182, 0.5);
+//   border-radius: 30px;
+// }
+
+// .feedback_comments.active {
+//   opacity: 1;
+//   transform: scale(1);
+// }
+
+// .feedback_comments.left {
+//   opacity: 0.5;
+//   transform: translateX(-120%); /* Links außerhalb des Containers */
+// }
+
+// .feedback_comments.right {
+//   opacity: 0.5;
+//   transform: translateX(120%); /* Rechts außerhalb des Containers */
+// }
+
+// .comment_center {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .arrow_container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 20px;
+// }
+
+// .arrow {
+//   cursor: pointer;
+//   width: 40px;
+//   height: 40px;
+//   opacity: 0.8;
+//   transition: opacity 0.3s ease;
+// }
+
+// .arrow.disabled {
+//   opacity: 0.3;
+//   pointer-events: none;
+// }
+
+// .scrollbar_container {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+// }
+
+// .scrollbar_point {
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 50%;
+//   background-color: gray;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+// }
+
+// .scrollbar_point.active {
+//   background-color: white;
+// }
+
 section {
   background-color: #1c1c1c;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
-
 }
 
 .comment_container {
   width: 100%;
+  max-width: 800px;
   overflow: hidden;
+  position: relative;
 }
 
 .feedback_comments_wrapper {
@@ -20,6 +160,8 @@ section {
 
 .feedback_comments {
   flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 20px;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -27,6 +169,10 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  border: 1px solid #3dcfb6;
+  background-color: rgba(61, 207, 182, 0.5);
+  border-radius: 30px;
 }
 
 .feedback_comments.active {
@@ -35,57 +181,55 @@ section {
 }
 
 .feedback_comments.left {
-  opacity: 0.5;
+  opacity: 0;
   transform: translateX(-100%);
 }
 
 .feedback_comments.right {
-  opacity: 0.5;
+  opacity: 0;
   transform: translateX(100%);
-}
-
-.comment_center {
-  display: flex;
-  justify-content: center;
 }
 
 .arrow_container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  margin-top: 20px;
 }
 
 .arrow {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
+.arrow:hover {
+  opacity: 1;
+}
+
 .arrow.disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   pointer-events: none;
 }
 
 .scrollbar_container {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  gap: 8px;
+  margin: 0 20px;
 }
 
 .scrollbar_point {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
+  background-color: #3dcfb6;
   border-radius: 50%;
-  background-color: gray;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .scrollbar_point.active {
-  background-color: white;
+  opacity: 1;
 }
 
 @media (max-width:375px) {

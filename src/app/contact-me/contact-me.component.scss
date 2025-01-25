@@ -9,6 +9,7 @@ form {
   width: 616px;
   height: 550px;
   background-color: #1c1c1c;
+  margin-left: 16px;
 }
 
 label {
@@ -150,6 +151,8 @@ label {
     height: fit-content;
     background-color: #1c1c1c;
     text-align: center;
+    margin-left: 0px;
+  
   }
 
   .contact_input,
@@ -215,6 +218,7 @@ label {
     height: fit-content;
     background-color: #1c1c1c;
     text-align: center;
+    margin-left: 0px;
   }
 
   .contact_input,
