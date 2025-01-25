@@ -14,11 +14,7 @@
 
 body{
     margin:0px;
-    background: linear-gradient(45deg,
-    #1c1c1c 40%,
-    #08463b 100%);
-    display: flex;
-    justify-content: center;
+    background: #1c1c1c ;
 }
 
 @keyframes slideInLeft {
@@ -68,4 +64,9 @@ body{
   opacity: 1; 
 }
 
-
+.limited-container {
+  max-width: 1440px;
+  margin: 0 auto; /* Zentriert den Container */
+  padding: 0 16px; /* Fügt etwas Innenabstand hinzu, damit der Inhalt nicht direkt am Rand klebt */
+  box-sizing: border-box; /* Stellt sicher, dass das Padding in der Breite enthalten ist */
+}

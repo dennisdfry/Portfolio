@@ -24,7 +24,7 @@ section {
 }
 
 .about_me_right_align {
-    // height: 708px;
+    
     display: flex;
     flex-direction: column;
     align-items: last baseline;
@@ -32,7 +32,7 @@ section {
 
 .about_me_right {
     opacity: 0;
-    width: 568px;
+    max-width: 568px;
     height: 568px;
     border-radius: 30px;
     color: #3DCFB6;
@@ -141,11 +141,13 @@ section {
         flex-direction: column;
 
     }
+
     .about_me_left {
         opacity: 0;
         height: 300px;
         display: flex;
         justify-content: center;
+
         >img {
             width: 300px;
             height: 300px;
@@ -194,12 +196,14 @@ section {
         // flex-direction: column;
 
     }
+
     .about_me_left {
         opacity: 0;
         // height: 300px;
         display: flex;
         justify-content: center;
         margin-right: 4px;
+
         >img {
             width: 350px;
             height: 350px;
@@ -212,7 +216,7 @@ section {
 
         }
     }
-    
+
     .about_me_right {
         opacity: 0;
         width: 350px;
@@ -227,4 +231,3 @@ section {
         }
     }
 }
-
