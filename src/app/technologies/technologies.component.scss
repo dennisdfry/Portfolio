@@ -1,5 +1,5 @@
 section {
-    padding-top: 144px;
+    // padding-top: 144px;
     background: radial-gradient(circle at left, #08463b 0%, #1c1c1c 22%);
     height: fit-content;
     >h3 {
@@ -27,6 +27,7 @@ section {
     opacity: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 632px;
     height: fit-content;
     gap: 56px;
@@ -74,6 +75,7 @@ section {
         >h3 {
             margin-block-start: 0;
             font-size: 24px;
+            padding-left: 8px;
         }
     }
 
@@ -144,6 +146,9 @@ section {
             text-align: center;
         }
     }
+    h2{
+        overflow-wrap: break-word;
+    }
 
     .technologies_contain {
         display: flex;
@@ -203,5 +208,8 @@ section {
         border: 1px solid #3DCFB6;
         background-color: rgb(31, 46, 43);
         backdrop-filter: blur(4);
+    }
+    h2{
+        overflow-wrap: break-word;
     }
 }
