@@ -1,26 +1,4 @@
-// import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-// import { provideRouter } from '@angular/router';
-// import { routes } from './app.routes';
-// import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-// import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
-// export const firebaseConfig = {
-//   apiKey: "AIzaSyA7uh86Fyac-fXbpic-OrsTP-V_jNF6CpI",
-//   authDomain: "portfolio-579ba.firebaseapp.com",
-//   projectId: "portfolio-579ba",
-//   storageBucket: "portfolio-579ba.appspot.com",
-//   messagingSenderId: "924498261196",
-//   appId: "1:924498261196:web:98f87af6de8088412f3e69",
-//   measurementId: "G-MQ0NKPZNWH"
-// };
-
-// export const appConfig: ApplicationConfig = {
-//   providers: [
-//     provideRouter(routes),
-//     importProvidersFrom(provideFirebaseApp(() => initializeApp(firebaseConfig))),
-//     importProvidersFrom(provideFirestore(() => getFirestore())),
-//   ],
-// };
 
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -44,7 +22,7 @@ export const firebaseConfig = {
 
 // Übersetzungs-Loader Factory
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/language/', '.json');
 }
 
 export const appConfig: ApplicationConfig = {

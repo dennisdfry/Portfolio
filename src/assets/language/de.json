@@ -1,0 +1,107 @@
+{
+    "HEADER": {
+        "ABOUT_ME": "Über mich",
+        "SKILLS": "Fähigkeiten",
+        "PROJECTS": "Projekte"
+    },
+    "MAINPAGE": {
+        "ROLE": "Frontend-Entwickler",
+        "NAME": "Dennis Freyer",
+        "CHECK_WORK": "Sieh dir meine Arbeit an",
+        "CONTACT_ME": "Kontaktiere mich",
+        "AVAILABLE": "Verfügbar für Remote-Arbeit",
+        "BASED": "Standort: Leipzig",
+        "OPEN_TO_WORK": "Offen für neue Herausforderungen"
+    },
+    "ABOUT_ME": {
+        "TITLE": "Über mich",
+        "WHO_I_AM": "Wer ich bin",
+        "INTRO": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Leipzig...",
+        "HIGHLIGHT_1": "Flexibel in Bezug auf Arbeitsumgebungen...",
+        "HIGHLIGHT_2": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen...",
+        "HIGHLIGHT_3": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben..."
+    },
+    "TECHNOLOGIES": {
+        "TITLE": "Technologien",
+        "SKILL_SET": "Fähigkeiten",
+        "INTRO": "Meine Reise hat mich durch verschiedene Projekte geführt, bei denen ich eine Vielzahl von Frontend-Technologien und Konzepten eingesetzt habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung auf dem neuesten Stand zu bleiben.",
+        "NEED_ANOTHER_SKILL": "Du brauchst eine andere Fähigkeit?",
+        "CONTACT_ME": "Zögere nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern.",
+        "LETS_TALK": "Lass uns sprechen"
+    },
+    "PORTFOLIO": {
+        "TITLE": "Portfolio",
+        "PROJECT_NUMBER": "0{{currentProjectIndex +1}}",
+        "WHAT_IS_THIS": "Worum geht es bei diesem Projekt?",
+        "TECHNOLOGIES_USED": "Verwendete Technologien",
+        "GITHUB": "GitHub",
+        "LIVE_TEST": "Live Test",
+        "NEXT_PROJECT": "Nächstes Projekt",
+        "PROJECTS": {
+            "JOIN": {
+                "TITLE": "Join",
+                "DESCRIPTION": "Ein Aufgabenverwaltungs-Tool, inspiriert von Kanban, um Aufgaben einfach zu erstellen und zu organisieren.",
+                "TECHNOLOGIES": [
+                    "Angular",
+                    "TypeScript",
+                    "HTML",
+                    "CSS",
+                    "Firebase"
+                ]
+            },
+            "EL_POLLO_LOCO": {
+                "TITLE": "El Pollo Loco",
+                "DESCRIPTION": "Ein 2D Jump 'n' Run-Spiel mit Animationen und verschiedenen Gegnern.",
+                "TECHNOLOGIES": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ]
+            },
+            "DA_BUBBLE": {
+                "TITLE": "Da Bubble",
+                "DESCRIPTION": "Eine Echtzeit-Chat-App mit Firebase-Backend und Angular.",
+                "TECHNOLOGIES": [
+                    "Angular",
+                    "Firebase",
+                    "TypeScript"
+                ]
+            }
+        }
+    },
+    "FEEDBACK": {
+        "TITLE": "Was meine Kollegen über mich sagen",
+        "COMMENTS": {
+            "USER_1": "Dennis ist ein sehr engagierter Frontend-Entwickler und arbeitet stets mit viel Leidenschaft an Projekten.",
+            "USER_2": "Er ist sehr hilfsbereit und hat immer eine Lösung parat, wenn es Probleme gibt.",
+            "USER_3": "Mit seiner kreativen Herangehensweise und seinem technischen Wissen bereichert er jedes Projekt."
+        }
+    },
+    "CONTACT": {
+        "TITLE": "Kontaktieren Sie mich",
+        "HEADER": "Lassen Sie uns zusammenarbeiten",
+        "SUBHEADER": "Haben Sie ein Problem zu lösen?",
+        "DESCRIPTION": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und zu Ihren Projekten mit meiner Arbeit beizutragen.",
+        "CALL_TO_ACTION": "Benötigen Sie einen Frontend-Entwickler? Lassen Sie uns sprechen!",
+        "FORM": {
+            "NAME_LABEL": "Wie heißt du?",
+            "NAME_PLACEHOLDER": "Geben Sie Ihren Namen ein",
+            "NAME_TITLE": "Nur Buchstaben und Leerzeichen sind erlaubt.",
+            "EMAIL_LABEL": "Wie lautet Ihre E-Mail?",
+            "EMAIL_PLACEHOLDER": "Geben Sie Ihre E-Mail-Adresse ein",
+            "MESSAGE_LABEL": "Wie kann ich Ihnen helfen?",
+            "MESSAGE_PLACEHOLDER": "Schreiben Sie Ihre Nachricht hier...",
+            "PRIVACY_POLICY": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
+            "SUBMIT_BUTTON": "Sagen Sie Hallo ;)"
+        }
+    },
+    "FOOTER": {
+        "JOB": "Webentwickler",
+        "LOCATION": "Leipzig, Deutschland",
+        "COPYRIGHT": "Dennis Freyer",
+        "GITHUB": "GitHub",
+        "LINKEDIN": "LinkedIn",
+        "EMAIL": "E-Mail",
+        "LEGAL": "Impressum"
+    }
+}

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 import { CommonModule } from '@angular/common';
 import { Renderer2 } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [ScrollAnimateDirective, CommonModule],
+  imports: [ScrollAnimateDirective, CommonModule, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -102,4 +103,9 @@ export class PortfolioComponent {
     Firebase: '../../assets/img/portfolio/FIRE.png',
     JavaScript: '../../assets/img/portfolio/JS.png'
   };
+  // isLastTech(tech: string): boolean {
+  //   return this.currentProject.technologies.indexOf(tech) === this.currentProject.technologies.length - 1;
+  // }
 }
+
+

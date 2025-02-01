@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service'; // Importiere den Firebase-Service
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';  // Importiere das FormsModule, um ngModel zu verwenden
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule, TranslateModule ],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })

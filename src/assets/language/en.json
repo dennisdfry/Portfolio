@@ -1,0 +1,107 @@
+{
+  "HEADER": {
+    "ABOUT_ME": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects"
+  },
+  "MAINPAGE": {
+    "ROLE": "Frontend Developer",
+    "NAME": "Dennis Freyer",
+    "CHECK_WORK": "Check my work",
+    "CONTACT_ME": "Contact me",
+    "AVAILABLE": "Available for remote work",
+    "BASED": "Based in Leipzig",
+    "OPEN_TO_WORK": "Open to work"
+  },
+  "ABOUT_ME": {
+    "TITLE": "About me",
+    "WHO_I_AM": "Who I Am",
+    "INTRO": "Hi, I'm a German-speaking Frontend Developer based in Leipzig...",
+    "HIGHLIGHT_1": "Flexible in terms of working environments...",
+    "HIGHLIGHT_2": "I am open-minded and always looking for personal challenges...",
+    "HIGHLIGHT_3": "In my profession, programming isn't just about writing code..."
+  },
+  "TECHNOLOGIES": {
+    "TITLE": "Technologies",
+    "SKILL_SET": "Skill Set",
+    "INTRO": "My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to continuously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+    "NEED_ANOTHER_SKILL": "You need another skill?",
+    "CONTACT_ME": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "LETS_TALK": "Let's Talk"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "PROJECT_NUMBER": "0{{currentProjectIndex +1}}",
+    "WHAT_IS_THIS": "What is this project about?",
+    "TECHNOLOGIES_USED": "Technologies Used",
+    "GITHUB": "GitHub",
+    "LIVE_TEST": "Live Test",
+    "NEXT_PROJECT": "Next Project",
+    "PROJECTS": {
+      "JOIN": {
+        "TITLE": "Join",
+        "DESCRIPTION": "A task management tool inspired by Kanban for creating and organizing tasks easily.",
+        "TECHNOLOGIES": [
+          "Angular",
+          "TypeScript",
+          "HTML",
+          "CSS",
+          "Firebase"
+        ]
+      },
+      "EL_POLLO_LOCO": {
+        "TITLE": "El Pollo Loco",
+        "DESCRIPTION": "A 2D jump 'n' run game with animations and various enemies.",
+        "TECHNOLOGIES": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      },
+      "DA_BUBBLE": {
+        "TITLE": "Da Bubble",
+        "DESCRIPTION": "A real-time chat app with a Firebase backend and Angular.",
+        "TECHNOLOGIES": [
+          "Angular",
+          "Firebase",
+          "TypeScript"
+        ]
+      }
+    }
+  },
+  "FEEDBACK": {
+    "TITLE": "What my colleagues say about me",
+    "COMMENTS": {
+      "USER_1": "Dennis is a very dedicated Frontend Developer who always works with great passion on projects.",
+      "USER_2": "He is very helpful and always has a solution ready when problems arise.",
+      "USER_3": "His creative approach and technical knowledge enrich every project."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact me",
+    "HEADER": "Let's work together",
+    "SUBHEADER": "Got a problem to solve?",
+    "DESCRIPTION": "Contact me through this form. I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.",
+    "CALL_TO_ACTION": "Need a Frontend developer? Let's talk!",
+    "FORM": {
+      "NAME_LABEL": "What's your name?",
+      "NAME_PLACEHOLDER": "Enter your name",
+      "NAME_TITLE": "Only letters and spaces are allowed.",
+      "EMAIL_LABEL": "What's your email?",
+      "EMAIL_PLACEHOLDER": "Enter your email",
+      "MESSAGE_LABEL": "How can I help you?",
+      "MESSAGE_PLACEHOLDER": "Write your message here...",
+      "PRIVACY_POLICY": "I've read the privacy policy and agree to the processing of my data as outlined.",
+      "SUBMIT_BUTTON": "Say Hello ;)"
+    }
+  },
+  "FOOTER": {
+    "JOB": "Web Developer",
+    "LOCATION": "Leipzig, Germany",
+    "COPYRIGHT": "Dennis Freyer",
+    "GITHUB": "GitHub",
+    "LINKEDIN": "LinkedIn",
+    "EMAIL": "Email",
+    "LEGAL": "Legal Notice"
+  }
+}

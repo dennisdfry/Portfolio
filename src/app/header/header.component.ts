@@ -7,20 +7,32 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   @Output() languageChanged = new EventEmitter<string>();
-
   isDropdownOpen = false;
+  isDefaultLanguage = true;
+
+  constructor(private translateConfigService: TranslateConfigService) {}
+
+  
 
   openDropDown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
 
-  changeLanguage(lang: string) {
-    this.languageChanged.emit(lang);
-  }
+  switchLanguage(lang: string) {
+    if(this.isDefaultLanguage){
+     lang = 'en';
+    this.isDefaultLanguage = !this.isDefaultLanguage}else{
+      lang = 'de';
+      this.isDefaultLanguage = !this.isDefaultLanguage
+    }
+    console.log(lang)
+    this.translateConfigService.changeLanguage(lang); 
+    this.languageChanged.emit(lang); 
+}
 }

@@ -1,9 +1,10 @@
 import { Component , EventEmitter, Output} from '@angular/core';
 import { ScrollAnimateDirective } from '../directives/scroll-animate.directive'; 
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-technologies',
   standalone: true,
-  imports: [ScrollAnimateDirective],
+  imports: [ScrollAnimateDirective, TranslateModule],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss'
 })
