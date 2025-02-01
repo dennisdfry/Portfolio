@@ -6,8 +6,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class TranslateConfigService {
     constructor(private translate: TranslateService) {
-        this.translate.setDefaultLang('de'); // Standard-Sprache Deutsch setzen
-        this.translate.use(localStorage.getItem('language') || 'de'); // Gespeicherte Sprache verwenden
+        this.translate.setDefaultLang('en'); // Standard-Sprache Deutsch setzen
+        this.translate.use(localStorage.getItem('language') || 'en'); // Gespeicherte Sprache verwenden
       }
     
       changeLanguage(lang: string) {

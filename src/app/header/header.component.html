@@ -1,30 +1,6 @@
-<!-- <section>
-  <div class="header_left">
-    <img (click)="switchLanguage('de')" class="header_left_resp" src="../../assets/img/header/Property 1=Default@2x.png" alt="">
-    <a class="header_left_resp" href="">About me</a>
-    <a class="header_left_resp" href="">Skills</a>
-    <a class="header_left_resp" href="">Projects</a>
-  </div>
-  <div class="dropdown_contain">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-      <text class="text" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">
-        <tspan class="highlight">D</tspan>
-        <tspan class="normal">F</tspan>
-      </text>
-    </svg>
-    <div (click)="openDropDown()" class="dropdown_menu_header">
-      <img src="../../assets/img/header/menu.png" alt="">
-    </div>
-  </div>
-  <div class="dropdown-menu" [ngClass]="{ 'dropdown-open': isDropdownOpen }">
-    <a href="">About me</a>
-    <a href="">Skills</a>
-    <a href="">Projects</a>
-  </div>
-</section> -->
 <section>
   <div class="header_left">
-    <img (click)="switchLanguage('de')" class="header_left_resp" src="../../assets/img/header/Property 1=Default@2x.png" alt="">
+    <img [src]="defaultImage" (click)="switchLanguage('de')" class="header_left_resp"  alt="">
     <a class="header_left_resp" href="">{{ 'HEADER.ABOUT_ME' | translate }}</a>
     <a class="header_left_resp" href="">{{ 'HEADER.SKILLS' | translate }}</a>
     <a class="header_left_resp" href="">{{ 'HEADER.PROJECTS' | translate }}</a>
