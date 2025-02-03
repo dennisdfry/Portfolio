@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component,HostListener, EventEmitter, Output } from '@angular/core';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -13,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   @Output() languageChanged = new EventEmitter<string>();
+  
   isDropdownOpen = false;
   isDefaultLanguage = false;
   defaultImage = "../../assets/img/header/Property 1=Default@2x.png";
@@ -23,9 +24,19 @@ export class HeaderComponent {
   openDropDown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
+  @HostListener('document:click', ['$event'])
+  closeDropdownOnClickOutside(event: Event) {
+    const dropdown = document.querySelector('.dropdown-menu');
+    const dropdownToggle = document.querySelector('.dropdown_image_contain');
+   
+    if (dropdown && dropdownToggle &&
+        !dropdown.contains(event.target as Node) &&
+        !dropdownToggle.contains(event.target as Node)) {
+      this.isDropdownOpen = false;
+    }
+  }
 
   switchLanguage(lang: string) {
-    
     if (this.isDefaultLanguage) {
       lang = 'en';
       this.isDefaultLanguage = !this.isDefaultLanguage;
@@ -35,7 +46,6 @@ export class HeaderComponent {
       this.isDefaultLanguage = !this.isDefaultLanguage
       this.defaultImage = '../../assets/img/header/Property 1=Deutsch.png';
     }
-    console.log(lang)
     this.translateConfigService.changeLanguage(lang);
     this.languageChanged.emit(lang);
   }
