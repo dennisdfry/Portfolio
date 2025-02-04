@@ -7,14 +7,13 @@ import { firebaseConfig } from '../../firebase.config'; // Dein Firebase-Konfigu
   providedIn: 'root',
 })
 export class FirebaseService {
-  private app = initializeApp(firebaseConfig); // Firebase initialisieren
-  private db = getFirestore(this.app); // Firestore-Datenbank
+  private app = initializeApp(firebaseConfig); 
+  private db = getFirestore(this.app); 
 
   constructor() {
     console.log('Firebase Service initialized');
   }
 
-  // Diese Methode speichert Daten in der Firestore-Datenbank
   async saveMessage(data: { name: string; email: string; message: string }) {
     try {
       const docRef = await addDoc(collection(this.db, 'messages'), data);

@@ -230,6 +230,11 @@ label {
     font-size: 56px;
     word-wrap: break-word;
   }
+  p{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
 
   .contact_me_left {
     width: 280px;
@@ -273,5 +278,31 @@ label {
 
   .contact_input {
     padding: 8px;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px){
+  .contact_me_left {
+    width: 350px;
+    height: fit-content;
+    padding: 8px;
+  }
+
+  form {
+    flex-direction: column;
+    width: 350px;
+    height: fit-content;
+    background-color: #1c1c1c;
+    text-align: center;
+    margin-left: 0px;
+  }
+  h1 {
+    font-size: 56px;
+    word-wrap: break-word;
+  }
+  p{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
   }
 }

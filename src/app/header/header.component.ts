@@ -43,7 +43,7 @@ export class HeaderComponent {
       this.defaultImage = "../../assets/img/header/Property 1=Default@2x.png";
     } else {
       lang = 'de';
-      this.isDefaultLanguage = !this.isDefaultLanguage
+      this.isDefaultLanguage = !this.isDefaultLanguage;
       this.defaultImage = '../../assets/img/header/Property 1=Deutsch.png';
     }
     this.translateConfigService.changeLanguage(lang);

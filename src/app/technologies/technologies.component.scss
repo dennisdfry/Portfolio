@@ -1,5 +1,4 @@
 section {
-    // padding-top: 144px;
     background: radial-gradient(circle at left, #08463b 0%, #1c1c1c 22%);
     height: fit-content;
     >h3 {
@@ -15,7 +14,6 @@ section {
 .technologies_left {
     opacity: 0;
     width: 520px;
-    height: 503px;
     padding: 32px;
     border: 1px solid #3DCFB6;
     background-color: rgb(31, 46, 43);
@@ -181,38 +179,49 @@ section {
             height: 116px;
         }
     }
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
+    .technologies_contain {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch; /* Beide Container haben gleiche Höhe */
+        gap: 16px;
+    }
+
+    .technologies_left, 
     .technologies_right {
-        max-width: 360px;
+        flex: 1; /* Gleiche Breite */
+        max-width: 50%;
+        min-height: 100%; /* Beide Container passen sich gegenseitig an */
+        height: auto;
+    }
+
+    .technologies_right {
         opacity: 0;
-        padding-left: 8px;
-        padding-right: 8px;
-        margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: fit-content;
-        height: fit-content;
-        gap: 16px;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+    }
 
-        >img {
-            gap: 8px;
-            width: 104px;
-            height: 116px;
-        }
+    .technologies_right img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
     }
 
     .technologies_left {
         opacity: 0;
-        width: 360px;
-        height: fit-content;
-        padding: 8px;
+        padding: 16px;
         border: 1px solid #3DCFB6;
         background-color: rgb(31, 46, 43);
-        backdrop-filter: blur(4);
+        backdrop-filter: blur(4px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Inhalt vertikal zentrieren */
     }
     h2{
         overflow-wrap: break-word;

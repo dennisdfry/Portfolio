@@ -370,7 +370,7 @@ h2 {
     .lateral_scroll_section_left {
         position: absolute; /* Positioniert sich relativ zum `section` */
         bottom: 0; /* Am unteren Rand der Section */
-        left:40px; /* Abstand von der linken Seite */
+        left:96px; /* Abstand von der linken Seite */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -383,7 +383,7 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        right: 40px;
+        right: 96px;
         bottom: 0;
         gap: 24px;
     }
@@ -404,7 +404,7 @@ h2 {
     .lateral_scroll_section_left {
         position: absolute;
         bottom: 0; 
-        left:20%; 
+        left: max(20%, calc(50% - 1440px)); 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -417,7 +417,7 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        right: 20%;
+        right: max(20%, calc(50% - 1440px));
         bottom: 0;
         gap: 24px;
     }
