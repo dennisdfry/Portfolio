@@ -73,26 +73,26 @@ section {
 }
 
 .overlay {
-  position: fixed; /* Fixiert das Overlay über die MainPage */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7); /* Dunkler Hintergrund mit Transparenz */
+  background: rgba(0, 0, 0, 0.7); 
   display: flex;
-  justify-content: center; /* Zentriert den Overlay-Container horizontal */
-  align-items: center; /* Zentriert den Overlay-Container vertikal */
-  z-index: 1000; /* Stellt sicher, dass das Overlay über allem liegt */
+  justify-content: center; 
+  align-items: center;
+  z-index: 1000; 
 }
 .overlay-container {
   position: relative;
-  max-width: calc(100vw - 80px); /* Verhindert, dass es breiter als der Bildschirm wird (40px Rand links/rechts) */
-  max-height: calc(100vh - 80px); /* Verhindert, dass es höher als der Bildschirm wird (40px Rand oben/unten) */
-  background: #1e1e1e; /* Dunkler Hintergrund */
+  max-width: calc(100vw - 80px); 
+  max-height: calc(100vh - 80px); 
+  background: #1e1e1e; 
   padding: 20px;
   border-radius: 32px;
   border: 1px solid #3dcfb6;
-  overflow: auto; /* Falls der Inhalt zu groß ist, wird gescrollt */
+  overflow: auto; 
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -248,8 +248,6 @@ section {
     overflow-wrap: break-word;
   }
 
-
-
   .portfolio-container {
     justify-content: center;
   }
@@ -277,21 +275,6 @@ section {
     border-bottom: 1px solid #3DCFB6;
   }
 
- 
-  .project-content {
-    max-width: 280px;
-    height:500px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    margin-top: 20px;
-  }
-  .project-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
   .project-description {
     width: 0;
     text-align: left;
@@ -319,6 +302,24 @@ section {
       text-align: center;
     }
   }
+  .technologies_portfolio{
+    gap:8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 16px; 
+    max-width: 100%;
+  }
+  .overlay-container{
+    gap:0px;
+  }
+  .project-content{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .project-buttons{
+    justify-content: center;
+  }
 
   .portfolio-container {
     display: flex;
@@ -332,9 +333,22 @@ section {
     align-items: flex-start;
     padding: 8px;
   }
-
+  .project-image{
+    width:100%;
+  }
   .portfolio-seperator-small {
     margin: 4px;
+  }
+  .close-button{
+    margin:0px;
+    margin-right: 16px;
+  }
+  .project-description{
+    width:100%;
+  }
+  .next-project-button{
+    margin-right:16px;
+    margin-top: 16px;
   }
 }
 
