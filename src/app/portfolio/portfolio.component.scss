@@ -1,5 +1,4 @@
 section {
-
   background-color: #1c1c1c;
   padding-top: 40px;
 
@@ -73,34 +72,34 @@ section {
   transform: scale(1.05);
 }
 
-
 .overlay {
-  position: fixed;
+  position: fixed; /* Fixiert das Overlay über die MainPage */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7); /* Dunkler Hintergrund mit Transparenz */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(4px);
-  z-index: 1000;
+  justify-content: center; /* Zentriert den Overlay-Container horizontal */
+  align-items: center; /* Zentriert den Overlay-Container vertikal */
+  z-index: 1000; /* Stellt sicher, dass das Overlay über allem liegt */
 }
-.no-scroll {
-  overflow: hidden;
+.overlay-container {
+  position: relative;
+  max-width: calc(100vw - 80px); /* Verhindert, dass es breiter als der Bildschirm wird (40px Rand links/rechts) */
+  max-height: calc(100vh - 80px); /* Verhindert, dass es höher als der Bildschirm wird (40px Rand oben/unten) */
+  background: #1e1e1e; /* Dunkler Hintergrund */
+  padding: 20px;
+  border-radius: 32px;
+  border: 1px solid #3dcfb6;
+  overflow: auto; /* Falls der Inhalt zu groß ist, wird gescrollt */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.overlay-container {
-  margin: 40px;
-  padding: 80px;
-  background-color: rgb(31, 46, 43);
-  border: 1px solid #3dcfb6;
-  border-radius: 32px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: #ffffff;
-  position: relative;
+.no-scroll {
+  overflow: hidden;
 }
 
 .close-button-contain {
@@ -278,18 +277,36 @@ section {
     border-bottom: 1px solid #3DCFB6;
   }
 
-  .overlay-container {
+ 
+  .project-content {
     max-width: 280px;
-    margin: 40px;
-    padding: 80px;
-    background-color: rgb(31, 46, 43);
-    border: 1px solid #3dcfb6;
-    border-radius: 32px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: #ffffff;
-    position: relative;
+    height:500px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 20px;
   }
+  .project-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .project-description {
+    width: 0;
+    text-align: left;
+  
+    >h3 {
+      margin-block-start: 0;
+    }
+  }
+  
+  .project-image {
+    width: 0;
+  }
+  
+ 
+  
 }
 
 @media (min-width: 375px) and (max-width: 768px) {

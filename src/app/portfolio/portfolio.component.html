@@ -6,7 +6,7 @@
         </div>
         <div class="project-content">
             <div class="project-description">
-                <h1 class="text-turquoise font-karla font-128 no-margin-block">0{{currentProjectIndex +1}}</h1>
+                <h1 class="text-turquoise font-karla font-64 no-margin-block">0{{currentProjectIndex +1}}</h1>
                 <h2 class="overlay-title font-fira text-white font-64 no-margin-block">{{ currentProject.title }}</h2>
                 <h3 class="font-fira font-24 text-turquoise">What is this project about?</h3>
                 <p class="overlay-description font-karla text-white font-18">
@@ -15,7 +15,7 @@
                 <div class="technologies_portfolio gap16">
                     <div class="d-flex gap4 align-items-ctr" *ngFor="let tech of currentProject.technologies">
                         <img class="img24" [src]="getTechImage(tech)" [alt]="tech">
-                        <p class="font-karla font-16">{{tech}}</p>
+                        <p class="font-karla font-16 text-white">{{tech}}</p>
                     </div>
                 </div>
             </div>

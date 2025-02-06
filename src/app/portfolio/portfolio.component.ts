@@ -27,6 +27,7 @@ export class PortfolioComponent {
   showOverlay(index: number): void {
     this.currentProjectIndex = index;
     this.isOverlayVisible = true;
+    document.body.style.overflow = 'hidden';
   }
 
   hideImage(): void {
@@ -35,6 +36,7 @@ export class PortfolioComponent {
 
   hideOverlay(): void {
     this.isOverlayVisible = false;
+    document.body.style.overflow = '';
   }
 
 
