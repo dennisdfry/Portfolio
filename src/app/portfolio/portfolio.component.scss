@@ -1,6 +1,7 @@
 section {
   background-color: #1c1c1c;
   padding-top: 40px;
+  padding-bottom: 40px;
 
   >h3 {
     padding-bottom: 10px;
@@ -14,7 +15,8 @@ section {
 
 .portfolio_button {
   opacity: 0;
-  width: 880px;
+  flex-grow: 1;
+  width:100%;
   height: 109px;
   display: flex;
   justify-content: space-between;
@@ -41,9 +43,9 @@ section {
 }
 
 .portfolio-container {
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
+  // display: flex;
+  // justify-content: flex-start;
+  // gap: 20px;
 }
 
 .portfolio-buttons {
@@ -73,26 +75,30 @@ section {
 }
 
 .overlay {
-  position: fixed; 
+  position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7); 
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  z-index: 1000; 
+  z-index: 1000;
 }
+
 .overlay-container {
   position: relative;
-  max-width: calc(100vw - 80px); 
-  max-height: calc(100vh - 80px); 
-  background: #1e1e1e; 
+  max-width: calc(100vw - 80px);
+  max-height: calc(100vh - 80px);
+  background: #1e1e1e;
   padding: 20px;
   border-radius: 32px;
   border: 1px solid #3dcfb6;
-  overflow: auto; 
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -236,7 +242,8 @@ section {
     padding-left: 8px;
     padding-right: 8px;
     height: fit-content;
-    >  h3 {
+
+    >h3 {
       padding-left: 8px;
       padding-right: 8px;
     }
@@ -278,18 +285,18 @@ section {
   .project-description {
     width: 0;
     text-align: left;
-  
+
     >h3 {
       margin-block-start: 0;
     }
   }
-  
+
   .project-image {
     width: 0;
   }
-  
- 
-  
+
+
+
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -302,22 +309,26 @@ section {
       text-align: center;
     }
   }
-  .technologies_portfolio{
-    gap:8px;
+
+  .technologies_portfolio {
+    gap: 8px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-    gap: 16px; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
     max-width: 100%;
   }
-  .overlay-container{
-    gap:0px;
+
+  .overlay-container {
+    gap: 0px;
   }
-  .project-content{
+
+  .project-content {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
   }
-  .project-buttons{
+
+  .project-buttons {
     justify-content: center;
   }
 
@@ -333,21 +344,26 @@ section {
     align-items: flex-start;
     padding: 8px;
   }
-  .project-image{
-    width:100%;
+
+  .project-image {
+    width: 100%;
   }
+
   .portfolio-seperator-small {
     margin: 4px;
   }
-  .close-button{
-    margin:0px;
+
+  .close-button {
+    margin: 0px;
     margin-right: 16px;
   }
-  .project-description{
-    width:100%;
+
+  .project-description {
+    width: 100%;
   }
-  .next-project-button{
-    margin-right:16px;
+
+  .next-project-button {
+    margin-right: 16px;
     margin-top: 16px;
   }
 }
@@ -355,7 +371,8 @@ section {
 @media (min-width: 768px) and (max-width: 1024px) {
   .portfolio_button {
     opacity: 0;
-    width: 680px;
+    flex-grow: 1;
+    box-sizing: border-box;
     height: 109px;
     display: flex;
     justify-content: space-between;
@@ -364,7 +381,7 @@ section {
     border: none;
     padding: 32px;
     border-top: 1px solid #3DCFB6;
-
+    
     &:hover {
       background-color: rgb(31, 46, 43);
       backdrop-filter: blur(4);
@@ -372,7 +389,8 @@ section {
   }
 
   .portfolio-container {
-    display: flex;
+    // display: flex;
+    // justify-content: center;
   }
 
   section {
