@@ -19,7 +19,7 @@ export class PortfolioComponent {
  
 
   showImage(imagePath: string): void {
-    if (window.innerWidth >= 920){
+    if (window.innerWidth >= 768){
     this.hoveredImage = imagePath;
   }
 }

@@ -8,15 +8,16 @@ section {
 }
 
 .comment_container {
-  // width: 100%;
-  // max-width: 800px;
+  width:400px;
   overflow: hidden;
   position: relative;
+  display: contents;
   padding-left: 96px;
   padding-right: 96px;
 }
 
 .feedback_comments_wrapper {
+  width:200px;
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
@@ -39,18 +40,19 @@ section {
   border-radius: 30px;
 }
 
+
 .feedback_comments.active {
   opacity: 1;
   transform: scale(1);
 }
 
 .feedback_comments.left {
-  opacity: 0;
+  opacity: 0.5;
   transform: translateX(-100%);
 }
 
 .feedback_comments.right {
-  opacity: 0;
+  opacity: 0.5;
   transform: translateX(100%);
 }
 

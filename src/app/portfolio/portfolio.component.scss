@@ -15,8 +15,7 @@ section {
 
 .portfolio_button {
   opacity: 0;
-  flex-grow: 1;
-  width:100%;
+  width:708px;
   height: 109px;
   display: flex;
   justify-content: space-between;
@@ -43,9 +42,9 @@ section {
 }
 
 .portfolio-container {
-  // display: flex;
-  // justify-content: flex-start;
-  // gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .portfolio-buttons {
@@ -338,7 +337,7 @@ section {
   }
 
   .portfolio_button {
-    width: 100%;
+    width: 280px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -372,6 +371,7 @@ section {
   .portfolio_button {
     opacity: 0;
     flex-grow: 1;
+    width:450px;
     box-sizing: border-box;
     height: 109px;
     display: flex;
@@ -386,11 +386,6 @@ section {
       background-color: rgb(31, 46, 43);
       backdrop-filter: blur(4);
     }
-  }
-
-  .portfolio-container {
-    // display: flex;
-    // justify-content: center;
   }
 
   section {
