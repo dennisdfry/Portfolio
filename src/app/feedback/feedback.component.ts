@@ -17,7 +17,7 @@ export class FeedbackComponent {
     'Thank you for being such a supportive colleague!'
   ];
   user = ['Peter Pfautsch', 'Benjamin Kloss', 'Lisa Meier'];
-  public currentIndex = 0;
+  public currentIndex = 1;
 
   prevComment() {
     if (this.currentIndex > 0) {

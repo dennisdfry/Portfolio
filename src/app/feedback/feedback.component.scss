@@ -1,23 +1,37 @@
-
 section {
   background-color: #1c1c1c;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding-top: 40px;
+  height: 452px;
+  overflow: hidden;
+  margin-left: 96px;
+  margin-right: 96px;
 }
 
+
 .comment_container {
-  width:400px;
+  width: 400px;
   overflow: hidden;
   position: relative;
   display: contents;
-  padding-left: 96px;
-  padding-right: 96px;
+ 
+}
+
+.feedback_absolute_image {
+  position: absolute;
+  bottom: 80%;
+  left: -10%;
+  width: auto;
+  height: auto;
+  z-index: 10;
 }
 
 .feedback_comments_wrapper {
-  width:200px;
+  position: relative;
+  width: 400px;
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
@@ -26,6 +40,7 @@ section {
 .feedback_comments {
   flex: 0 0 100%;
   box-sizing: border-box;
+  margin-top: 32px;
   padding: 20px;
   opacity: 0;
   transform: scale(0.8);
@@ -43,17 +58,17 @@ section {
 
 .feedback_comments.active {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.5);
 }
 
 .feedback_comments.left {
   opacity: 0.5;
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 
 .feedback_comments.right {
   opacity: 0.5;
-  transform: translateX(100%);
+  transform: translateX(50%);
 }
 
 .arrow_container {
@@ -127,13 +142,14 @@ section {
     padding-right: 8px;
     padding-left: 8px;
   }
-  .feedback_comments_wrapper{
+
+  .feedback_comments_wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
     margin: 8px;
 
-}
+  }
 }
 
 @media (min-width:375px) and (max-width:768px) {
@@ -143,7 +159,7 @@ section {
     padding-right: 8px;
   }
 
-  h2{
+  h2 {
     font-size: 24px;
     padding-right: 8px;
     padding-left: 8px;

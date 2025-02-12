@@ -35,7 +35,6 @@ h2 {
 
 .mainpage_teaser_section {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 48px;
@@ -189,6 +188,9 @@ h2 {
     color: #FFFFFF;
     font-size: 18px;
     font-family: 'karla';
+    &:hover{
+        color:#3DCFB6;
+    }
 }
 
 @media (max-width: 375px) {

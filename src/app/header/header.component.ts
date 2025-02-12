@@ -19,8 +19,6 @@ export class HeaderComponent {
   defaultImage = "../../assets/img/header/Property 1=Default@2x.png";
   constructor(private translateConfigService: TranslateConfigService) { }
 
-
-
   openDropDown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }

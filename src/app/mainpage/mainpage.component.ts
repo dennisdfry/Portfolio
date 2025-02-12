@@ -13,15 +13,15 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-mainpage',
   standalone: true,
-  imports: [HeaderComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, FeedbackComponent, ContactMeComponent, FooterComponent, TranslateModule ],
+  imports: [HeaderComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, FeedbackComponent, ContactMeComponent, FooterComponent, TranslateModule, CommonModule ],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })
-export class MainpageComponent {
+export class MainpageComponent  {
   constructor(private translateConfigService: TranslateConfigService) {}
-
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
+    console.log(element)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
