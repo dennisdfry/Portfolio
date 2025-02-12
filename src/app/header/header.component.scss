@@ -3,6 +3,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 96px;
+  padding-right: 96px;
 }
 
 .header_normal {
@@ -191,7 +193,5 @@ h1 {
 }
 
 @media screen and (min-width:1024px) and (max-width: 1440) {
-  section {
-    padding: 0 8px;
-  }
+
 }
