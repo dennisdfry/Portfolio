@@ -1,82 +1,95 @@
-section{
-    background-color:#1c1c1c;
+section {
+    background-color: #1c1c1c;
     padding-bottom: 48px;
     padding-top: 40px;
 }
+
 h1 {
     font-weight: bold;
     color: #D9D9D9;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                 0 0 20px rgba(255, 255, 255, 0.6), 
-                 0 0 30px rgba(255, 255, 255, 0.4);
-  }
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.4);
+}
 
-.header_top{
+.header_top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer_link{
+.footer_link {
     display: flex;
     flex-direction: column;
+
     >a {
         text-decoration: none;
         font-family: 'karla';
         font-size: 16px;
         color: #FFFFFF;
-        &:hover{
-            color:#3DCFB6;  
+
+        &:hover {
+            color: #3DCFB6;
         }
     }
 }
 
-.legal_notiz_button_footer{
+.legal_notiz_button_footer {
     all: unset;
     font-family: 'karla';
     font-size: 16px;
     color: #FFFFFF;
-    &:hover{
-        color:#3DCFB6;
+
+    &:hover {
+        color: #3DCFB6;
         cursor: pointer;
     }
 }
-@media (max-width:375px){
-    section{
-        padding:8px;
+
+@media (max-width:375px) {
+    section {
+        padding: 8px;
         flex-direction: column;
     }
-    .header_mid{
+
+    .header_mid {
         display: none;
     }
-    .header_resp{
+
+    .header_resp {
         display: inline;
         display: flex;
         justify-content: center;
     }
-    .header_top{
+
+    .header_top {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .footer_link{
+
+    .footer_link {
         justify-content: space-between;
     }
 }
-@media (min-width:375px) and (max-width:768px){
-    section{
-        padding:8px;
+
+@media (min-width:375px) and (max-width:768px) {
+    section {
+        padding: 8px;
         flex-direction: column;
     }
-    .header_mid{
+
+    .header_mid {
         display: none;
     }
-    .header_resp{
+
+    .header_resp {
         display: inline;
         display: flex;
         justify-content: center;
     }
-    .header_top{
+
+    .header_top {
         display: flex;
         justify-content: space-evenly;
         align-items: center;

@@ -1,85 +1,57 @@
 <section class="pa-le-ri-96">
-    <div class="contact_me_left">
-      <h2 class="no-margin-block text-turquoise font-karla font-24">
-        {{ 'CONTACT.TITLE' | translate }}
-      </h2>
-      <h1 class="no-margin-block text-turquoise font-wgh700 font-64 font-fira">
-        {{ 'CONTACT.HEADER' | translate }}
-      </h1>
-      <h3 class="no-margin-block text-turquoise font-fira font-wgh700 font-24">
-        {{ 'CONTACT.SUBHEADER' | translate }}
-      </h3>
+  <div class="contact_me_left">
+    <h2 class="no-margin-block text-turquoise font-karla font-24">
+      {{ 'CONTACT.TITLE' | translate }}
+    </h2>
+    <h1 class="no-margin-block text-turquoise font-wgh700 font-64 font-fira">
+      {{ 'CONTACT.HEADER' | translate }}
+    </h1>
+    <h3 class="no-margin-block text-turquoise font-fira font-wgh700 font-24">
+      {{ 'CONTACT.SUBHEADER' | translate }}
+    </h3>
+    <p class="text-white font-karla font-16">
+      {{ 'CONTACT.DESCRIPTION' | translate }}
+    </p>
+    <div>
       <p class="text-white font-karla font-16">
-        {{ 'CONTACT.DESCRIPTION' | translate }}
+        {{ 'CONTACT.CALL_TO_ACTION' | translate }}
       </p>
-      <div>
-        <p class="text-white font-karla font-16">
-          {{ 'CONTACT.CALL_TO_ACTION' | translate }}
-        </p>
-      </div>
     </div>
-    <form (ngSubmit)="onSubmit()">
-      <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
-        <label class="font-fira font-24 text-turquoise" for="name">
-          {{ 'CONTACT.FORM.NAME_LABEL' | translate }}
-        </label>
-        <input
-          class="contact_input font-karla font-18 text-white"
-          type="text"
-          id="name"
-          [(ngModel)]="name"
-          name="name"
-          [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate"
-          required
-          pattern="[A-Za-zÄÖÜäöüß\s]+"
-          title="{{ 'CONTACT.FORM.NAME_TITLE' | translate }}"
-        />
-      </div>
-      <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
-        <label class="font-fira font-24 text-turquoise" for="email">
-          {{ 'CONTACT.FORM.EMAIL_LABEL' | translate }}
-        </label>
-        <input
-          class="contact_input font-karla font-18 text-white"
-          type="email"
-          id="email"
-          [(ngModel)]="email"
-          name="email"
-          [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate"
-          required
-        />
-      </div>
-      <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
-        <label class="font-fira font-24 text-turquoise" for="message">
-          {{ 'CONTACT.FORM.MESSAGE_LABEL' | translate }}
-        </label>
-        <textarea
-          class="contact_input contact_textarea font-karla font-18"
-          id="message"
-          [(ngModel)]="message"
-          name="message"
-          [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate"
-          required
-        ></textarea>
-      </div>
-      <div class="checkbox-container max-height131 min-height130 border-top-turquoise font-karla font-15 text-white">
-        <input
-          class="checkbox_design"
-          type="checkbox"
-          id="privacy"
-          [(ngModel)]="privacyAccepted"
-          name="privacy"
-          required
-        />
-        <label for="privacy">
-          {{ 'CONTACT.FORM.PRIVACY_POLICY' | translate }}
-        </label>
-      </div>
-      <div class="d-flex jtf-center">
-        <button class="contact_me_button font-18 font-karla" type="submit">
-          {{ 'CONTACT.FORM.SUBMIT_BUTTON' | translate }}
-        </button>
-      </div>
-    </form>
-  </section>
-  
+  </div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
+      <label class="font-fira font-24 text-turquoise" for="name">
+        {{ 'CONTACT.FORM.NAME_LABEL' | translate }}
+      </label>
+      <input class="contact_input font-karla font-18 text-white" type="text" id="name" [(ngModel)]="name" name="name"
+        [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate" required pattern="[A-Za-zÄÖÜäöüß\s]+"
+        title="{{ 'CONTACT.FORM.NAME_TITLE' | translate }}" />
+    </div>
+    <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
+      <label class="font-fira font-24 text-turquoise" for="email">
+        {{ 'CONTACT.FORM.EMAIL_LABEL' | translate }}
+      </label>
+      <input class="contact_input font-karla font-18 text-white" type="email" id="email" [(ngModel)]="email"
+        name="email" [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate" required />
+    </div>
+    <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
+      <label class="font-fira font-24 text-turquoise" for="message">
+        {{ 'CONTACT.FORM.MESSAGE_LABEL' | translate }}
+      </label>
+      <textarea class="contact_input contact_textarea font-karla font-18" id="message" [(ngModel)]="message"
+        name="message" [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate" required></textarea>
+    </div>
+    <div class="checkbox-container max-height131 min-height130 border-top-turquoise font-karla font-15 text-white">
+      <input class="checkbox_design" type="checkbox" id="privacy" [(ngModel)]="privacyAccepted" name="privacy"
+        required />
+      <label for="privacy">
+        {{ 'CONTACT.FORM.PRIVACY_POLICY' | translate }}
+      </label>
+    </div>
+    <div class="d-flex jtf-center">
+      <button class="contact_me_button font-18 font-karla" type="submit">
+        {{ 'CONTACT.FORM.SUBMIT_BUTTON' | translate }}
+      </button>
+    </div>
+  </form>
+</section>

@@ -12,31 +12,34 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
   @Output() languageChanged = new EventEmitter<string>();
-  
+  @HostListener('document:click', ['$event'])
+  @Output() scrollToSection = new EventEmitter<string>();
+
   isDropdownOpen = false;
   isDefaultLanguage = false;
   defaultImage = "../../assets/img/header/Property 1=Default@2x.png";
+
   constructor(private translateConfigService: TranslateConfigService) { }
 
   openDropDown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
-  @HostListener('document:click', ['$event'])
+
   closeDropdownOnClickOutside(event: Event) {
     const dropdown = document.querySelector('.dropdown-menu');
     const dropdownToggle = document.querySelector('.dropdown_image_contain');
-   
+
     if (dropdown && dropdownToggle &&
-        !dropdown.contains(event.target as Node) &&
-        !dropdownToggle.contains(event.target as Node)) {
+      !dropdown.contains(event.target as Node) &&
+      !dropdownToggle.contains(event.target as Node)) {
       this.isDropdownOpen = false;
     }
   }
-  @Output() scrollToSection = new EventEmitter<string>();
 
   onScroll(sectionId: string) {
-    this.scrollToSection.emit(sectionId); 
+    this.scrollToSection.emit(sectionId);
   }
 
   switchLanguage(lang: string) {

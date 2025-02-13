@@ -16,13 +16,12 @@ export class LegalNotizComponent implements OnInit {
   constructor(private legalNotizService: LegalNotizService) {}
 
   ngOnInit(): void {
-    // Abonnieren des Observable, um den Sichtbarkeitsstatus zu überwachen
     this.legalNotizService.visibility$.subscribe(visible => {
       this.isVisible = visible;
     });
   }
 
   closeDatenschutz(): void {
-    this.legalNotizService.hide(); // Schließen über den Service
+    this.legalNotizService.hide(); 
   }
 }

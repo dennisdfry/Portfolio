@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScrollAnimateDirective } from '../directives/scroll-animate.directive'; 
+import { ScrollAnimateDirective } from '../directives/scroll-animate.directive';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -12,5 +12,4 @@ import { TranslateModule } from '@ngx-translate/core';
 
 
 export class AboutMeComponent {
-  
 }

@@ -22,13 +22,11 @@ a {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  /* Halbtransparentes schwarzes Hintergrund */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 1000;
-  /* Sehr hoher Z-Index, damit es über allem anderen liegt */
 }
 
 .legal_notiz {
@@ -59,31 +57,23 @@ button {
 
 ::-webkit-scrollbar {
   width: 6px;
-  /* Breite der Scrollbar */
   height: 6px;
-  /* Höhe für horizontale Scrollbars */
 }
 
 ::-webkit-scrollbar-track {
   background: transparent;
-  /* Unsichtbarer Track */
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(100, 100, 100, 0.3);
-  /* Dezente Farbe */
   border-radius: 8px;
-  /* Abgerundete Ecken */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 100, 100, 0.5);
-  /* Sichtbarer beim Hover */
 }
 
-/* Firefox */
 * {
   scrollbar-width: thin;
-  /* Schmale Scrollbar */
   scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
 }
