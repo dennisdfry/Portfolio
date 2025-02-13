@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,HostListener, EventEmitter, Output } from '@angular/core';
+import { Component, HostListener, EventEmitter, Output } from '@angular/core';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -32,6 +32,11 @@ export class HeaderComponent {
         !dropdownToggle.contains(event.target as Node)) {
       this.isDropdownOpen = false;
     }
+  }
+  @Output() scrollToSection = new EventEmitter<string>();
+
+  onScroll(sectionId: string) {
+    this.scrollToSection.emit(sectionId); 
   }
 
   switchLanguage(lang: string) {

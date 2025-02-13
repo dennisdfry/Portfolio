@@ -2,9 +2,9 @@
   <div class="header_normal">
     <div class="header_left">
       <img [src]="defaultImage" (click)="switchLanguage('de')" class="" alt="">
-      <a class="header_left_resp" href="">{{ 'HEADER.ABOUT_ME' | translate }}</a>
-      <a class="header_left_resp" href="">{{ 'HEADER.SKILLS' | translate }}</a>
-      <a class="header_left_resp" href="">{{ 'HEADER.PROJECTS' | translate }}</a>
+      <button (click)="onScroll('aboutMe')">{{ 'HEADER.ABOUT_ME' | translate }}</button>
+      <button (click)="onScroll('tech')" class="header_left_resp" >{{ 'HEADER.SKILLS' | translate }}</button>
+      <button (click)="onScroll('work')" class="header_left_resp" >{{ 'HEADER.PROJECTS' | translate }}</button>
     </div>
     <h1>DF</h1>
   </div>
@@ -15,9 +15,9 @@
         <img class="dropdown_image" src="../../assets/img/header/menu.png" alt="">
       </div>
       <div class="dropdown-menu" [ngClass]="{ 'dropdown-open': isDropdownOpen }">
-        <a href="">{{ 'HEADER.ABOUT_ME' | translate }}</a>
-        <a href="">{{ 'HEADER.SKILLS' | translate }}</a>
-        <a href="">{{ 'HEADER.PROJECTS' | translate }}</a>
+        <button (click)="onScroll('aboutMe')">{{ 'HEADER.ABOUT_ME' | translate }}</button>
+        <button (click)="onScroll('tech')">{{ 'HEADER.SKILLS' | translate }}</button>
+        <button (click)="onScroll('work')">{{ 'HEADER.PROJECTS' | translate }}</button>
         <img [src]="defaultImage" (click)="switchLanguage('de')" class="" alt="">
       </div>
     </div>

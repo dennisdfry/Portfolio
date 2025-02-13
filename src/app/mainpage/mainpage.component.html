@@ -1,6 +1,6 @@
 <section>
     <div class="limited-container teaser_size">
-        <app-header (languageChanged)="onLanguageChanged($event)"></app-header>
+        <app-header (scrollToSection)="scrollToSection($event)" (languageChanged)="onLanguageChanged($event)"></app-header>
         <div class="mainpage_teaser_section">
             <h2 class="no-margin-block slide-in-left">{{ 'MAINPAGE.ROLE' | translate }}</h2>
             <h1 class="no-margin-block slide-in-right">{{ 'MAINPAGE.NAME' | translate }}</h1>
@@ -19,8 +19,8 @@
     
             <div class="lateral_scroll_section_right">
                 <a class="mainpage_lateral_mail" href="mailto:dennis.dfry@gmail.com">dennis.dfry&#64;gmail.com</a>
-                <a href=""><img src="../../assets/img/mainpage_section/Github.png" alt=""></a>
-                <a href=""><img src="../../assets/img/mainpage_section/Property 1=Linkedin.png" alt=""></a>
+                <a href="https://github.com/dennisdfry"><img src="../../assets/img/mainpage_section/Github.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/dennis-freyer-53a449319/?originalSubdomain=de"><img src="../../assets/img/mainpage_section/Property 1=Linkedin.png" alt=""></a>
                 <div class="mainpage_scroll_line_right"></div>
             </div>
         </div>
@@ -40,7 +40,7 @@
 </section>
 <div class="limited-container">
     <app-about-me id="aboutMe"></app-about-me>
-    <app-technologies (scrollEvent)="scrollToSection($event)"></app-technologies>
+    <app-technologies id="tech" (scrollEvent)="scrollToSection($event)"></app-technologies>
     <app-portfolio id="work"></app-portfolio>
     <app-feedback></app-feedback>
     <app-contact-me id="contact"></app-contact-me>
