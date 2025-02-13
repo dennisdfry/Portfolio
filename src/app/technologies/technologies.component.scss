@@ -3,6 +3,7 @@ section {
     height: fit-content;
     padding-top: 40px;
     padding-bottom: 40px;
+
     >h3 {
         font-size: 24px;
     }
@@ -37,7 +38,8 @@ section {
         width: 104px;
         height: 116px;
         transition: transform 0.2s ease-in-out;
-        &:hover{
+
+        &:hover {
             transform: scale(1.1);
         }
     }
@@ -53,7 +55,7 @@ section {
     font-size: 18px;
     color: #FFFFFF;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,11 +63,11 @@ section {
 }
 
 .technologies_button marquee {
-    border-radius: 100px; 
-    display: block; 
-    width: 100%; 
-    height: 100%; 
-    line-height: 48px; 
+    border-radius: 100px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 48px;
 }
 
 @media (max-width:375px) {
@@ -74,7 +76,6 @@ section {
         padding-left: 8px;
         padding-right: 8px;
         height: fit-content;
-        // width: 300px;
         background: radial-gradient(circle at left, #08463b 0%, #1c1c1c 22%);
 
         >h3 {
@@ -86,7 +87,7 @@ section {
 
     h2 {
         font-size: 56px;
-        padding:8px;
+        padding: 8px;
         overflow-wrap: break-word;
     }
 
@@ -127,7 +128,7 @@ section {
     }
 }
 
-@media (min-width: 375px) and (max-width: 768px){
+@media (min-width: 375px) and (max-width: 768px) {
     .technologies_left {
         opacity: 0;
         width: 280px;
@@ -137,12 +138,12 @@ section {
         background-color: rgb(31, 46, 43);
         backdrop-filter: blur(4);
     }
+
     section {
         padding-top: 40px;
         padding-left: 8px;
         padding-right: 8px;
         height: fit-content;
-        // width: 300px;
         background: radial-gradient(circle at left, #08463b 0%, #1c1c1c 22%);
 
         >h3 {
@@ -151,7 +152,8 @@ section {
             text-align: center;
         }
     }
-    h2{
+
+    h2 {
         overflow-wrap: break-word;
     }
 
@@ -183,19 +185,19 @@ section {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
     .technologies_contain {
         display: flex;
         justify-content: space-between;
-        align-items: stretch; /* Beide Container haben gleiche Höhe */
+        align-items: stretch;
         gap: 16px;
     }
 
-    .technologies_left, 
+    .technologies_left,
     .technologies_right {
-        flex: 1; /* Gleiche Breite */
+        flex: 1;
         max-width: 50%;
-        min-height: 100%; /* Beide Container passen sich gegenseitig an */
+        min-height: 100%;
         height: auto;
     }
 
@@ -223,9 +225,10 @@ section {
         backdrop-filter: blur(4px);
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Inhalt vertikal zentrieren */
+        justify-content: center;
     }
-    h2{
+
+    h2 {
         overflow-wrap: break-word;
     }
 }

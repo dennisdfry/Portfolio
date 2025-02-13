@@ -20,7 +20,6 @@ export const firebaseConfig = {
   measurementId: "G-MQ0NKPZNWH"
 };
 
-// Übersetzungs-Loader Factory
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
 }
