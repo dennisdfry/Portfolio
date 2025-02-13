@@ -13,6 +13,9 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class PortfolioComponent {
 
+  /**
+   * Array of project objects containing title, description, image, technologies, and URLs.
+   */
   projects = [
     {
       title: 'Join',
@@ -40,6 +43,9 @@ export class PortfolioComponent {
     }
   ];
 
+  /**
+   * Mapping of technology names to their respective icon images.
+   */
   techImages: { [key: string]: string } = {
     Angular: '../../assets/img/portfolio/A.png',
     TypeScript: '../../assets/img/portfolio/TS.png',
@@ -49,41 +55,80 @@ export class PortfolioComponent {
     JavaScript: '../../assets/img/portfolio/JS.png'
   };
 
-  constructor(private renderer: Renderer2) { }
-
+  /**
+   * Stores the currently hovered image path.
+   */
   hoveredImage: string | null = null;
+
+  /**
+   * Index of the currently selected project in the overlay.
+   */
   currentProjectIndex: number = 0;
+
+  /**
+   * Determines whether the project overlay is visible.
+   */
   isOverlayVisible: boolean = false;
 
+  /**
+   * Constructor initializes the renderer for DOM manipulation.
+   * @param renderer The Angular Renderer2 for modifying DOM properties.
+   */
+  constructor(private renderer: Renderer2) { }
+
+  /**
+   * Shows an image preview on hover for screens wider than 768px.
+   * @param imagePath The path to the image to be displayed.
+   */
   showImage(imagePath: string): void {
     if (window.innerWidth >= 768) {
       this.hoveredImage = imagePath;
     }
   }
 
+  /**
+   * Displays the project details overlay.
+   * @param index The index of the selected project.
+   */
   showOverlay(index: number): void {
     this.currentProjectIndex = index;
     this.isOverlayVisible = true;
     document.body.style.overflow = 'hidden';
   }
 
+  /**
+   * Hides the hovered image preview.
+   */
   hideImage(): void {
     this.hoveredImage = null;
   }
 
+  /**
+   * Hides the project details overlay and restores scrolling.
+   */
   hideOverlay(): void {
     this.isOverlayVisible = false;
     document.body.style.overflow = '';
   }
 
+  /**
+   * Moves to the next project in the list.
+   */
   goToNextProject(): void {
     this.currentProjectIndex = (this.currentProjectIndex + 1) % this.projects.length;
   }
 
+  /**
+   * Returns the currently selected project.
+   */
   get currentProject() {
     return this.projects[this.currentProjectIndex];
   }
 
+  /**
+   * Opens the GitHub repository for the selected project in a new tab.
+   * @param url The GitHub repository URL.
+   */
   openGithub(url: string): void {
     if (url) {
       window.open(url, '_blank');
@@ -92,6 +137,10 @@ export class PortfolioComponent {
     }
   }
 
+  /**
+   * Opens the live project URL in a new tab.
+   * @param url The live project URL.
+   */
   openProject(url: string): void {
     if (url) {
       window.open(url, '_blank');
@@ -100,9 +149,12 @@ export class PortfolioComponent {
     }
   }
 
+  /**
+   * Retrieves the corresponding technology image for a given technology name.
+   * @param technology The name of the technology.
+   * @returns The path to the technology's image.
+   */
   getTechImage(technology: string): string {
     return this.techImages[technology] || 'assets/img/icons/default.png';
   }
 }
-
-
