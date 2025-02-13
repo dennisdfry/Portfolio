@@ -67,7 +67,7 @@ export class ContactMeComponent {
 
       try {
         await this.firebaseService.saveMessage(formData);
-        alert('Message successfully sent!');
+        alert('Thank you for your message.');
         this.clearForm();
       } catch (error) {
         console.error('Error sending the message:', error);
