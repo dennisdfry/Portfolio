@@ -11,9 +11,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  
+  /**
+   * Creates an instance of FooterComponent.
+   * @param legalNotizService The service to handle legal notice display.
+   */
   constructor(private legalNotizService: LegalNotizService) {}
 
+  /**
+   * Opens the legal notice when triggered.
+   * Calls the `show` method from the LegalNotizService to display the legal notice.
+   */
   openLegalNotiz(): void {
-    this.legalNotizService.show(); // Zeigt die rechtliche Notiz an
+    this.legalNotizService.show(); 
   }
 }
