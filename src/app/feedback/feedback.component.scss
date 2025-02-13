@@ -62,13 +62,17 @@ section {
 }
 
 .feedback_comments.left {
-  opacity: 0.5;
+  opacity: 0.3;
   transform: translateX(-50%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0) 60%);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0) 60%);
 }
 
 .feedback_comments.right {
-  opacity: 0.5;
+  opacity: 0.3;
   transform: translateX(50%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0) 60%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0) 60%);
 }
 
 .arrow_container {
