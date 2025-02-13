@@ -1,5 +1,3 @@
-
-
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
@@ -20,18 +18,33 @@ export const firebaseConfig = {
   measurementId: "G-MQ0NKPZNWH"
 };
 
+/**
+ * Factory function for loading translation files.
+ * 
+ * @param http - The HttpClient instance used to fetch translation files.
+ * @returns A new instance of TranslateHttpLoader.
+ */
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
 }
 
+/**
+ * Global application configuration object.
+ * Provides routing, HTTP client, Firebase services, and translation module.
+ */
 export const appConfig: ApplicationConfig = {
   providers: [
+    // Provides the router with defined application routes
     provideRouter(routes),
+
+    // Provides HTTP client with DI interceptors
     provideHttpClient(withInterceptorsFromDi()),
 
+    // Initializes Firebase and Firestore services
     importProvidersFrom(provideFirebaseApp(() => initializeApp(firebaseConfig))),
     importProvidersFrom(provideFirestore(() => getFirestore())),
 
+    // Configures translation module with an HTTP loader
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

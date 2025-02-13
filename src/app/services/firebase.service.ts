@@ -4,44 +4,44 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { firebaseConfig } from '../../firebase.config'; 
 
 /**
- * Service zur Interaktion mit Firebase Firestore.
- * Dieser Service initialisiert die Firebase-App und stellt eine Methode zum Speichern von Nachrichten bereit.
+ * Service for interacting with Firebase Firestore.
+ * This service initializes the Firebase app and provides a method to store messages in Firestore.
  */
 @Injectable({
   providedIn: 'root',
 })
 export class FirebaseService {
   /**
-   * Initialisiert die Firebase-App mit der gegebenen Konfiguration.
+   * Initializes the Firebase app with the provided configuration.
    */
   private app = initializeApp(firebaseConfig);
 
   /**
-   * Erstellt eine Firestore-Datenbankinstanz.
+   * Creates an instance of Firestore database.
    */
   private db = getFirestore(this.app);
 
   /**
-   * Konstruktor für den FirebaseService.
-   * Gibt eine Konsole-Ausgabe aus, wenn der Service initialisiert wurde.
+   * Constructor for FirebaseService.
+   * Logs a message to the console when the service is initialized.
    */
   constructor() {
     console.log('Firebase Service initialized');
   }
 
   /**
-   * Speichert eine Nachricht in der Firestore-Datenbank.
+   * Saves a message to the Firestore database.
    * 
-   * @param data - Ein Objekt mit den Feldern `name`, `email` und `message`, die in der Datenbank gespeichert werden sollen.
-   * @returns Eine Promise, die entweder die Dokumentreferenz oder eine Fehlermeldung zurückgibt.
+   * @param data - An object containing `name`, `email`, and `message` fields to be stored in the database.
+   * @returns A Promise that resolves to the document reference or logs an error message if the operation fails.
    */
   async saveMessage(data: { name: string; email: string; message: string }): Promise<void> {
     try {
       const docRef = await addDoc(collection(this.db, 'messages'), data);
-      console.log('Daten erfolgreich gespeichert mit ID:', docRef.id);
+      console.log('Data successfully saved with ID:', docRef.id);
     } catch (error) {
-      console.error('Fehler beim Speichern in Firestore:', error);
-      alert('Fehler beim Speichern der Nachricht.');
+      console.error('Error saving to Firestore:', error);
+      alert('Error saving the message.');
     }
   }
 }

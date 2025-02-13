@@ -5,16 +5,16 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root',
 })
 /**
- * Service zur Verwaltung der Sprachkonfiguration in der Anwendung.
- * Ermöglicht das Setzen, Wechseln und Abrufen der aktuellen Sprache.
+ * Service for managing language configuration in the application.
+ * Allows setting, switching, and retrieving the current language.
  */
 export class TranslateConfigService {
   
   /**
-   * Konstruktor, der den TranslateService initialisiert.
-   * Setzt die Standardsprache auf Englisch und lädt die zuletzt gespeicherte Sprache aus dem `localStorage`.
+   * Constructor that initializes the TranslateService.
+   * Sets the default language to English and loads the last saved language from `localStorage`.
    * 
-   * @param translate - Instanz des `TranslateService`, um die Spracheinstellungen zu verwalten.
+   * @param translate - Instance of `TranslateService` to manage language settings.
    */
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en'); 
@@ -22,9 +22,9 @@ export class TranslateConfigService {
   }
 
   /**
-   * Ändert die aktuelle Sprache der Anwendung und speichert sie im `localStorage`.
+   * Changes the application's current language and stores it in `localStorage`.
    * 
-   * @param lang - Die neue Sprache, die gesetzt werden soll (z. B. 'en' oder 'de').
+   * @param lang - The new language to be set (e.g., 'en' or 'de').
    */
   changeLanguage(lang: string): void {
     this.translate.use(lang);
@@ -32,9 +32,9 @@ export class TranslateConfigService {
   }
 
   /**
-   * Gibt die aktuell verwendete Sprache zurück.
+   * Returns the currently used language.
    * 
-   * @returns Die aktuelle Sprachkennung als `string` (z. B. 'en', 'de').
+   * @returns The current language code as a `string` (e.g., 'en', 'de').
    */
   getCurrentLanguage(): string {
     return this.translate.currentLang;

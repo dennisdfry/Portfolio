@@ -35,9 +35,7 @@ export class MainpageComponent  {
    * @param sectionId The ID of the section to scroll to.
    */
   scrollToSection(sectionId: string): void {
-    console.log(sectionId);
     const element = document.getElementById(sectionId);
-    console.log(element);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
