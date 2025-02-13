@@ -1,5 +1,4 @@
- <div class="overlay" *ngIf="isOverlayVisible">
-
+<div class="overlay" *ngIf="isOverlayVisible">
     <div class="overlay-container">
         <div class="close-button-contain">
             <button class="close-button" (click)="hideOverlay()">X</button>
@@ -44,7 +43,6 @@
         </div>
     </div>
 </div>
-
 <section class="pa-le-ri-96">
     <h3 class="font-24 text-turquoise font-karla no-margin-block">Portfolio</h3>
     <div class="portfolio-container">
@@ -54,10 +52,14 @@
                 (click)="showOverlay(0)">
                 <h3 class="portfolio_title no-margin-block font-fira font-24 text-white font-wgh700">Join</h3>
                 <div class=" d-flex font-karla text-white">
-                    <p class="no-margin-block d-flex ">Angular</p><div class="portfolio_seperator"></div>
-                    <p class="no-margin-block d-flex ">TypeScript</p><div class="portfolio_seperator"></div>
-                    <p class="no-margin-block d-flex ">HTML</p><div class="portfolio_seperator"></div>
-                    <p class="no-margin-block d-flex ">CSS</p><div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">Angular</p>
+                    <div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">TypeScript</p>
+                    <div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">HTML</p>
+                    <div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">CSS</p>
+                    <div class="portfolio_seperator"></div>
                     <p class="no-margin-block d-flex ">Firebase</p>
                 </div>
             </button>
@@ -66,8 +68,10 @@
                 (click)="showOverlay(1)">
                 <h3 class="portfolio_title font-fira font-24 text-white font-wgh700">El Pollo Loco</h3>
                 <div class="d-flex font-karla text-white">
-                    <p class="no-margin-block d-flex ">HTML</p><div class="portfolio_seperator"></div>
-                    <p class="no-margin-block d-flex ">CSS</p><div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">HTML</p>
+                    <div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">CSS</p>
+                    <div class="portfolio_seperator"></div>
                     <p class="no-margin-block d-flex ">JavaScript</p>
                 </div>
             </button>
@@ -76,8 +80,10 @@
                 (mouseleave)="hideImage()" (click)="showOverlay(2)">
                 <h3 class="portfolio_title font-fira font-24 text-white font-wgh700">Da Bubble</h3>
                 <div class="d-flex font-karla text-white">
-                    <p class="no-margin-block d-flex ">Angular</p><div class="portfolio_seperator"></div>
-                    <p class="no-margin-block d-flex ">Firebase</p><div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">Angular</p>
+                    <div class="portfolio_seperator"></div>
+                    <p class="no-margin-block d-flex ">Firebase</p>
+                    <div class="portfolio_seperator"></div>
                     <p class="no-margin-block d-flex ">TypeScript</p>
                 </div>
             </button>
@@ -86,6 +92,4 @@
             <img [src]="hoveredImage" alt="Project Preview">
         </div>
     </div>
-</section> 
-
-
+</section>

@@ -209,17 +209,13 @@ h2 {
     }
 
     .mainpage_teaser_section {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
         gap: 24px;
         height: 50%;
     }
 
     .main_button_section {
         width: 300px;
-        display: flex;
         justify-content: center;
 
         >button {

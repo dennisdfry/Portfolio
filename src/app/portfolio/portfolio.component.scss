@@ -15,7 +15,7 @@ section {
 
 .portfolio_button {
   opacity: 0;
-  width:708px;
+  width: 708px;
   height: 109px;
   display: flex;
   justify-content: space-between;
@@ -371,7 +371,7 @@ section {
   .portfolio_button {
     opacity: 0;
     flex-grow: 1;
-    width:450px;
+    width: 450px;
     box-sizing: border-box;
     height: 109px;
     display: flex;
@@ -381,7 +381,7 @@ section {
     border: none;
     padding: 32px;
     border-top: 1px solid #3DCFB6;
-    
+
     &:hover {
       background-color: rgb(31, 46, 43);
       backdrop-filter: blur(4);

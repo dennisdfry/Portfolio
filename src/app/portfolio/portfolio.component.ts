@@ -12,58 +12,6 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-  constructor(private renderer: Renderer2) {}
-  hoveredImage: string | null = null;
-  currentProjectIndex: number = 0;
-  isOverlayVisible: boolean = false;
- 
-
-  showImage(imagePath: string): void {
-    if (window.innerWidth >= 768){
-    this.hoveredImage = imagePath;
-  }
-}
-
-  showOverlay(index: number): void {
-    this.currentProjectIndex = index;
-    this.isOverlayVisible = true;
-    document.body.style.overflow = 'hidden';
-  }
-
-  hideImage(): void {
-    this.hoveredImage = null;
-  }
-
-  hideOverlay(): void {
-    this.isOverlayVisible = false;
-    document.body.style.overflow = '';
-  }
-
-
-
-  goToNextProject(): void {
-    this.currentProjectIndex = (this.currentProjectIndex + 1) % this.projects.length;
-  }
-
-  get currentProject() {
-    return this.projects[this.currentProjectIndex];
-  }
-
-  openGithub(url: string): void {
-    if (url) {
-      window.open(url, '_blank');
-    } else {
-      console.error('GitHub URL is not available for this project.');
-    }
-  }
-
-  openProject(url: string): void {
-    if (url) {
-      window.open(url, '_blank');
-    } else {
-      console.error('Live URL is not available for this project.');
-    }
-  }
 
   projects = [
     {
@@ -92,11 +40,6 @@ export class PortfolioComponent {
     }
   ];
 
-
-  getTechImage(technology: string): string {
-    return this.techImages[technology] || 'assets/img/icons/default.png';
-  }
-
   techImages: { [key: string]: string } = {
     Angular: '../../assets/img/portfolio/A.png',
     TypeScript: '../../assets/img/portfolio/TS.png',
@@ -105,9 +48,61 @@ export class PortfolioComponent {
     Firebase: '../../assets/img/portfolio/FIRE.png',
     JavaScript: '../../assets/img/portfolio/JS.png'
   };
-  // isLastTech(tech: string): boolean {
-  //   return this.currentProject.technologies.indexOf(tech) === this.currentProject.technologies.length - 1;
-  // }
+
+  constructor(private renderer: Renderer2) { }
+
+  hoveredImage: string | null = null;
+  currentProjectIndex: number = 0;
+  isOverlayVisible: boolean = false;
+
+  showImage(imagePath: string): void {
+    if (window.innerWidth >= 768) {
+      this.hoveredImage = imagePath;
+    }
+  }
+
+  showOverlay(index: number): void {
+    this.currentProjectIndex = index;
+    this.isOverlayVisible = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  hideImage(): void {
+    this.hoveredImage = null;
+  }
+
+  hideOverlay(): void {
+    this.isOverlayVisible = false;
+    document.body.style.overflow = '';
+  }
+
+  goToNextProject(): void {
+    this.currentProjectIndex = (this.currentProjectIndex + 1) % this.projects.length;
+  }
+
+  get currentProject() {
+    return this.projects[this.currentProjectIndex];
+  }
+
+  openGithub(url: string): void {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      console.error('GitHub URL is not available for this project.');
+    }
+  }
+
+  openProject(url: string): void {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      console.error('Live URL is not available for this project.');
+    }
+  }
+
+  getTechImage(technology: string): string {
+    return this.techImages[technology] || 'assets/img/icons/default.png';
+  }
 }
 
 
