@@ -1,46 +1,89 @@
-section{
-    background: linear-gradient(45deg,
-            #1c1c1c 40%,
-            #08463b 100%);
+section {
+  background: linear-gradient(45deg,
+      #1c1c1c 40%,
+      #08463b 100%);
 }
-  .legal-notiz-overlay {
-    color:#FFFFFF;
-    position: fixed;
-    padding: 96px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);  /* Halbtransparentes schwarzes Hintergrund */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1000;  /* Sehr hoher Z-Index, damit es über allem anderen liegt */
-  }
 
-  .legal_notiz{
-    overflow: auto;
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+
+  &:hover {
+    color: #3DCFB6;
+  }
+}
+
+.legal-notiz-overlay {
+  color: #FFFFFF;
+  position: fixed;
+  padding: 96px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Halbtransparentes schwarzes Hintergrund */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  /* Sehr hoher Z-Index, damit es über allem anderen liegt */
+}
+
+.legal_notiz {
+  overflow: auto;
+  border: 1px solid #3DCFB6;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+button {
+  all: unset;
+  font-family: 'karla';
+  font-size: 18px;
+  color: #FFFFFF;
+  padding-right: 24px;
+  padding-left: 24px;
+  border: 1px solid #FFFFFF;
+  border-radius: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:hover {
+    cursor: pointer;
     border: 1px solid #3DCFB6;
-    padding:32px;
-    border-radius: 32px;
+    color: #3DCFB6;
   }
+}
 
-  button {
-    all: unset;
-    font-family: 'karla';
-    font-size: 18px;
-    color: #FFFFFF;
-    padding-right: 24px;
-    padding-left: 24px;
-    border: 1px solid #FFFFFF;
-    border-radius: 100px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+::-webkit-scrollbar {
+  width: 6px;
+  /* Breite der Scrollbar */
+  height: 6px;
+  /* Höhe für horizontale Scrollbars */
+}
 
-    &:hover {
-        cursor: pointer;
-        border: 1px solid #3DCFB6;
-        color: #3DCFB6;
-    }
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* Unsichtbarer Track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.3);
+  /* Dezente Farbe */
+  border-radius: 8px;
+  /* Abgerundete Ecken */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.5);
+  /* Sichtbarer beim Hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  /* Schmale Scrollbar */
+  scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
 }
