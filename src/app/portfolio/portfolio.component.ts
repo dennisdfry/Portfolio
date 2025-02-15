@@ -23,7 +23,7 @@ export class PortfolioComponent {
       image: '../../assets/img/portfolio/JOIN (1).png',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubUrl: 'https://github.com/dennisdfry/Join',
-      liveUrl: 'https://your-live-project-url.com'
+      liveUrl: 'http://join.dennis-freyer.de/public/index.html'
     },
     {
       title: 'El Pollo Loco',
@@ -31,7 +31,7 @@ export class PortfolioComponent {
       image: '../../assets/img/portfolio/EL-POLLO-LOCO.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://github.com/dennisdfry/El-Pollo-Lco',
-      liveUrl: 'https://your-live-project-url.com'
+      liveUrl: 'http://el-pollo-loco.dennis-freyer.de/index.html'
     },
     {
       title: 'Da Bubble',
