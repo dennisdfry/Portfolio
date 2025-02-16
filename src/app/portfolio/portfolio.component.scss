@@ -7,6 +7,11 @@ section {
     padding-bottom: 10px;
   }
 }
+.explore{
+  max-width: 456px;
+  text-align: left;
+
+}
 
 .portfolio_seperator {
   border: 1px solid #3DCFB6;
@@ -390,5 +395,11 @@ section {
 
   section {
     padding-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+  .portfolio_button {
+    width:880px;
   }
 }

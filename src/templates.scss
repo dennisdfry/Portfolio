@@ -2,6 +2,10 @@
     margin-block-start: 0;
     margin-block-end: 0;
 }
+
+.no-margin-block-top{
+    margin-block-start: 0;
+}
 .pointer{
     cursor: pointer;
 }
@@ -43,6 +47,10 @@
 }
 .font-wgh700{
     font-weight: 700;
+}
+
+.font-wgh400{
+    font-weight: 400;
 }
 .pa-le-ri-96{
     padding-left: 96px;

@@ -25,12 +25,15 @@
         "TITLE": "Technologien",
         "SKILL_SET": "Fähigkeiten",
         "INTRO": "Meine Reise hat mich durch verschiedene Projekte geführt, bei denen ich eine Vielzahl von Frontend-Technologien und Konzepten eingesetzt habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung auf dem neuesten Stand zu bleiben.",
-        "NEED_ANOTHER_SKILL": "Du brauchst eine andere Fähigkeit?",
+        "NEED_ANOTHER_SKILL_PART_ONE": "Du brauchst ",
+        "NEED_ANOTHER_SKILL_PART_TWO": "eine andere Fähigkeit?",
         "CONTACT_ME": "Zögere nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern.",
         "LETS_TALK": "Lass uns sprechen"
     },
     "PORTFOLIO": {
         "TITLE": "Portfolio",
+        "PORTFOLIO_TEASER": "Ausgewählte Projekte",
+        "EXPLORE": "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
         "PROJECT_NUMBER": "0{{currentProjectIndex +1}}",
         "WHAT_IS_THIS": "Worum geht es bei diesem Projekt?",
         "TECHNOLOGIES_USED": "Verwendete Technologien",
