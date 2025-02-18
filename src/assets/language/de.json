@@ -78,6 +78,11 @@
             "USER_1": "Dennis ist ein sehr engagierter Frontend-Entwickler und arbeitet stets mit viel Leidenschaft an Projekten.",
             "USER_2": "Er ist sehr hilfsbereit und hat immer eine Lösung parat, wenn es Probleme gibt.",
             "USER_3": "Mit seiner kreativen Herangehensweise und seinem technischen Wissen bereichert er jedes Projekt."
+        },
+        "USERS": {
+          "USER_1": "Peter Pfautsch",
+          "USER_2": "Benjamin Kloss",
+          "USER_3": "Lisa Meier"
         }
     },
     "CONTACT": {

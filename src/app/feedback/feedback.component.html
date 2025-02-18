@@ -8,9 +8,9 @@
         [ngClass]="getCommentClass(i)">
         <img *ngIf="i === currentIndex" class="feedback_absolute_image" src="../../assets/img/feedback/quotes.png"
           alt="">
-        <p class="font-18 comment">{{ comment }}</p>
+        <p class="font-18 comment">{{ comment}}</p>
         <div>
-          <p class="font-16">{{ user[i] }}</p>
+          <p class="font-16">{{ users[i] }}</p>
         </div>
       </div>
     </div>

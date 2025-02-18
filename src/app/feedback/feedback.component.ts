@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 /**
  * Component to display and navigate through a list of feedback comments.
@@ -12,26 +14,65 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.scss'
 })
-export class FeedbackComponent {
+export class FeedbackComponent implements OnInit, OnDestroy {
   /**
    * Array of feedback comments.
    */
-  comments = [
-    'Dennis, your creative approach and attention to detail have greatly advanced the project. Working with you has been truly rewarding!',
-    'Your ability to simplify complex problems is remarkable.',
-    'Thank you for being such a supportive colleague!'
-  ];
+  comments: string[] = [];
 
   /**
    * Array of user names corresponding to the feedback comments.
    */
-  user = ['Peter Pfautsch', 'Benjamin Kloss', 'Lisa Meier'];
+  users: string[] = [];
 
   /**
    * The index of the currently displayed comment.
    * @default 1
    */
   public currentIndex = 1;
+
+    /**
+   * Subscription to detect language changes.
+   */
+    private langChangeSubscription!: Subscription;
+
+  constructor(private translate: TranslateService) {}
+
+  /**
+   * Initializes the component and loads the feedback comments.
+   */
+  ngOnInit(): void {
+    this.loadComments();
+    this.langChangeSubscription = this.translate.onLangChange.subscribe(() => {
+      this.loadComments();
+    });
+  }
+
+   /**
+   * Unsubscribes from language change events to prevent memory leaks.
+   */
+   ngOnDestroy(): void {
+    if (this.langChangeSubscription) {
+      this.langChangeSubscription.unsubscribe();
+    }
+  }
+
+  /**
+   * Loads feedback comments from the translation file.
+   */
+  loadComments(): void {
+    this.comments = [];
+    this.users = [];
+    const userKeys = ['USER_1', 'USER_2', 'USER_3'];
+    userKeys.forEach(userKey => {
+      this.translate.get(`FEEDBACK.COMMENTS.${userKey}`).subscribe(comment => {
+        this.comments.push(comment);
+      });
+      this.translate.get(`FEEDBACK.USERS.${userKey}`).subscribe(user => {
+        this.users.push(user);
+      });
+    });
+  }
 
   /**
    * Moves to the previous comment in the list, if possible.

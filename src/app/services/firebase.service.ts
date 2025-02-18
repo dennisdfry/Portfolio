@@ -26,7 +26,6 @@ export class FirebaseService {
    * Logs a message to the console when the service is initialized.
    */
   constructor() {
-    console.log('Firebase Service initialized');
   }
 
   /**

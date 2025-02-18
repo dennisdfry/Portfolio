@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, EventEmitter, Output } from '@angular/core';
+import { Component, HostListener, EventEmitter, OnInit, Output } from '@angular/core';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   /**
    * Event emitted when the language is changed.
@@ -75,21 +75,31 @@ export class HeaderComponent {
     this.scrollToSection.emit(sectionId);
   }
 
+  ngOnInit(): void {
+    const savedLang = localStorage.getItem('language') || 'en';
+    this.isDefaultLanguage = savedLang === 'en';
+    this.defaultImage = savedLang === 'en' 
+      ? "../../assets/img/header/Property 1=Default@2x.png" 
+      : "../../assets/img/header/Property 1=Deutsch.png";
+
+    this.translateConfigService.changeLanguage(savedLang);
+  }
+
   /**
    * Switches the website's language between English and German.
    * @param lang The language to switch to ('en' for English, 'de' for German).
    */
-  switchLanguage(lang: string) {
-    if (this.isDefaultLanguage) {
-      lang = 'en';
-      this.isDefaultLanguage = !this.isDefaultLanguage;
-      this.defaultImage = "../../assets/img/header/Property 1=Default@2x.png";
-    } else {
-      lang = 'de';
-      this.isDefaultLanguage = !this.isDefaultLanguage;
-      this.defaultImage = '../../assets/img/header/Property 1=Deutsch.png';
-    }
-    this.translateConfigService.changeLanguage(lang);
-    this.languageChanged.emit(lang);
+  switchLanguage() {
+    const currentLang = localStorage.getItem('language') || 'en';
+    const newLang = currentLang === 'en' ? 'de' : 'en';
+  
+    this.isDefaultLanguage = newLang === 'en';
+    this.defaultImage = newLang === 'en' 
+      ? "../../assets/img/header/Property 1=Default@2x.png" 
+      : "../../assets/img/header/Property 1=Deutsch.png";
+  
+    this.translateConfigService.changeLanguage(newLang);
+    localStorage.setItem('language', newLang);
+    this.languageChanged.emit(newLang);
   }
 }

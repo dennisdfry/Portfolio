@@ -78,6 +78,11 @@
       "USER_1": "Dennis is a very dedicated Frontend Developer who always works with great passion on projects.",
       "USER_2": "He is very helpful and always has a solution ready when problems arise.",
       "USER_3": "His creative approach and technical knowledge enrich every project."
+    },
+    "USERS": {
+      "USER_1": "Peter Pfautsch",
+      "USER_2": "Benjamin Kloss",
+      "USER_3": "Lisa Meier"
     }
   },
   "CONTACT": {
