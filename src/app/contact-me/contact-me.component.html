@@ -67,9 +67,9 @@
       <input class="checkbox_design" type="checkbox" id="privacy" [(ngModel)]="privacyAccepted" name="privacy" required
         #privacyInput="ngModel" />
       <label for="privacy">
-        {{ 'CONTACT.FORM.PRIVACY_POLICY_ONE' | translate }}  {{ 'CONTACT.FORM.PRIVACY_POLICY_TWO' | translate }}
+        {{ 'CONTACT.FORM.PRIVACY_POLICY_ONE' | translate }} <span (click)="navigateToLegalNotiz()" routerLink="/legal-notiz" class="font-karla font-15 text-turquoise pointer">Datenschutzrichtlinien</span>  {{ 'CONTACT.FORM.PRIVACY_POLICY_TWO' | translate }}
       </label>
-      <button (click)="navigateToLegalNotiz()" routerLink="/legal-notiz" class="font-karla font-15 text-turquoise pointer">Datenschutzrichtlinien</button>
+     
       <div *ngIf="privacyInput.invalid && (privacyInput.dirty || privacyInput.touched)" class="text-red font-karla font-14">
         {{ 'CONTACT.FORM.PRIVACY_REQUIRED' | translate }}
       </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,5 +16,9 @@ export class FooterComponent {
    * Creates an instance of FooterComponent.
    * @param legalNotizService The service to handle legal notice display.
    */
-  constructor() {}
+  constructor(private router:Router) {}
+
+  navigateToLegalNotiz() {
+    this.router.navigate(['/legal-notiz']);
+  }
 }

@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
@@ -34,17 +34,11 @@ export function HttpLoaderFactory(http: HttpClient) {
  */
 export const appConfig: ApplicationConfig = {
   providers: [
-    // Provides the router with defined application routes
+      
     provideRouter(routes),
-
-    // Provides HTTP client with DI interceptors
     provideHttpClient(withInterceptorsFromDi()),
-
-    // Initializes Firebase and Firestore services
     importProvidersFrom(provideFirebaseApp(() => initializeApp(firebaseConfig))),
     importProvidersFrom(provideFirestore(() => getFirestore())),
-
-    // Configures translation module with an HTTP loader
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {
@@ -53,6 +47,9 @@ export const appConfig: ApplicationConfig = {
           deps: [HttpClient],
         },
       })
+    ),
+    importProvidersFrom(
+      RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })
     ),
   ],
 };
