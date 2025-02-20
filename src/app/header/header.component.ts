@@ -68,6 +68,16 @@ export class HeaderComponent implements OnInit {
   }
 
   /**
+  * Closes the dropdown menu when the user scrolls.
+  */
+  @HostListener('window:scroll', ['$event'])
+  closeDropdownOnScroll() {
+    if (this.isDropdownOpen) {
+      this.isDropdownOpen = false;
+    }
+  }
+
+  /**
    * Emits an event to scroll to a specific section of the page.
    * @param sectionId The ID of the section to scroll to.
    */
@@ -78,8 +88,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     const savedLang = localStorage.getItem('language') || 'en';
     this.isDefaultLanguage = savedLang === 'en';
-    this.defaultImage = savedLang === 'en' 
-      ? "../../assets/img/header/Property 1=Default@2x.png" 
+    this.defaultImage = savedLang === 'en'
+      ? "../../assets/img/header/Property 1=Default@2x.png"
       : "../../assets/img/header/Property 1=Deutsch.png";
 
     this.translateConfigService.changeLanguage(savedLang);
@@ -92,14 +102,15 @@ export class HeaderComponent implements OnInit {
   switchLanguage() {
     const currentLang = localStorage.getItem('language') || 'en';
     const newLang = currentLang === 'en' ? 'de' : 'en';
-  
+
     this.isDefaultLanguage = newLang === 'en';
-    this.defaultImage = newLang === 'en' 
-      ? "../../assets/img/header/Property 1=Default@2x.png" 
+    this.defaultImage = newLang === 'en'
+      ? "../../assets/img/header/Property 1=Default@2x.png"
       : "../../assets/img/header/Property 1=Deutsch.png";
-  
+
     this.translateConfigService.changeLanguage(newLang);
     localStorage.setItem('language', newLang);
     this.languageChanged.emit(newLang);
   }
+
 }

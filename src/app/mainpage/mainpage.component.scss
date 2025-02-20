@@ -16,6 +16,12 @@ section {
     overflow: hidden;
     position: relative;
 }
+.transform{
+    transition: all 0.3s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
 
 .lateral_scroll_section_left {
     position: absolute;
