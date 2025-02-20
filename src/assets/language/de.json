@@ -80,9 +80,9 @@
             "USER_3": "Mit seiner kreativen Herangehensweise und seinem technischen Wissen bereichert er jedes Projekt."
         },
         "USERS": {
-          "USER_1": "Peter Pfautsch",
-          "USER_2": "Benjamin Kloss",
-          "USER_3": "Lisa Meier"
+            "USER_1": "Peter Pfautsch",
+            "USER_2": "Benjamin Kloss",
+            "USER_3": "Lisa Meier"
         }
     },
     "CONTACT": {
@@ -99,8 +99,15 @@
             "EMAIL_PLACEHOLDER": "Geben Sie Ihre E-Mail-Adresse ein",
             "MESSAGE_LABEL": "Wie kann ich Ihnen helfen?",
             "MESSAGE_PLACEHOLDER": "Schreiben Sie Ihre Nachricht hier...",
-            "PRIVACY_POLICY": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
-            "SUBMIT_BUTTON": "Sagen Sie Hallo ;)"
+            "PRIVACY_POLICY_ONE": "Ich habe die  ",
+            "PRIVACY_POLICY_TWO": " gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
+            "SUBMIT_BUTTON": "Sagen Sie Hallo ;)",
+            "NAME_REQUIRED": "Name ist erforderlich.",
+            "NAME_PATTERN": "Der Name darf nur Buchstaben und Leerzeichen enthalten und muss aus zwei Wörtern bestehen.",
+            "EMAIL_REQUIRED": "E-Mail ist erforderlich.",
+            "EMAIL_INVALID": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+            "MESSAGE_REQUIRED": "Nachricht ist erforderlich.",
+            "PRIVACY_REQUIRED": "Sie müssen die Datenschutzbestimmungen akzeptieren."
         }
     },
     "FOOTER": {

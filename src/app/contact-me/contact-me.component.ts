@@ -1,8 +1,10 @@
+
 import { Component } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 /**
  * Component for the contact form.
@@ -13,7 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [FormsModule, TranslateModule, CommonModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
@@ -48,17 +50,22 @@ export class ContactMeComponent {
    * 
    * @param {FirebaseService} firebaseService - The service for interacting with Firebase.
    */
-  constructor(private firebaseService: FirebaseService) { }
+  constructor(private firebaseService: FirebaseService, private router: Router) { }
 
+
+  navigateToLegalNotiz() {
+    this.router.navigate(['/legal-notiz']);
+  }
   /**
    * Called when the form is submitted.
    * Checks if all fields are filled out and the privacy policy is accepted.
    * If so, it saves the message in the Firebase service.
    * 
+   * @param {NgForm} form - The form instance.
    * @returns {Promise<void>} Returns a Promise indicating the success or failure of saving the message.
    */
-  async onSubmit() {
-    if (this.privacyAccepted && this.name && this.email && this.message) {
+  async onSubmit(form: NgForm) {
+    if (form.valid && this.privacyAccepted) {
       const formData = {
         name: this.name,
         email: this.email,
@@ -67,14 +74,11 @@ export class ContactMeComponent {
 
       try {
         await this.firebaseService.saveMessage(formData);
-        alert('Thank you for your message.');
         this.clearForm();
       } catch (error) {
         console.error('Error sending the message:', error);
-        alert('There was an error sending the message. Please try again later.');
       }
     } else {
-      alert('Please fill out all fields and accept the privacy policy.');
     }
   }
 

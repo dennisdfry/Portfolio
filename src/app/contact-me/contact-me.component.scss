@@ -311,3 +311,20 @@ label {
     white-space: normal;
   }
 }
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-15px); }
+  40% { transform: translateX(15px); }
+  60% { transform: translateX(-15px); }
+  80% { transform: translateX(15px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.8s ease-in-out;
+}
+
+.required_text{
+  padding-left:0px;
+}

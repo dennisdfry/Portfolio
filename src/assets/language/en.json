@@ -100,7 +100,13 @@
       "MESSAGE_LABEL": "How can I help you?",
       "MESSAGE_PLACEHOLDER": "Write your message here...",
       "PRIVACY_POLICY": "I've read the privacy policy and agree to the processing of my data as outlined.",
-      "SUBMIT_BUTTON": "Say Hello ;)"
+      "SUBMIT_BUTTON": "Say Hello ;)",
+      "NAME_REQUIRED": "Name is required.",
+      "NAME_PATTERN": "Name can only contain letters and spaces.",
+      "EMAIL_REQUIRED": "Email is required.",
+      "EMAIL_INVALID": "Please enter a valid email address.",
+      "MESSAGE_REQUIRED": "Message is required.",
+      "PRIVACY_REQUIRED": "You must accept the privacy policy."
     }
   },
   "FOOTER": {

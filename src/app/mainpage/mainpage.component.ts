@@ -10,7 +10,6 @@ import { FooterComponent } from '../footer/footer.component';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { LegalNotizComponent } from '../legal-notiz/legal-notiz.component';
-import { LegalNotizService } from '../legal-notiz.service';
 
 @Component({
   selector: 'app-mainpage',
@@ -26,9 +25,7 @@ export class MainpageComponent  {
    * @param translateConfigService The service for handling language translation.
    * @param legalNotizService The service for controlling the visibility of the legal notice.
    */
-  constructor(private translateConfigService: TranslateConfigService,
-    public legalNotizService: LegalNotizService 
-  ) {}
+  constructor(private translateConfigService: TranslateConfigService,){}
 
   /**
    * Scrolls the page to a section specified by its ID.
@@ -49,17 +46,4 @@ export class MainpageComponent  {
     this.translateConfigService.changeLanguage(lang);
   }
 
-  /**
-   * Opens the legal notice by calling the `show` method from `LegalNotizService`.
-   */
-  openLegalNotiz() {
-    this.legalNotizService.show();
-  }
-
-  /**
-   * Closes the legal notice by calling the `hide` method from `LegalNotizService`.
-   */
-  closeLegalNotiz() {
-    this.legalNotizService.hide();
-  }
 }

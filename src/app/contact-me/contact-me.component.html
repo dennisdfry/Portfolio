@@ -18,38 +18,65 @@
       </p>
     </div>
   </div>
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
       <label class="font-fira font-24 text-turquoise" for="name">
         {{ 'CONTACT.FORM.NAME_LABEL' | translate }}
       </label>
       <input class="contact_input font-karla font-18 text-white" type="text" id="name" [(ngModel)]="name" name="name"
-        [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate" required pattern="[A-Za-zÄÖÜäöüß\s]+"
-        title="{{ 'CONTACT.FORM.NAME_TITLE' | translate }}" />
+        [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate" required minlength="3" pattern="^\s*[A-Za-zÄÖÜäöüß]+(?:\s+[A-Za-zÄÖÜäöüß]+)+\s*$"
+        #nameInput="ngModel" />
+      <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched) && (nameInput.errors?.['required'] || nameInput.errors?.['minlength'])" class="contact_input font-karla font-18 text-white">
+        <div class="contact_input font-karla font-18 text-white required_text" *ngIf="nameInput.errors?.['required']">
+          {{ 'CONTACT.FORM.NAME_REQUIRED' | translate }}
+        </div>
+        <div class="contact_input font-karla font-18 text-white required_text" *ngIf="nameInput.errors?.['pattern']">
+          {{ 'CONTACT.FORM.NAME_PATTERN' | translate }}
+        </div>
+      </div>
     </div>
     <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
       <label class="font-fira font-24 text-turquoise" for="email">
         {{ 'CONTACT.FORM.EMAIL_LABEL' | translate }}
       </label>
-      <input class="contact_input font-karla font-18 text-white" type="email" id="email" [(ngModel)]="email"
-        name="email" [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate" required />
+      <input class="contact_input font-karla font-18 text-white" type="email" id="email" [(ngModel)]="email" name="email"
+        [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate" required email #emailInput="ngModel" />
+      <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="text-red font-karla font-14">
+        <div class="contact_input font-karla font-18 text-white" *ngIf="emailInput.errors?.['required']">
+          {{ 'CONTACT.FORM.EMAIL_REQUIRED' | translate }}
+        </div>
+        <div class="contact_input font-karla font-18 text-white" *ngIf="emailInput.errors?.['email']">
+          {{ 'CONTACT.FORM.EMAIL_INVALID' | translate }}
+        </div>
+      </div>
     </div>
     <div class="d-flex flex-column jtf-center max-height131 min-height130 border-top-turquoise">
       <label class="font-fira font-24 text-turquoise" for="message">
         {{ 'CONTACT.FORM.MESSAGE_LABEL' | translate }}
       </label>
       <textarea class="contact_input contact_textarea font-karla font-18" id="message" [(ngModel)]="message"
-        name="message" [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate" required></textarea>
+        name="message" [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate" required minlength="3"
+        #messageInput="ngModel"></textarea>
+      <div *ngIf="messageInput.errors?.['minlength']" class="text-red font-karla font-14">
+        <div class="contact_input font-karla font-18 text-white" *ngIf="messageInput.errors?.['required']">
+          {{ 'CONTACT.FORM.MESSAGE_REQUIRED' | translate }}
+        </div>
+      </div>
     </div>
     <div class="checkbox-container max-height131 min-height130 border-top-turquoise font-karla font-15 text-white">
-      <input class="checkbox_design" type="checkbox" id="privacy" [(ngModel)]="privacyAccepted" name="privacy"
-        required />
+      <input class="checkbox_design" type="checkbox" id="privacy" [(ngModel)]="privacyAccepted" name="privacy" required
+        #privacyInput="ngModel" />
       <label for="privacy">
-        {{ 'CONTACT.FORM.PRIVACY_POLICY' | translate }}
+        {{ 'CONTACT.FORM.PRIVACY_POLICY_ONE' | translate }}  {{ 'CONTACT.FORM.PRIVACY_POLICY_TWO' | translate }}
       </label>
+      <button (click)="navigateToLegalNotiz()" routerLink="/legal-notiz" class="font-karla font-15 text-turquoise pointer">Datenschutzrichtlinien</button>
+      <div *ngIf="privacyInput.invalid && (privacyInput.dirty || privacyInput.touched)" class="text-red font-karla font-14">
+        {{ 'CONTACT.FORM.PRIVACY_REQUIRED' | translate }}
+      </div>
     </div>
+
     <div class="d-flex jtf-center">
-      <button class="contact_me_button font-18 font-karla" type="submit">
+      <button  [class.shake]="contactForm.valid"  class="contact_me_button font-18 font-karla" type="submit" [disabled]="contactForm.invalid || !privacyAccepted">
         {{ 'CONTACT.FORM.SUBMIT_BUTTON' | translate }}
       </button>
     </div>
