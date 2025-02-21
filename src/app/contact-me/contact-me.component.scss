@@ -8,7 +8,7 @@ section {
 
 form {
   flex-direction: column;
-  width: 616px;
+  width: 50%;
   height: 550px;
   background-color: #1c1c1c;
   margin-left: 16px;
@@ -84,7 +84,7 @@ label {
 }
 
 .contact_me_left {
-  width: 568px;
+  width: 50%;
   height: 337px;
 }
 
@@ -191,10 +191,12 @@ label {
   .contact_input,
   .contact_textarea {
     width: 280px;
-    height: 16px;
+    height: unset;
     resize: vertical;
     text-align: center;
     overflow-y: hidden;
+    padding-left: unset;
+    padding:0px;
   }
 
   .contact_input::placeholder {
@@ -202,10 +204,6 @@ label {
   }
 
   label {
-    padding: 8px;
-  }
-
-  .contact_input {
     padding: 8px;
   }
 }
@@ -269,6 +267,9 @@ label {
     resize: vertical;
     text-align: center;
     overflow-y: hidden;
+    padding-left: unset;
+    height: unset;
+    padding:0px;
   }
 
   .contact_input::placeholder {
@@ -278,22 +279,18 @@ label {
   label {
     padding: 8px;
   }
-
-  .contact_input {
-    padding: 8px;
-  }
 }
 
 @media (min-width:768px) and (max-width:1024px) {
   .contact_me_left {
-    width: 350px;
+    width: 50%;
     height: fit-content;
     padding: 8px;
   }
 
   form {
     flex-direction: column;
-    width: 350px;
+    width: 50%;
     height: fit-content;
     background-color: #1c1c1c;
     text-align: center;
@@ -303,6 +300,7 @@ label {
   h1 {
     font-size: 56px;
     word-wrap: break-word;
+    padding:8px;
   }
 
   p {

@@ -42,10 +42,10 @@
       <input class="contact_input font-karla font-18 text-white" type="email" id="email" [(ngModel)]="email" name="email"
         [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate" required email #emailInput="ngModel" />
       <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="text-red font-karla font-14">
-        <div class="contact_input font-karla font-18 text-white" *ngIf="emailInput.errors?.['required']">
+        <div class="position_absolut contact_input font-karla font-18 text-white" *ngIf="emailInput.errors?.['required']">
           {{ 'CONTACT.FORM.EMAIL_REQUIRED' | translate }}
         </div>
-        <div class="contact_input font-karla font-18 text-white" *ngIf="emailInput.errors?.['email']">
+        <div class="position_absolut contact_input font-karla font-18 text-white" *ngIf="emailInput.errors?.['email']">
           {{ 'CONTACT.FORM.EMAIL_INVALID' | translate }}
         </div>
       </div>

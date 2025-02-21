@@ -38,8 +38,8 @@ export class PortfolioComponent {
       description: 'Dieses Projekt wurde mit Angular, Firebase und TypeScript erstellt. Es zeigt meine Fähigkeit, skalierbare Anwendungen zu entwickeln.',
       image: '../../assets/img/portfolio/DABUBBLE.png',
       technologies: ['Angular', 'Firebase', 'TypeScript'],
-      githubUrl: 'https://github.com/your-repo',
-      liveUrl: 'https://your-live-project-url.com'
+      githubUrl: 'https://github.com/dennisdfry',
+      liveUrl: 'https://github.com/dennisdfry'
     }
   ];
 
