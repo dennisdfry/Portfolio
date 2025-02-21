@@ -227,7 +227,7 @@ label {
   }
 
   h1 {
-    font-size: 56px;
+    font-size: 40px;
     word-wrap: break-word;
   }
 
@@ -325,4 +325,12 @@ label {
 
 .required_text{
   padding-left:0px;
+}
+
+@media (min-width:1024px) and (max-width:1439px){
+  h1 {
+    font-size: 56px;
+    word-wrap: break-word;
+    padding:8px;
+  }
 }
