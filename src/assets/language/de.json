@@ -118,6 +118,59 @@
         "LINKEDIN": "LinkedIn",
         "EMAIL": "E-Mail",
         "LEGAL": "Impressum"
+    },
+    "PRIVACY_POLICY": {
+        "TITLE": "Datenschutzerklärung",
+        "RESPONSIBLE_PARTY": {
+            "HEADER": "1. Verantwortliche Stelle",
+            "TEXT": "Verantwortlich für die Verarbeitung Ihrer personenbezogenen Daten auf dieser Website ist:<br><strong>Dennis Freyer</strong><br>E-Mail: ",
+            "EMAIL_LINK": "dennis.dfry@gmail.com"
+        },
+        "DATA_COLLECTION": {
+            "HEADER": "2. Erhebung und Verarbeitung personenbezogener Daten",
+            "TEXT": "Beim Besuch dieser Website werden automatisch technische Daten erfasst (z. B. IP-Adresse, Browsertyp, Zugriffszeit). Diese Daten dienen der technischen Bereitstellung und Sicherheit der Website und werden nicht zur Identifikation des Nutzers verwendet."
+        },
+        "CONTACT": {
+            "HEADER": "3. Kontaktaufnahme per E-Mail",
+            "TEXT": "Wenn Sie mich per E-Mail kontaktieren, werden Ihre angegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) zur Bearbeitung der Anfrage gespeichert. Diese Daten gebe ich nicht ohne Ihre Zustimmung weiter."
+        },
+        "LEGAL_BASIS": {
+            "HEADER": "4. Rechtsgrundlage der Verarbeitung",
+            "TEXT": "Die Verarbeitung Ihrer Daten erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis meines berechtigten Interesses, eine funktionale und sichere Website bereitzustellen, sowie gemäß Art. 6 Abs. 1 lit. b DSGVO zur Bearbeitung Ihrer Anfragen."
+        },
+        "STORAGE_DURATION": {
+            "HEADER": "5. Speicherdauer",
+            "TEXT": "Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen."
+        },
+        "DATA_SHARING": {
+            "HEADER": "6. Weitergabe von Daten",
+            "TEXT": "Ich gebe keine personenbezogenen Daten an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben oder zur Vertragserfüllung erforderlich."
+        },
+        "YOUR_RIGHTS": {
+            "HEADER": "7. Ihre Rechte",
+            "LIST": [
+                "Auskunft (Art. 15 DSGVO)",
+                "Berichtigung (Art. 16 DSGVO)",
+                "Löschung (Art. 17 DSGVO)",
+                "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+                "Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)",
+                "Datenübertragbarkeit (Art. 20 DSGVO)"
+            ],
+            "TEXT": "Zur Wahrnehmung Ihrer Rechte können Sie sich jederzeit an mich wenden."
+        },
+        "COOKIES": {
+            "HEADER": "8. Cookies und Tracking-Technologien",
+            "TEXT": "Diese Website verwendet keine Cookies oder Tracking-Technologien."
+        },
+        "DATA_SECURITY": {
+            "HEADER": "9. Datensicherheit",
+            "TEXT": "Ich setze technische und organisatorische Maßnahmen ein, um Ihre Daten vor Verlust, Missbrauch oder unbefugtem Zugriff zu schützen."
+        },
+        "CHANGES": {
+            "HEADER": "10. Änderungen der Datenschutzerklärung",
+            "TEXT": "Diese Datenschutzerklärung kann aktualisiert werden, um rechtliche Anforderungen zu erfüllen oder Änderungen an der Website zu berücksichtigen."
+        },
+        "LAST_UPDATED": "Stand: 12. Februar 2025",
+        "CLOSE_BUTTON": "Schließen"
     }
-    
 }

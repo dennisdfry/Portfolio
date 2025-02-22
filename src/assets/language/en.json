@@ -1,39 +1,39 @@
 {
   "HEADER": {
-    "ABOUT_ME": "About me",
+    "ABOUT_ME": "About Me",
     "SKILLS": "Skills",
     "PROJECTS": "Projects"
   },
   "MAINPAGE": {
     "ROLE": "Frontend Developer",
     "NAME": "Dennis Freyer",
-    "CHECK_WORK": "Check my work",
-    "CONTACT_ME": "Contact me",
+    "CHECK_WORK": "Check out my work",
+    "CONTACT_ME": "Contact Me",
     "AVAILABLE": "Available for remote work",
     "BASED": "Based in Leipzig",
-    "OPEN_TO_WORK": "Open to work"
+    "OPEN_TO_WORK": "Open to new challenges"
   },
   "ABOUT_ME": {
-    "TITLE": "About me",
+    "TITLE": "About Me",
     "WHO_I_AM": "Who I Am",
-    "INTRO": "Hi, I'm a German-speaking Frontend Developer based in Leipzig...",
-    "HIGHLIGHT_1": "Flexible in terms of working environments...",
+    "INTRO": "Hello, I am a German-speaking frontend developer based in Leipzig...",
+    "HIGHLIGHT_1": "Flexible in terms of work environments...",
     "HIGHLIGHT_2": "I am open-minded and always looking for personal challenges...",
-    "HIGHLIGHT_3": "In my profession, programming isn't just about writing code..."
+    "HIGHLIGHT_3": "In my profession, programming is not just about writing code..."
   },
   "TECHNOLOGIES": {
     "TITLE": "Technologies",
     "SKILL_SET": "Skill Set",
-    "INTRO": "My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to continuously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
-    "NEED_ANOTHER_SKILL_PART_ONE": "You need ",
+    "INTRO": "My journey has taken me through various projects where I have used a wide range of frontend technologies and concepts. I am open to new technologies and methods to continuously improve my skills and stay up-to-date in the ever-evolving world of web development.",
+    "NEED_ANOTHER_SKILL_PART_ONE": "Do you need ",
     "NEED_ANOTHER_SKILL_PART_TWO": "another skill?",
-    "CONTACT_ME": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
-    "LETS_TALK": "Let's Talk"
+    "CONTACT_ME": "Feel free to contact me. I look forward to expanding my knowledge.",
+    "LETS_TALK": "Let's talk"
   },
   "PORTFOLIO": {
     "TITLE": "Portfolio",
-    "PORTFOLIO_TEASER": "Featured Projects",
-    "EXPLORE": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "PORTFOLIO_TEASER": "Selected Projects",
+    "EXPLORE": "Explore a selection of my work here – Interact with the projects to see my skills in action.",
     "PROJECT_NUMBER": "0{{currentProjectIndex +1}}",
     "WHAT_IS_THIS": "What is this project about?",
     "TECHNOLOGIES_USED": "Technologies Used",
@@ -43,7 +43,7 @@
     "PROJECTS": {
       "JOIN": {
         "TITLE": "Join",
-        "DESCRIPTION": "A task management tool inspired by Kanban for creating and organizing tasks easily.",
+        "DESCRIPTION": "A task management tool inspired by Kanban to easily create and organize tasks.",
         "TECHNOLOGIES": [
           "Angular",
           "TypeScript",
@@ -63,7 +63,7 @@
       },
       "DA_BUBBLE": {
         "TITLE": "Da Bubble",
-        "DESCRIPTION": "A real-time chat app with a Firebase backend and Angular.",
+        "DESCRIPTION": "A real-time chat app with Firebase backend and Angular.",
         "TECHNOLOGIES": [
           "Angular",
           "Firebase",
@@ -75,9 +75,9 @@
   "FEEDBACK": {
     "TITLE": "What my colleagues say about me",
     "COMMENTS": {
-      "USER_1": "Dennis is a very dedicated Frontend Developer who always works with great passion on projects.",
+      "USER_1": "Dennis is a very dedicated frontend developer and always works on projects with great passion.",
       "USER_2": "He is very helpful and always has a solution ready when problems arise.",
-      "USER_3": "His creative approach and technical knowledge enrich every project."
+      "USER_3": "With his creative approach and technical knowledge, he enriches every project."
     },
     "USERS": {
       "USER_1": "Peter Pfautsch",
@@ -86,23 +86,24 @@
     }
   },
   "CONTACT": {
-    "TITLE": "Contact me",
+    "TITLE": "Contact Me",
     "HEADER": "Let's work together",
-    "SUBHEADER": "Got a problem to solve?",
-    "DESCRIPTION": "Contact me through this form. I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.",
-    "CALL_TO_ACTION": "Need a Frontend developer? Let's talk!",
+    "SUBHEADER": "Do you have a problem to solve?",
+    "DESCRIPTION": "Contact me via this form. I look forward to hearing from you, getting to know your ideas, and contributing to your projects with my work.",
+    "CALL_TO_ACTION": "Do you need a frontend developer? Let's talk!",
     "FORM": {
-      "NAME_LABEL": "What's your name?",
+      "NAME_LABEL": "What is your name?",
       "NAME_PLACEHOLDER": "Enter your name",
       "NAME_TITLE": "Only letters and spaces are allowed.",
-      "EMAIL_LABEL": "What's your email?",
-      "EMAIL_PLACEHOLDER": "Enter your email",
+      "EMAIL_LABEL": "What is your email?",
+      "EMAIL_PLACEHOLDER": "Enter your email address",
       "MESSAGE_LABEL": "How can I help you?",
       "MESSAGE_PLACEHOLDER": "Write your message here...",
-      "PRIVACY_POLICY": "I've read the privacy policy and agree to the processing of my data as outlined.",
+      "PRIVACY_POLICY_ONE": "I have read the  ",
+      "PRIVACY_POLICY_TWO": " and agree to the processing of my data in accordance with it.",
       "SUBMIT_BUTTON": "Say Hello ;)",
       "NAME_REQUIRED": "Name is required.",
-      "NAME_PATTERN": "Name can only contain letters and spaces.",
+      "NAME_PATTERN": "The name must only contain letters and spaces and consist of two words.",
       "EMAIL_REQUIRED": "Email is required.",
       "EMAIL_INVALID": "Please enter a valid email address.",
       "MESSAGE_REQUIRED": "Message is required.",
@@ -117,5 +118,59 @@
     "LINKEDIN": "LinkedIn",
     "EMAIL": "Email",
     "LEGAL": "Legal Notice"
+  },
+  "PRIVACY_POLICY": {
+    "TITLE": "Privacy Policy",
+   "RESPONSIBLE_PARTY": {
+      "HEADER": "1. Responsible Party",
+      "TEXT": "The party responsible for processing your personal data on this website is:<br><strong>Dennis Freyer</strong><br>Email: ",
+      "EMAIL_LINK": "dennis.dfry@gmail.com"
+    },
+    "DATA_COLLECTION": {
+      "HEADER": "2. Collection and Processing of Personal Data",
+      "TEXT": "When you visit this website, technical data (e.g., IP address, browser type, access time) is automatically collected. This data is used for the technical provision and security of the website and is not used to identify the user."
+    },
+    "CONTACT": {
+      "HEADER": "3. Contact via Email",
+      "TEXT": "If you contact me by email, the data you provide (e.g., name, email address, message) will be stored to process your request. I will not share this data without your consent."
+    },
+    "LEGAL_BASIS": {
+      "HEADER": "4. Legal Basis for Processing",
+      "TEXT": "Your data is processed in accordance with Art. 6 (1) (f) GDPR based on my legitimate interest in providing a functional and secure website, as well as Art. 6 (1) (b) GDPR to process your requests."
+    },
+    "STORAGE_DURATION": {
+      "HEADER": "5. Storage Duration",
+      "TEXT": "Personal data is only stored for as long as necessary for the respective purpose or as required by legal retention periods."
+    },
+    "DATA_SHARING": {
+      "HEADER": "6. Data Sharing",
+      "TEXT": "I do not share personal data with third parties unless required by law or necessary to fulfill a contract."
+    },
+    "YOUR_RIGHTS": {
+      "HEADER": "7. Your Rights",
+      "LIST": [
+        "Right to access (Art. 15 GDPR)",
+        "Right to rectification (Art. 16 GDPR)",
+        "Right to erasure (Art. 17 GDPR)",
+        "Right to restriction of processing (Art. 18 GDPR)",
+        "Right to object to processing (Art. 21 GDPR)",
+        "Right to data portability (Art. 20 GDPR)"
+      ],
+      "TEXT": "To exercise your rights, you can contact me at any time."
+    },
+    "COOKIES": {
+      "HEADER": "8. Cookies and Tracking Technologies",
+      "TEXT": "This website does not use cookies or tracking technologies."
+    },
+    "DATA_SECURITY": {
+      "HEADER": "9. Data Security",
+      "TEXT": "I implement technical and organizational measures to protect your data from loss, misuse, or unauthorized access."
+    },
+    "CHANGES": {
+      "HEADER": "10. Changes to the Privacy Policy",
+      "TEXT": "This privacy policy may be updated to comply with legal requirements or reflect changes to the website."
+    },
+    "LAST_UPDATED": "Last updated: February 12, 2025",
+    "CLOSE_BUTTON": "Close"
   }
 }

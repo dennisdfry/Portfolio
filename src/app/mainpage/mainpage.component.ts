@@ -9,12 +9,12 @@ import { ContactMeComponent } from '../contact-me/contact-me.component';
 import { FooterComponent } from '../footer/footer.component';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { LegalNotizComponent } from '../legal-notiz/legal-notiz.component';
+
 
 @Component({
   selector: 'app-mainpage',
   standalone: true,
-  imports: [HeaderComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, FeedbackComponent, ContactMeComponent, FooterComponent, TranslateModule, LegalNotizComponent, CommonModule],
+  imports: [HeaderComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, FeedbackComponent, ContactMeComponent, FooterComponent, TranslateModule, CommonModule],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })
