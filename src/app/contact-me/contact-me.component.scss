@@ -128,8 +128,8 @@ label {
   -webkit-appearance: none;
   background-color: #1c1c1c;
   border: 1px solid #3DCFB6;
-  width: 28px;
-  height: 14px;
+  width: 24px;
+  height: 16px;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -329,6 +329,10 @@ label {
     overflow-wrap: break-word;
     white-space: normal;
   }
+  .checkbox_design {
+    width: 28px;
+    height: 14px;
+  }
 }
 
 @keyframes shake {
@@ -353,5 +357,9 @@ label {
     font-size: 56px;
     word-wrap: break-word;
     padding:8px;
+  }
+  .checkbox_design {
+    width: 28px;
+    height: 14px;
   }
 }
