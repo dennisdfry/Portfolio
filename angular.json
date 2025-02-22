@@ -61,6 +61,14 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "rewrites": [
+              {
+                "source": "**",
+                "destination": "/index.html"
+              }
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "portfolio-website:build:production"
