@@ -93,6 +93,14 @@ label {
   justify-content: center;
   align-items: center;
 }
+.privacy_label{
+  text-align: center;
+}
+
+.privacy_direction{
+  display: flex;
+  flex-direction: column;
+}
 
 .contact_me_button {
   border: 1px solid #FFFFFF;
@@ -120,11 +128,12 @@ label {
   -webkit-appearance: none;
   background-color: #1c1c1c;
   border: 1px solid #3DCFB6;
-  width: 24px;
-  height: 18px;
+  width: 28px;
+  height: 14px;
   cursor: pointer;
   display: inline-block;
   position: relative;
+  margin:0;
 }
 
 .checkbox_design:checked {
@@ -206,6 +215,11 @@ label {
   label {
     padding: 8px;
   }
+
+  .checkbox_design {
+    width: 28px;
+    height: 14px;
+  }
 }
 
 @media (min-width:375px) and (max-width:768px) {
@@ -279,6 +293,10 @@ label {
   label {
     padding: 8px;
   }
+  .checkbox_design {
+    width: 28px;
+    height: 14px;
+  }
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -286,6 +304,9 @@ label {
     width: 50%;
     height: fit-content;
     padding: 8px;
+  }
+  .contact_input{
+    text-align: center;
   }
 
   form {

@@ -107,6 +107,7 @@
             "EMAIL_REQUIRED": "E-Mail ist erforderlich.",
             "EMAIL_INVALID": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
             "MESSAGE_REQUIRED": "Nachricht ist erforderlich.",
+            "MESSAGE_MINLENGTH": "Die Nachricht muss mindestens 3 Zeichen lang sein.",
             "PRIVACY_REQUIRED": "Sie müssen die Datenschutzbestimmungen akzeptieren."
         }
     },

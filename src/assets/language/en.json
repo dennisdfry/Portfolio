@@ -107,6 +107,7 @@
       "EMAIL_REQUIRED": "Email is required.",
       "EMAIL_INVALID": "Please enter a valid email address.",
       "MESSAGE_REQUIRED": "Message is required.",
+      "MESSAGE_MINLENGTH": "The message must be at least 3 characters long.",
       "PRIVACY_REQUIRED": "You must accept the privacy policy."
     }
   },
