@@ -173,5 +173,49 @@
     },
     "LAST_UPDATED": "Last updated: February 12, 2025",
     "CLOSE_BUTTON": "Close"
+  },
+    "IMPRINT": {
+      "TITLE": "Imprint",
+      "LEGAL_DETAILS": {
+        "TITLE": "Information according to § 5 TMG:",
+        "NAME": "Dennis Freyer",
+        "ADDRESS": "Röthiger Weg 10",
+        "COUNTRY": "04575 Deutzen, Germany"
+      },
+      "CONTACT_IMPRESSUM": {
+        "TITLE": "Contact:",
+        "EMAIL": "Email: dennis.dfry.public@gmail.com"
+      },
+      "VAT_ID": {
+        "TITLE": "VAT Identification Number according to § 27 a of the German VAT Act:",
+        "NUMBER": "DE123456789 (if applicable)"
+      },
+      "PROFESSIONAL_REGULATIONS": {
+        "TITLE": "Professional Title and Regulations:",
+        "OCCUPATION": "Software Developer",
+        "CHAMBER": "Responsible Chamber: IHK Musterstadt (if applicable)",
+        "REGULATIONS": "Granted in: Germany"
+      },
+      "DISCLAIMER": {
+        "TITLE": "Disclaimer:",
+        "CONTENT_LIABILITY": {
+          "TITLE": "Liability for Content:",
+          "TEXT": "As a service provider, we are responsible for our own content on these pages according to § 7 Abs.1 TMG under general laws. According to §§ 8 to 10 TMG, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general laws remain unaffected. However, liability in this regard is only possible from the point in time at which a concrete violation of the law becomes known. Upon becoming aware of such violations, we will remove this content immediately."
+        },
+        "LINK_LIABILITY": {
+          "TITLE": "Liability for Links:",
+          "TEXT": "Our offer contains links to external websites of third parties, over whose content we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a violation of the law. Upon becoming aware of legal violations, we will remove such links immediately."
+        },
+        "COPYRIGHT": {
+          "TITLE": "Copyright:",
+          "TEXT": "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of use outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately."
+        }
+      },
+      "NOTE": {
+        "TITLE": "Note:",
+        "TEXT": "This imprint serves as a template and should be adapted to your individual needs and legal requirements. It is recommended to consult a lawyer for specific legal questions to ensure that all legal requirements are met."
+      }
+    }
   }
-}
+
+  

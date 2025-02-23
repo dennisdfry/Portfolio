@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
@@ -9,7 +9,7 @@ import { ContactMeComponent } from '../contact-me/contact-me.component';
 import { FooterComponent } from '../footer/footer.component';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mainpage',
@@ -18,14 +18,32 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })
-export class MainpageComponent  {
+export class MainpageComponent implements OnInit  {
 
   /**
    * Creates an instance of MainpageComponent.
    * @param translateConfigService The service for handling language translation.
    * @param legalNotizService The service for controlling the visibility of the legal notice.
    */
-  constructor(private translateConfigService: TranslateConfigService,){}
+  constructor(private translateConfigService: TranslateConfigService,
+    private router: Router
+ ){}
+
+     /**
+   * Initializes the component.
+   * Checks if a sectionId is stored in localStorage and scrolls to it if present.
+   */
+  ngOnInit(): void {
+    const sectionId = localStorage.getItem('scrollSectionId');
+
+    if (sectionId) {
+      setTimeout(() => {
+        this.scrollToSection(sectionId);
+      }, 100);
+      localStorage.removeItem('scrollSectionId');
+    }
+  }
+
 
   /**
    * Scrolls the page to a section specified by its ID.

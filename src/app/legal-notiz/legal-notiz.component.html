@@ -1,8 +1,10 @@
-
 <div class="background">
   <div class="limited-container">
     <app-header></app-header>
     <section class="legal-notiz-overlay">
+      <div class="next-button-impressum">
+        <button class="next-project-impressum" (click)="navigateToImpressum()" >Impressum</button>
+      </div>
       <div class="legal_notiz">
         <h2>{{ 'PRIVACY_POLICY.TITLE' | translate }}</h2>
 
@@ -44,9 +46,8 @@
 
         <p><strong>{{ 'PRIVACY_POLICY.LAST_UPDATED' | translate }}</strong></p>
 
-        <div>
-          <p>Dies ist die rechtliche Notiz.</p>
-          <button (click)="navigateToLegalNotiz()">{{ 'PRIVACY_POLICY.CLOSE_BUTTON' | translate }}</button>
+        <div class="next-button-impressum ">
+          <button class="next-project-impressum " (click)="navigateToLegalNotiz()">{{ 'PRIVACY_POLICY.CLOSE_BUTTON' | translate }}</button>
         </div>
       </div>
     </section>

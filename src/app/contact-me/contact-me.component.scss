@@ -128,8 +128,9 @@ label {
   -webkit-appearance: none;
   background-color: #1c1c1c;
   border: 1px solid #3DCFB6;
-  width: 24px;
-  height: 16px;
+  aspect-ratio: 1 / 1; 
+  width: 26px; 
+  height: auto; 
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -215,11 +216,6 @@ label {
   label {
     padding: 8px;
   }
-
-  .checkbox_design {
-    width: 28px;
-    height: 14px;
-  }
 }
 
 @media (min-width:375px) and (max-width:768px) {
@@ -293,10 +289,6 @@ label {
   label {
     padding: 8px;
   }
-  .checkbox_design {
-    width: 28px;
-    height: 14px;
-  }
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -329,10 +321,10 @@ label {
     overflow-wrap: break-word;
     white-space: normal;
   }
-  .checkbox_design {
-    width: 28px;
-    height: 14px;
-  }
+  // .checkbox_design {
+  //   width: 28px;
+  //   height: 14px;
+  // }
 }
 
 @keyframes shake {
@@ -358,8 +350,24 @@ label {
     word-wrap: break-word;
     padding:8px;
   }
-  .checkbox_design {
-    width: 28px;
-    height: 14px;
-  }
+}
+
+.success-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }

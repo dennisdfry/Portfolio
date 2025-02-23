@@ -6,22 +6,21 @@ import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-legal-notiz',
+  selector: 'app-impressum',
   standalone: true,
-  imports:[CommonModule, HeaderComponent, FooterComponent, TranslateModule],
-  templateUrl: './legal-notiz.component.html',
-  styleUrls: ['./legal-notiz.component.scss']
+  imports: [CommonModule, HeaderComponent, FooterComponent, TranslateModule],
+  templateUrl: './impressum.component.html',
+  styleUrl: './impressum.component.scss'
 })
-export class LegalNotizComponent  {
+export class ImpressumComponent {
+
 
   constructor(private router: Router) {}
 
-  navigateToLegalNotiz() {
+  navigateToLegal() {
+    this.router.navigate(['/legal-notiz']);
+  }
+  navigateToMainPage(){
     this.router.navigate(['']);
   }
-
-  navigateToImpressum(){
-    this.router.navigate(['/impressum']);
-  }
 }
-

@@ -1,0 +1,45 @@
+<div class="background">
+    <div class="limited-container">
+        <app-header></app-header>
+        <section class="legal-notiz-overlay">
+            <div class="next-button-impressum">
+                <button class="next-project-impressum" (click)="navigateToLegal()">Legal Notiz</button>
+            </div>
+            <div class="legal_notiz">
+                <h2>{{ 'IMPRINT.TITLE' | translate }}</h2>
+
+                <h2>{{ 'IMPRINT.LEGAL_DETAILS.TITLE' | translate }}</h2>
+                <p>{{ 'IMPRINT.LEGAL_DETAILS.NAME' | translate }}</p>
+                <p>{{ 'IMPRINT.LEGAL_DETAILS.ADDRESS' | translate }}</p>
+                <p>{{ 'IMPRINT.LEGAL_DETAILS.COUNTRY' | translate }}</p>
+
+                <h2>{{ 'IMPRINT.CONTACT_IMPRESSUM.TITLE' | translate }}</h2>
+                <p>{{ 'IMPRINT.CONTACT_IMPRESSUM.EMAIL' | translate }}</p>
+
+                <h2>{{ 'IMPRINT.VAT_ID.TITLE' | translate }}</h2>
+                <p>{{ 'IMPRINT.VAT_ID.NUMBER' | translate }}</p>
+
+                <h2>{{ 'IMPRINT.PROFESSIONAL_REGULATIONS.TITLE' | translate }}</h2>
+                <p>{{ 'IMPRINT.PROFESSIONAL_REGULATIONS.OCCUPATION' | translate }}</p>
+                <p>{{ 'IMPRINT.PROFESSIONAL_REGULATIONS.CHAMBER' | translate }}</p>
+                <p>{{ 'IMPRINT.PROFESSIONAL_REGULATIONS.REGULATIONS' | translate }}</p>
+
+                <h2>{{ 'IMPRINT.DISCLAIMER.TITLE' | translate }}</h2>
+                <h3>{{ 'IMPRINT.DISCLAIMER.CONTENT_LIABILITY.TITLE' | translate }}</h3>
+                <p>{{ 'IMPRINT.DISCLAIMER.CONTENT_LIABILITY.TEXT' | translate }}</p>
+                <h3>{{ 'IMPRINT.DISCLAIMER.LINK_LIABILITY.TITLE' | translate }}</h3>
+                <p>{{ 'IMPRINT.DISCLAIMER.LINK_LIABILITY.TEXT' | translate }}</p>
+                <h3>{{ 'IMPRINT.DISCLAIMER.COPYRIGHT.TITLE' | translate }}</h3>
+                <p>{{ 'IMPRINT.DISCLAIMER.COPYRIGHT.TEXT' | translate }}</p>
+
+                <h2>{{ 'IMPRINT.NOTE.TITLE' | translate }}</h2>
+                <p>{{ 'IMPRINT.NOTE.TEXT' | translate }}</p>
+                <div class="next-button-impressum ">
+                    <button class="next-project-impressum " (click)="navigateToMainPage()">{{
+                        'PRIVACY_POLICY.CLOSE_BUTTON' | translate }}</button>
+                </div>
+            </div>
+        </section>
+        <app-footer></app-footer>
+    </div>
+</div>

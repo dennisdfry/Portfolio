@@ -20,6 +20,37 @@ a {
   }
 }
 
+.next-button-impressum {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: transform 0.3s ease-out;
+  &:hover {
+      color: #ffffff;
+        transform: scale(1.1);
+   
+    }
+}
+
+.next-project-imrpessum {
+  all: unset;
+  color: #3dcfb6;
+  border: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'karla';
+  transition: background-color 0.3s ease;
+}
+
+.legal_notiz_close_button{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .legal-notiz-overlay {
   color: #FFFFFF;
   padding: 96px;
@@ -35,8 +66,6 @@ a {
 }
 
 .legal_notiz {
-  overflow: auto;
-  
   padding: 32px;
   border-radius: 32px;
 }
@@ -60,25 +89,3 @@ button {
   }
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 100, 0.3);
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 100, 100, 0.5);
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(100, 100, 100, 0.3) transparent;
-}

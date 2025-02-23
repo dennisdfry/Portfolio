@@ -27,7 +27,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/.htaccess"
             ],
             "styles": [
               "src/styles.scss",
@@ -61,14 +62,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "rewrites": [
-              {
-                "source": "**",
-                "destination": "/index.html"
-              }
-            ]
-          },
+          "options": {}, // Die `rewrites`-Eigenschaft wurde entfernt
           "configurations": {
             "production": {
               "buildTarget": "portfolio-website:build:production"

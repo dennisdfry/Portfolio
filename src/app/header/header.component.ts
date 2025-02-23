@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, EventEmitter, OnInit, Output } from '@angular/core';
 import { TranslateConfigService } from '../services/translate-config.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -12,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
+  
 
   /**
    * Event emitted when the language is changed.
@@ -37,13 +40,11 @@ export class HeaderComponent implements OnInit {
    * Creates an instance of HeaderComponent.
    * @param translateConfigService The service for handling language changes.
    */
-  constructor(private translateConfigService: TranslateConfigService) { }
-
-  /**
-   * Event emitted when scrolling to a section.
-   */
+  constructor(
+    private translateConfigService: TranslateConfigService,
+    private router: Router
+  ) { }
   @Output() scrollToSection = new EventEmitter<string>();
-
   /**
    * Toggles the state of the dropdown menu.
    */
@@ -78,12 +79,20 @@ export class HeaderComponent implements OnInit {
   }
 
   /**
-   * Emits an event to scroll to a specific section of the page.
-   * @param sectionId The ID of the section to scroll to.
-   */
-  onScroll(sectionId: string) {
+ * Handles scrolling to a specific section or navigating to the main page.
+ * If the current route is not the main page, it stores the sectionId in localStorage.
+ * After navigation, it retrieves the sectionId from localStorage and scrolls to the specified section.
+ * Finally, it clears the sectionId from localStorage to avoid conflicts on the next call.
+ * @param {string} sectionId - The ID of the section to scroll to.
+ */
+onScroll(sectionId: string): void {
+  if (this.router.url !== '/') {
+    localStorage.setItem('scrollSectionId', sectionId);
+    this.router.navigate(['/'])
+  } else {
     this.scrollToSection.emit(sectionId);
   }
+}
 
   ngOnInit(): void {
     const savedLang = localStorage.getItem('language') || 'en';
