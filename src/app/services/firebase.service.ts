@@ -37,10 +37,7 @@ export class FirebaseService {
   async saveMessage(data: { name: string; email: string; message: string }): Promise<void> {
     try {
       const docRef = await addDoc(collection(this.db, 'messages'), data);
-      console.log('Data successfully saved with ID:', docRef.id);
     } catch (error) {
-      console.error('Error saving to Firestore:', error);
-      alert('Error saving the message.');
     }
   }
 }
